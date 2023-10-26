@@ -40,7 +40,6 @@ class Home extends React.Component {
                     <div className="introFade"></div>
                 </div>
 
-                <div className="homeBody">
                     <div className="homeGalleryDiv">
                         <div className="homeGalleryColumn left">
                             <div className="homeGallerySection wedding">
@@ -63,8 +62,10 @@ class Home extends React.Component {
                                 <p className="homeGalleryText">GIFTS</p>
                             </div>
                         </div>
+                        <img className="homeBody flowerImage left" alt="flower" src="introImages/homeflowers.png"></img>
+                    <img className="homeBody flowerImage right1" alt="flower" src="introImages/homeflowers2.png"></img>
+                    <img className="homeBody flowerImage right2" alt="flower" src="introImages/homeflowers.png"></img>
                     </div>
-                </div>
             </motion.div>
         );
     }
