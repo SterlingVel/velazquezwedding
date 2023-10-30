@@ -40,32 +40,42 @@ class Home extends React.Component {
                     <div className="introFade"></div>
                 </div>
 
-                    <div className="homeGalleryDiv">
-                        <div className="homeGalleryColumn left">
+                <div className="homeGalleryDiv">
+                    <div className="homeGalleryColumn left">
+                        <Link to='/wedding'>
                             <div className="homeGallerySection wedding">
                                 <p className="homeGalleryText">WEDDING</p>
                                 <img className="homeGalleryPic" alt="weddingmenu" src="introImages/twirl.jpg" />
                             </div>
-                            <div className="homeGallerySection travel">
-                                <img className="homeGalleryPic" alt="weddingmenu" src="introImages/field.jpg" />
-                                <p className="homeGalleryText">TRAVEL</p>
-                            </div>
-                            <button className="faqButton">FAQs</button>
+                        </Link>
+                        <div className="homeGallerySection travel">
+                            <img className="homeGalleryPic" alt="weddingmenu" src="introImages/field.jpg" />
+                            <p className="homeGalleryText">TRAVEL</p>
                         </div>
-                        <div className="homeGalleryColumn right">
-                            <div className="homeGallerySection ourStory">
-                                <p className="homeGalleryText">OUR STORY</p>
-                                <img className="homeGalleryPic" alt="weddingmenu" src="introImages/ring.jpg" />
-                            </div>
-                            <div className="homeGallerySection gifts">
-                                <img className="homeGalleryPic" alt="weddingmenu" src="introImages/arms.jpg" />
-                                <p className="homeGalleryText">GIFTS</p>
-                            </div>
+                        <button className="faqButton">FAQs</button>
+                    </div>
+                    <div className="homeGalleryColumn right">
+                        <div className="homeGallerySection ourStory">
+                            <p className="homeGalleryText">OUR STORY</p>
+                            <img className="homeGalleryPic" alt="weddingmenu" src="introImages/ring.jpg" />
                         </div>
-                        <img className="homeBody flowerImage left" alt="flower" src="introImages/homeflowers.png"></img>
+                        <div className="homeGallerySection gifts">
+                            <img className="homeGalleryPic" alt="weddingmenu" src="introImages/arms.jpg" />
+                            <p className="homeGalleryText">GIFTS</p>
+                        </div>
+                    </div>
+                    <img className="homeBody flowerImage left" alt="flower" src="introImages/homeflowers.png"></img>
                     <img className="homeBody flowerImage right1" alt="flower" src="introImages/homeflowers2.png"></img>
                     <img className="homeBody flowerImage right2" alt="flower" src="introImages/homeflowers.png"></img>
+                </div>
+
+                <div className="rsvpFormDiv">
+                    <div className="rsvpHeaderContainer">
+                        <p className="rsvpHeaderCursive">Please</p>
+                        <p className="rsvpHeaderScript">RSVP</p>
+                        <p className="rsvpHeaderDate">by 03.06.2024</p>
                     </div>
+                </div>
             </motion.div>
         );
     }

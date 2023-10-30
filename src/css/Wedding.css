@@ -1,0 +1,243 @@
+/* Top of Wedding Page */
+
+.weddingDiv {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+.weddingHeaderSection {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+}
+
+.weddingTitle {
+    font-family: Angella;
+    font-size: 11vw;
+    color: #595959;
+    margin: 0;
+}
+
+.weddingSubHeader {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: #595959;
+    font-size: 3.7vw;
+    margin-bottom:-0.5vw;
+}
+
+.weddingImageFlower {
+    position: absolute;
+}
+.weddingImageFlower.left1 {
+    top:18vw; left:0vw;
+    width:15vw;
+}
+.weddingImageFlower.left2 {
+    top:-7vw; left:-17vw;
+    width:60vw;
+    transform:rotate(-45deg);
+}
+.weddingImageFlower.right {
+    left:auto;
+    bottom:-10vw; right:0;
+    width:30vw;
+}
+
+/* Hazlehurst Information */
+
+.hazlehurstDiv {
+    position:relative;
+    margin-bottom:7vw;
+}
+.hazlehurstImageWrapper {
+    position:relative;
+    height:20vw; width:fit-content;
+    left:50%; transform:translateX(-50%);
+}
+.hazlehurstImage {
+    object-fit: contain;
+    height:100%;
+}
+.hazlehurstFade {
+    position:absolute;
+    top:0; left:-0.5vw;
+    height:20vw; width:5vw;
+    background:linear-gradient(to right, #FEFEFB 0%, #fefefb7d 20%, #fefefb00 100%);
+}
+.hazlehurstFade:nth-child(1) {
+    left:auto; right:-0.5vw;
+    background:linear-gradient(to left, #FEFEFB 0%, #fefefb7d 20%, #fefefb00 100%);
+}
+
+.hazlehurstHeader {
+    font-family: Angella;
+    font-size:5vw;
+    margin-top:1.2vw;
+}
+.hazlehurstDate {
+    font-size:1.9vw;
+    font-style: italic;
+    margin-top:-0.9vw;
+}
+.hazlehurstAddressHeader {
+    font-size:1.9vw;
+    font-weight:700;
+    margin-top:1.8vw;
+}
+.hazlehurstAddress {
+    font-size:1.9vw;
+    font-style: italic;
+}
+.hazlehurstMap {
+    font-family: 'Cormorant Garamond', serif;
+    color: #595959;
+    font-size:2vw;
+    border: 1px solid #595959;
+    background:none;
+    padding:0.5vw 3.2vw;
+    margin-top:2vw;
+}
+
+.sectionDivider {
+    position:absolute;
+    bottom:-7vw; left:50%;
+    transform:translateX(-50%);
+    height:5vw; width:0.05vw;
+    background:#595959;
+}
+.sectionDivider.schedule {
+    bottom:auto; top:0;
+}
+
+/* Schedule Section */
+
+.scheduleDiv {
+    position:relative;
+    background: #B5CFE6;
+    padding:7vw 0 4vw 0;
+}
+.scheduleSection {
+    position:relative;
+    margin-bottom:3vw;
+}
+.scheduleHeader {
+    color: #595959;
+    font-size:2.6vw;
+    font-weight:700;
+}
+.scheduleTime {
+    color: #595959;
+    font-size:2.4vw;
+    margin-top:-0.5vw;
+}
+.scheduleFlower {
+    position:absolute;
+    bottom:0; left:12vw;
+    height:32vw;
+}
+.scheduleButterfly {
+    position:absolute;
+    top:4vw; right:16vw;
+    height:16vw;
+}
+
+/* The Crew Section */
+
+.crewDiv {
+    position:relative;
+}
+.crewDivHeader {
+    background: #DFE9F2;
+    padding:5vw 0 5vw 0;
+}
+.crewDivHeaderText {
+    font-family: Angella;
+    font-size:6vw;
+    margin-bottom:-6.2vw;
+}
+.crewDivSubheaderText {
+    font-size:8vw;
+    margin-top:1.8vw;
+}
+
+.crewHeader {
+    position:relative;
+    text-align:left;
+}
+.crewHeader.groom {
+    text-align:right;
+}
+.brideFlower {
+    position:relative;
+    top:-7vw; left:-3.5vw;
+    transform:rotate(12deg);
+    width:29vw;
+}
+.groomFlower {
+    position:relative;
+    top:-5vw; left:-5.3vw;
+    transform:rotate(-115deg);
+    width:22vw;
+}
+.crewHeaderText {
+    position:relative;
+    font-family: Angella;
+    font-size:5.4vw;
+    padding:0.4vw 3vw;
+    width:fit-content;
+    background:#F5F5F5;
+}
+.crewHeaderText.bride {
+    top:-23vw; left:3vw;
+}
+.crewHeaderText.groom {
+    top:-30vw; left:70.1vw;
+}
+
+.crewRow {
+    position:relative;
+    margin-top:-14vw;
+}
+.crewRow.groom {
+    position:relative;
+    margin:-19vw 0 20vw 0;
+}
+.crewSection {
+    position:relative;
+    width:47vw;
+    text-align:left;
+    display:inline-table;
+}
+.crewImage {
+    display:inline-block;
+    width:17vw;
+}
+.crewSectionText {
+    position:relative;
+    display:inline-block;
+    top:-11vw; left:1.5vw;
+}
+.crewSectionHeader {
+    font-family: Angella;
+    font-size:5.4vw;
+    width:fit-content;
+}
+.crewSectionSubheader {
+    width:fit-content;
+    font-size:2vw;
+    font-style: italic;
+    margin-top:-0.7vw;
+}
+
+.crewFlower {
+    position:absolute;
+    bottom:-23vw; left:0;
+    width:35vw;
+    transform:rotate(10deg);
+}

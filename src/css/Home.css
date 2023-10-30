@@ -1,18 +1,3 @@
-* {
-  margin:0;
-  padding:0;
-}
-
-@font-face {
-  font-family: "Angella";
-  src: local(AngellaWhite), url("../fonts/AngellaWhite.otf") format("truetype");
-}
-
-.App {
-  overflow:hidden;
-  text-align: center;
-}
-
 /* Top of Home Page */
 
 .introDiv {
@@ -110,6 +95,7 @@
 
 .homeGalleryText {
   line-height: 3.8vw;
+  text-decoration: none;
 }
 .homeGallerySection.wedding .homeGalleryText {
   font-size:4vw;
@@ -159,9 +145,28 @@
 
 /* RSVP Form of Home Page */
 
-
-
-
+.rsvpFormDiv {
+  position:relative;
+  background: #DFE9F2;
+  padding:4vw 0 7vw 0;
+}
+.rsvpHeaderContainer {
+  position:relative;
+}
+.rsvpHeaderCursive {
+  font-family: Angella;
+  font-size:9vw;
+  color: #595959;
+  margin-right:16vw;
+}
+.rsvpHeaderScript {
+  font-size:8vw;
+  margin-top:-4.7vw;
+}
+.rsvpHeaderDate {
+  font-size:2.7vw;
+  margin-top:-.5vw;
+}
 
 
 @media (max-aspect-ratio: 1/1) {
