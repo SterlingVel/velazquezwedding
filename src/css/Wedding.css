@@ -197,7 +197,8 @@
     top:-23vw; left:3vw;
 }
 .crewHeaderText.groom {
-    top:-30vw; left:70.1vw;
+    position:absolute;
+    top:11.3vw; right:4vw;
 }
 
 .crewRow {
@@ -206,7 +207,7 @@
 }
 .crewRow.groom {
     position:relative;
-    margin:-19vw 0 20vw 0;
+    margin:-11vw 0 20vw 0;
 }
 .crewSection {
     position:relative;
@@ -240,4 +241,163 @@
     bottom:-23vw; left:0;
     width:35vw;
     transform:rotate(10deg);
+}
+
+@media (min-aspect-ratio: 1/0.58) {
+
+/* Top of Wedding Page */
+
+.weddingDiv {
+    height: 100vh;
+}
+.weddingHeaderSection {
+    width: 160vh;
+}
+.weddingTitle {
+    font-size: 22vh;
+}
+.weddingSubHeader {
+    font-size: 7vh;
+    margin-bottom:-1.5vh;
+}
+.weddingImageFlower.left1 {
+    top:27vh;
+    width:27vh;
+}
+.weddingImageFlower.left2 {
+    top:-12vh; left:-22vh;
+    width:94vh;
+}
+.weddingImageFlower.right {
+    bottom:-23vh; right:0;
+    width:55vh;
+}
+
+/* Hazlehurst Information */
+
+.hazlehurstDiv {
+    margin-bottom:15vh;
+}
+.hazlehurstImageWrapper {
+    height:38vh;
+}
+.hazlehurstFade {
+    top:0; left:-1vh;
+    height:38vh; width:11vh;
+}
+.hazlehurstFade:nth-child(1) {
+    right:-1vh;
+}
+
+.hazlehurstHeader {
+    font-size:10vh;
+    margin-top:2.5vh;
+}
+.hazlehurstDate {
+    font-size:3.9vh;
+    margin-top:-1.7vh;
+}
+.hazlehurstAddressHeader {
+    font-size:4.5vh;
+    margin-top:3.6vh;
+}
+.hazlehurstAddress {
+    font-size:4vh;
+}
+.hazlehurstMap {
+    font-size:4.8vh;
+    padding:1vh 6.8vh;
+    margin-top:4.2vh;
+}
+
+.sectionDivider {
+    bottom:-15vh;
+    height:11.8vh; width:0.1vh;
+}
+
+/* Schedule Section */
+
+.scheduleDiv {
+    padding:15vh 0 9vh 0;
+}
+.scheduleSection {
+    margin-bottom:6vh;
+}
+.scheduleHeader {
+    font-size:5.8vh;
+}
+.scheduleTime {
+    font-size:5.2vh;
+    margin-top:-1.5vh;
+}
+.scheduleFlower {
+    bottom:0; left:26vh;
+    height:69vh;
+}
+.scheduleButterfly {
+    top:10vh; right:36vh;
+    height:34vh;
+}
+
+/* The Crew Section */
+
+.crewDivHeader {
+    padding:10vh 0 10vh 0;
+}
+.crewDivHeaderText {
+    font-size:12vh;
+    margin-bottom:-13.5vh;
+}
+.crewDivSubheaderText {
+    font-size:17vh;
+    margin-top:3.8vh;
+}
+
+.brideFlower {
+    top:-15vh; left:-7.2vh;
+    width:60vh;
+}
+.groomFlower {
+    top:-14vh; left:-15vh;
+    width:44vh;
+}
+.crewHeaderText {
+    font-size:10.8vh;
+    padding:1vh 6vh;
+}
+.crewHeaderText.bride {
+    top:-49vh; left:6vh;
+}
+.crewHeaderText.groom {
+    top:19vh; right:8vh;
+}
+
+.crewRow {
+    margin-top:-31vh;
+}
+.crewRow.groom {
+    margin:-26vh 0 43vh 0;
+}
+.crewSection {
+    width:102vh;
+}
+.crewImage {
+    width:36vh;
+}
+.crewSectionText {
+    top:-23.5vh; left:3.2vh;
+}
+.crewSectionHeader {
+    font-size:10.5vh;
+}
+.crewSectionSubheader {
+    font-size:4.5vh;
+    margin-top:-1vh;
+}
+
+.crewFlower {
+    bottom:-50vh;
+    width:75vh;
+}
+
 }
