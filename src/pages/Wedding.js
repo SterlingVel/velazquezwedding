@@ -26,6 +26,10 @@ class Wedding extends React.Component {
         this.state = {};
     }
 
+    componentDidMount() {
+        this.addResizeListener();
+    }
+
     render() {
         return (
             <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants}>
@@ -55,24 +59,26 @@ class Wedding extends React.Component {
 
                 <div className="scheduleDiv">
                     <div className="sectionDivider schedule"></div>
-                    <div className="scheduleSection">
-                        <p className="scheduleHeader">CEREMONY</p>
-                        <p className="scheduleTime">5:30 pm</p>
+                    <div className="scheduleWrapper">
+                        <div className="scheduleSection">
+                            <p className="scheduleHeader">CEREMONY</p>
+                            <p className="scheduleTime">5:30 pm</p>
+                        </div>
+                        <div className="scheduleSection">
+                            <p className="scheduleHeader">COCKTAILS</p>
+                            <p className="scheduleTime">6:00 pm</p>
+                        </div>
+                        <div className="scheduleSection">
+                            <p className="scheduleHeader">DINNER</p>
+                            <p className="scheduleTime">7:00 pm</p>
+                        </div>
+                        <div className="scheduleSection">
+                            <p className="scheduleHeader">PARTY TIME</p>
+                            <p className="scheduleTime">8:00 pm and onward</p>
+                        </div>
+                        <img className="scheduleFlower" alt="flower" src="weddingImages/24.PNG"></img>
+                        <img className="scheduleButterfly" alt="butterfly" src="weddingImages/32.PNG"></img>
                     </div>
-                    <div className="scheduleSection">
-                        <p className="scheduleHeader">COCKTAILS</p>
-                        <p className="scheduleTime">6:00 pm</p>
-                    </div>
-                    <div className="scheduleSection">
-                        <p className="scheduleHeader">DINNER</p>
-                        <p className="scheduleTime">7:00 pm</p>
-                    </div>
-                    <div className="scheduleSection">
-                        <p className="scheduleHeader">PARTY TIME</p>
-                        <p className="scheduleTime">8:00 pm and onward</p>
-                    </div>
-                    <img className="scheduleFlower" alt="flower" src="weddingImages/24.PNG"></img>
-                    <img className="scheduleButterfly" alt="butterfly" src="weddingImages/32.PNG"></img>
                 </div>
 
                 <div className="crewDiv">
@@ -125,6 +131,25 @@ class Wedding extends React.Component {
             </motion.div>
         );
     }
+
+    addResizeListener() { 
+        const classes = document.getElementById('navoptions').classList;
+        let timer = 0;
+        window.addEventListener('resize', function () {
+            if (timer) {
+                clearTimeout(timer);
+                timer = null;
+            }
+            else
+                classes.add('stop-transitions');
+      
+            timer = setTimeout(() => {
+                classes.remove('stop-transitions');
+                timer = null;
+            }, 100);
+        });
+    }
+    
 }
 
 export default Wedding;

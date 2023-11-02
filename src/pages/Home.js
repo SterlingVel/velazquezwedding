@@ -26,6 +26,10 @@ class Home extends React.Component {
         this.state = {};
     }
 
+    componentDidMount() {
+        this.addResizeListener();
+    }
+
     render() {
         return (
             <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants}>
@@ -80,6 +84,24 @@ class Home extends React.Component {
                 </div>
             </motion.div>
         );
+    }
+
+    addResizeListener() { 
+        const classes = document.getElementById('navoptions').classList;
+        let timer = 0;
+        window.addEventListener('resize', function () {
+            if (timer) {
+                clearTimeout(timer);
+                timer = null;
+            }
+            else
+                classes.add('stop-transitions');
+      
+            timer = setTimeout(() => {
+                classes.remove('stop-transitions');
+                timer = null;
+            }, 100);
+        });
     }
 }
 

@@ -37,17 +37,81 @@ a {
   text-decoration: none;
 }
 
-.navigationButton {
+.navMenu {
   position:fixed;
+  display:flex;
   top:1.5vw; right:1.5vw;
   font-size:2vw;
-  border:thin solid #5959594e;
-  color: #595959;
-  padding:0.5vw 2vw;
-  background:#FEFEFB;
   z-index:10;
+  width:10.1vw; height:3.4vw;
+  border:thin solid #5959594e;
+  background:#FEFEFB;
   box-shadow: 0 0 20px white;
+  overflow:hidden;
+  transition:1s ease-in-out;
 }
-.projectButtonText {
+.navMenu.show {
+  width:95vw;
+}
+.menuButton {
+  position:absolute;
+  display:inline-table;
+  width:10vw;
+  right:0; top:0.5vw;
+  z-index:12;
+  cursor:pointer;
+}
+.navOptions {
+  position:absolute;
+  left:1vw; top:0;
+  display:inline-flex;
+  transform:translateX(-70vw);
+  transition:1s ease-in-out;
+}
+.navMenu.show .navOptions {
+  transform:translateX(0);
+}
+.navOption {
+  padding: 0.5vw 2vw;
+  cursor:pointer;
+}
+.navOptionText {
   color:#595959aa;
+}
+.navOptionText.story {
+  width:11.2vw;
+}
+.menuButtonText {
+  color:#595959aa;
+}
+
+.navOptions.stop-transitions {
+  transition:0s;
+}
+
+@media (min-aspect-ratio: 1/0.58) {
+
+  .navMenu {
+    top:2.2vh; right:2.2vh;
+    font-size:4vh;
+    width:20vh; height:6.8vh;
+  }
+  .navMenu.show {
+    width:185vh;
+  }
+  .menuButton {
+    width:20vh;
+    top:1vh;
+  }
+  .navOptions {
+    left:2.2vh;
+    transform:translateX(-145vh);
+  }
+  .navOption {
+    padding: 1vh 4.35vh;
+  }
+  .navOptionText.story {
+    width:22.5vh;
+  }
+
 }
