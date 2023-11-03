@@ -69,10 +69,11 @@ class Home extends React.Component {
                                 <p className="homeGalleryText">GIFTS</p>
                             </div>
                         </div>
-                        <img className="homeBody flowerImage left" alt="flower" src="introImages/homeflowers.png"></img>
-                        <img className="homeBody flowerImage right1" alt="flower" src="introImages/homeflowers2.png"></img>
-                        <img className="homeBody flowerImage right2" alt="flower" src="introImages/homeflowers.png"></img>
                     </div>
+                    <img className="homeBody flowerImage left" alt="flower" src="introImages/homeflowers.png"></img>
+                    <img className="homeBody flowerImage right1" alt="flower" src="introImages/homeflowers2.png"></img>
+                    <img className="homeBody flowerImage right2" alt="flower" src="introImages/homeflowers.png"></img>
+                    <div className="homeContainer fade"></div>
                 </div>
 
                 <div className="rsvpFormDiv">
@@ -87,7 +88,7 @@ class Home extends React.Component {
     }
 
     addResizeListener() { 
-        const classes = document.getElementById('navoptions').classList;
+        const classes = [document.getElementById('navmenu').classList, document.getElementById('navoptions').classList];
         let timer = 0;
         window.addEventListener('resize', function () {
             if (timer) {
@@ -95,10 +96,10 @@ class Home extends React.Component {
                 timer = null;
             }
             else
-                classes.add('stop-transitions');
+                classes.forEach(e => e.add('stop-transitions'));
       
             timer = setTimeout(() => {
-                classes.remove('stop-transitions');
+                classes.forEach(e => e.remove('stop-transitions'));
                 timer = null;
             }, 100);
         });

@@ -41,9 +41,9 @@ a {
   position:fixed;
   display:flex;
   top:1.5vw; right:1.5vw;
-  font-size:2vw;
+  font-size:1.6vw;
   z-index:10;
-  width:10.1vw; height:3.4vw;
+  width:9vw; height:2.9vw;
   border:thin solid #5959594e;
   background:#FEFEFB;
   box-shadow: 0 0 20px white;
@@ -51,12 +51,12 @@ a {
   transition:1s ease-in-out;
 }
 .navMenu.show {
-  width:95vw;
+  width:83vw;
 }
 .menuButton {
   position:absolute;
   display:inline-table;
-  width:10vw;
+  width:9vw;
   right:0; top:0.5vw;
   z-index:12;
   cursor:pointer;
@@ -72,35 +72,35 @@ a {
   transform:translateX(0);
 }
 .navOption {
-  padding: 0.5vw 2vw;
+  padding: 0.5vw 1.5vw;
   cursor:pointer;
 }
 .navOptionText {
   color:#595959aa;
 }
 .navOptionText.story {
-  width:11.2vw;
+  width:8.9vw;
 }
 .menuButtonText {
   color:#595959aa;
 }
 
-.navOptions.stop-transitions {
-  transition:0s;
+.navMenu.stop-transitions, .navOptions.stop-transitions {
+  transition:none;
 }
 
-@media (min-aspect-ratio: 1/0.58) {
+@media (min-aspect-ratio: 1/0.50) {
 
   .navMenu {
-    top:2.2vh; right:2.2vh;
-    font-size:4vh;
-    width:20vh; height:6.8vh;
+    top:3vh; right:3vh;
+    font-size:3.1vh;
+    width:17vh; height:5.8vh;
   }
   .navMenu.show {
-    width:185vh;
+    width:155vh;
   }
   .menuButton {
-    width:20vh;
+    width:17vh;
     top:1vh;
   }
   .navOptions {
@@ -108,10 +108,10 @@ a {
     transform:translateX(-145vh);
   }
   .navOption {
-    padding: 1vh 4.35vh;
+    padding: 1vh 3vh;
   }
   .navOptionText.story {
-    width:22.5vh;
+    width:17.1vh;
   }
 
 }

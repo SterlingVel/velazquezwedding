@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div className="App" id="app">
+
       <div className="navMenu" id="navmenu">
         <div className="navOptions" id="navoptions">
           <Link to="/" className="navOption">
@@ -18,7 +19,7 @@ function App() {
           <Link to="/wedding" className="navOption">
             <p className="navOptionText">WEDDING</p>
           </Link>
-          <Link to="/wedding" className="navOption story">
+          <Link to="/wedding" className="navOption">
             <p className="navOptionText story">OUR STORY</p>
           </Link>
           <Link to="/wedding" className="navOption">
@@ -32,6 +33,7 @@ function App() {
           <p className="menuButtonText">MENU</p>
         </div>
       </div>
+      
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route path="/" exact element={<Home />} />
