@@ -3,6 +3,7 @@ import '../css/Wedding.css';
 import '../css/index.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
+import Fade from '../tools/fade.js'
 
 const pageVariants = {
     in: {
@@ -14,7 +15,7 @@ const pageVariants = {
     out: {
         opacity: 0,
         transition: {
-            duration: 1
+            duration: 0.5
         }
     }
 }
@@ -27,6 +28,7 @@ class Wedding extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0);
         this.addResizeListener();
     }
 

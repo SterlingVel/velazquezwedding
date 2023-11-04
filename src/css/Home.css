@@ -14,11 +14,13 @@
   width:100vw;
   object-fit: cover;
   z-index:-1;
+  animation:topFlowersIntro ease-out 2s;
 }
 .introImageButterfly {
   position:absolute;
   width:6vw;
   top:-3vw; right:0;
+  animation:butterflyIntro ease-out 2.8s;
 }
 .introHeaderSection {
   position:absolute;
@@ -31,6 +33,7 @@
   font-size:10vw;
   color: #b5cfe6;
   margin:0;
+  animation:fadeIn 1s ease-out;
 }
 .introSubHeader {
   font-family: 'Cormorant Garamond', serif;
@@ -38,6 +41,7 @@
   color: #595959;
   font-size:2.1vw;
   margin:30px 0 10px 0;
+  animation:subheaderIntro ease-out 1.3s;
 }
 .introDate {
   font-family: 'Cormorant Garamond', serif;
@@ -45,6 +49,7 @@
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0em;
+  animation:dateIntro ease-out 1.5s;
 }
 .introFade {
   position:absolute;
@@ -59,6 +64,7 @@
   position:relative;
   background:#FEFEFB;
   padding:4.9vw 0 13vw 0;
+  margin:-0.1vw;
 }
 .homeGalleryDiv {
   position:relative;
@@ -209,6 +215,7 @@
 /* Gallery Menu of Home Page */
 
 .homeGalleryContainer {
+  margin:-0.2vh;
   padding: 8vh 0 24vh 0;
 }
 .homeGalleryDiv {
@@ -292,3 +299,7 @@
   }
 
 }
+
+
+
+

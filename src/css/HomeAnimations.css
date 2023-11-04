@@ -1,0 +1,118 @@
+@keyframes fadeIn {
+    from {
+      opacity:0;
+    } to {
+      opacity:1;
+    }
+  }
+  
+  @keyframes butterflyIntro {
+    0% {
+      opacity:0; 
+    } 20% {
+      opacity:0;
+      transform: rotate(0deg) translate(6vw, -3vw); 
+    }
+    100% {
+      transform: rotate(180deg) translate(0, -0) rotate(-180deg); 
+    }
+  }
+  
+  @keyframes topFlowersIntro {
+    0% {
+      opacity:0;
+      transform: translate(-50%, 2vw);
+    } 10% {
+      opacity:0;
+      transform: translate(-50%, 2vw);
+    } 100% {
+      opacity:1;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  @keyframes subheaderIntro {
+    0% {
+      transform: translate(0, 2vw);
+      opacity:0;
+    } 20% {
+      transform: translate(0, 2vw);
+      opacity:0;
+    } to {
+      transform: translate(0, 0);
+      opacity:1;
+    }
+  }
+  
+  @keyframes dateIntro {
+    0% {
+      transform: translate(0, 2vw);
+      opacity:0;
+    } 40% {
+      transform: translate(0, 2vw);
+      opacity:0;
+    } to {
+      transform: translate(0, 0);
+      opacity:1;
+    }
+  }
+  
+  .fade-in-section {
+    opacity: 0;
+    visibility: hidden;
+    transition: 2.5s;
+    will-change: opacity, visibility, transform;
+  }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  #weddinglink {
+    transform:translateY(-4vw);
+  }
+  #weddinglink.is-visible {
+    transform:translateY(0vw);
+  }
+  
+  #travellink {
+    transform:translateX(-4vw);
+  }
+  #travellink.is-visible {
+    transform:translateY(0vw);
+  }
+  
+  #storylink {
+    transform:translateX(4vw);
+  }
+  #storylink.is-visible {
+    transform:translateY(0vw);
+  }
+  
+  #giftslink {
+    transform:translateY(4vw);
+  }
+  #giftslink.is-visible {
+    transform:translateY(0vw);
+  }
+  
+  #homeflowerleft {
+    transform:translateY(4vw);
+  }
+  #homeflowerleft.is-visible {
+    transform:translateY(0vw);
+  }
+  
+  #homeflowerright1 {
+    transform:translateY(4vw);
+  }
+  #homeflowerright1.is-visible {
+    transform:translateY(0vw);
+  }
+  
+  #homeflowerright2 {
+    transform:translateY(4vw);
+  }
+  #homeflowerright2.is-visible {
+    transform:translateY(0vw);
+  }
