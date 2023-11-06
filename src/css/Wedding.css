@@ -190,11 +190,15 @@
 .crewHeader.groom {
     text-align:right;
 }
-.brideFlower {
+#crewheaderbrideflower {
     position:relative;
     top:-8vw; left:-3.5vw;
     transform:rotate(12deg);
     width:27vw;
+    transition:transform 2s, opacity 2s;
+}
+.brideFlower {
+    width:100%;
 }
 .groomFlower {
     position:relative;
@@ -213,9 +217,10 @@
 .crewHeaderText.bride {
     top:-23vw; left:3vw;
 }
-.crewHeaderText.groom {
+#crewheadergroomtext {
     position:absolute;
     top:12vw; right:4vw;
+    transition:transform 2s, opacity 2s;
 }
 
 .crewRow {
@@ -253,11 +258,14 @@
     margin-top:-0.4vw;
 }
 
-.crewFlower {
+#crewflowerend {
     position:absolute;
     bottom:-23vw; left:0;
     width:35vw;
     transform:rotate(10deg);
+}
+.crewFlower {
+    width:100%;
 }
 
 @media (min-aspect-ratio: 1/0.58) {
@@ -377,7 +385,7 @@
     margin-top:3.8vh;
 }
 
-.brideFlower {
+#crewheaderbrideflower {
     top:-14vh; left:-6.2vh;
     width:47vh;
 }
@@ -392,7 +400,7 @@
 .crewHeaderText.bride {
     top:-40vh; left:5vh;
 }
-.crewHeaderText.groom {
+#crewheadergroomtext {
     top:19vh; right:8vh;
 }
 
@@ -419,7 +427,7 @@
     margin-top:-0.7vh;
 }
 
-.crewFlower {
+#crewflowerend {
     bottom:-43vh;
     width:63vh;
 }

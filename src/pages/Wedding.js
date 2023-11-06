@@ -111,57 +111,76 @@ class Wedding extends React.Component {
 
                 <div className="crewDiv">
                     <div className="crewDivHeader">
-                        <p className="crewDivHeaderText">The</p><br />
-                        <p className='crewDivSubheaderText'>CREW</p>
+                        <Fade id="crewheaderfade" threshold="0.9">
+                            <p className="crewDivHeaderText">The</p><br />
+                        </Fade>
+                        <Fade id="crewsubheaderfade" threshold="0.9">
+                            <p className='crewDivSubheaderText'>CREW</p>
+                        </Fade>
                     </div>
                     <div className="crewHeader bride">
-                        <img className="brideFlower" alt="flower" src="weddingImages/2.PNG"></img>
-                        <p className="crewHeaderText bride">For the Bride</p>
+                        <Fade id="crewheaderbrideflower" threshold="0">
+                            <img className="brideFlower" alt="flower" src="weddingImages/2.PNG"></img>
+                        </Fade>
+                        <Fade id="crewheaderbridetext" threshold="0">
+                            <p className="crewHeaderText bride">For the Bride</p>
+                        </Fade>
                     </div>
                     <div className="crewRow">
-                        <div className="crewSection">
-                            <img className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg"></img>
-                            <div className="crewSectionText">
-                                <p className="crewSectionHeader">Keeley Cauble</p>
-                                <p className="crewSectionSubheader">Maid of Honor</p>
+                        <Fade>
+                            <div className="crewSection">
+                                <img className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg"></img>
+                                <div className="crewSectionText">
+                                    <p className="crewSectionHeader">Keeley Cauble</p>
+                                    <p className="crewSectionSubheader">Maid of Honor</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="crewSection">
-                            <img className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg"></img>
-                            <div className="crewSectionText">
-                                <p className="crewSectionHeader">Amelia Adkisson</p>
-                                <p className="crewSectionSubheader">Bridesmaid</p>
+                            <div className="crewSection">
+                                <img className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg"></img>
+                                <div className="crewSectionText">
+                                    <p className="crewSectionHeader">Amelia Adkisson</p>
+                                    <p className="crewSectionSubheader">Bridesmaid</p>
+                                </div>
                             </div>
-                        </div>
+                        </Fade>
                     </div>
                     <div className="crewHeader groom">
-                        <img className="groomFlower" alt="flower" src="weddingImages/14.PNG"></img>
-                        <p className="crewHeaderText groom">For the Groom</p>
+                        <Fade id="crewheadergroomflower" threshold="0.2">
+                            <img className="groomFlower" alt="flower" src="weddingImages/14.PNG"></img>
+                        </Fade>
+                        <Fade id="crewheadergroomtext" threshold="0">
+                            <p className="crewHeaderText groom">For the Groom</p>
+                        </Fade>
                     </div>
                     <div className="crewRow groom">
-                        <div className="crewSection">
-                            <img className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg"></img>
-                            <div className="crewSectionText">
-                                <p className="crewSectionHeader">Gabriel Torres</p>
-                                <p className="crewSectionSubheader">Best Man</p>
+                        <Fade>
+                            <div className="crewSection">
+                                <img className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg"></img>
+                                <div className="crewSectionText">
+                                    <p className="crewSectionHeader">Gabriel Torres</p>
+                                    <p className="crewSectionSubheader">Best Man</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="crewSection">
-                            <img className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg"></img>
-                            <div className="crewSectionText">
-                                <p className="crewSectionHeader">Mike Veloso</p>
-                                <p className="crewSectionSubheader">Groomsman</p>
+                            <div className="crewSection">
+                                <img className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg"></img>
+                                <div className="crewSectionText">
+                                    <p className="crewSectionHeader">Mike Veloso</p>
+                                    <p className="crewSectionSubheader">Groomsman</p>
+                                </div>
                             </div>
-                        </div>
+                        </Fade>
                     </div>
-                    <img className="crewFlower" alt="flower" src="weddingImages/bouquet.png"></img>
+                    <Fade id="crewflowerend" threshold="0.5">
+                        <img className="crewFlower" alt="flower" src="weddingImages/bouquet.png"></img>
+                    </Fade>
                 </div>
             </motion.div>
         );
     }
 
     addResizeListener() {
-        const classes = [document.getElementById('navmenu').classList, document.getElementById('navoptions').classList];
+        const classes = [document.getElementById('navmenu').classList, document.getElementById('navoptions').classList,
+        document.getElementById('crewheadergroomtext').classList];
         let timer = 0;
         window.addEventListener('resize', function () {
             if (timer) {

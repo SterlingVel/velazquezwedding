@@ -94,13 +94,13 @@
     0% {
         transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg);
     } 16% {
-        transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg) rotateZ(10deg);
+        transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg) rotateZ(6deg);
     } 33% {
-        transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg) rotateZ(-10deg);
+        transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg) rotateZ(-6deg);
     } 50% {
-        transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg) rotateZ(10deg);
+        transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg) rotateZ(6deg);
     } 67% {
-        transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg) rotateZ(-10deg);
+        transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg) rotateZ(-6deg);
     } 83% {
         transform:rotate(-180deg) translate(355%, -3.5vw) rotate(180deg);
     } 100% {
@@ -130,7 +130,79 @@
         transform:rotate(0deg) translate(0, 0vw) rotate(0deg);
     }
   }
-/* 
-  0% {
-    transform:rotate(0deg) translate(400%, 0vw) rotate(0deg);
-} */
+
+  #crewheaderfade {
+    transform:translateX(-2vw)
+  }
+  #crewheaderfade.is-visible {
+    transform:translateX(0)
+  }
+  #crewsubheaderfade {
+    transform:translateX(2vw)
+  }
+  #crewsubheaderfade.is-visible {
+    transform:translateX(0)
+  }
+
+  #crewheaderbrideflower {
+    transform:translate(-5vw, -2vw) rotate(12deg);
+  }
+  #crewheaderbrideflower.is-visible {
+    transform:rotate(12deg);
+  }
+  #crewheaderbridetext {
+    animation:none;
+    transform:translateY(-10vw);
+  }
+  #crewheaderbridetext.is-visible {
+    animation:crewHeaderBride 1.5s ease-out;
+    transform:translateY(0)
+  }
+
+  @keyframes crewHeaderBride {
+    from {
+        transform:translateX(-5vw)
+    } to {
+        transform:translateX(0)
+    }
+  }
+
+  #crewheadergroomflower {
+    animation:none;
+    transform:translateY(0vw);
+  }
+  #crewheadergroomflower.is-visible {
+    animation:crewHeaderGroomFlower 1.5s ease-out;
+    transform:translateY(0)
+  }
+  #crewheadergroomtext {
+    transform:translateX(5vw);
+  }
+  #crewheadergroomtext.is-visible {
+    transform:translateX(0)
+  }
+
+  @keyframes crewHeaderGroomFlower {
+    from {
+        transform:translate(5vw, -2vw);
+    } to {
+        transform:translate(0);
+    }
+  }
+
+  #crewflowerend {
+    animation:none;
+    transform:translateY(-5vw);
+  }
+  #crewflowerend.is-visible {
+    animation:crewFlowerEnd 1.5s ease-out;
+    transform:translateY(0) rotate(10deg);
+  }
+
+  @keyframes crewFlowerEnd {
+    from {
+        transform:translate(-5vw, 2vw) rotate(10deg);
+    } to {
+        transform:translate(0) rotate(10deg);
+    }
+  }
