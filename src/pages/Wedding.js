@@ -50,7 +50,7 @@ class Wedding extends React.Component {
                     <Fade threshold="0.6">
                         <div className="hazlehurstImageWrapper">
                             <div className="hazlehurstFade"></div>
-                            <img className='hazlehurstImage' src="weddingImages/hazelhurst-house.jpg" alt="house"></img>
+                            <img className='hazlehurstImage' src="weddingImages/hazelhurst-house.jpg" alt="house" loading="lazy"></img>
                             <div className="hazlehurstFade"></div>
                         </div>
                     </Fade>
@@ -98,12 +98,12 @@ class Wedding extends React.Component {
                         </div>
                         <div className="scheduleFlowerWrapper">
                             <Fade threshold="0" id="scheduleflower">
-                                <img className="scheduleFlower" alt="flower" src="weddingImages/24.PNG"></img>
+                                <img className="scheduleFlower" alt="flower" src="weddingImages/24.PNG" loading="lazy"></img>
                             </Fade>
                         </div>
                         <div className="scheduleButterflyWrapper">
                             <Fade threshold="1" id="schedulebutterfly">
-                                <img className="scheduleButterfly" alt="butterfly" src="weddingImages/32.PNG"></img>
+                                <img className="scheduleButterfly" alt="butterfly" src="weddingImages/32.PNG" loading="lazy"></img>
                             </Fade>
                         </div>
                     </div>
@@ -119,8 +119,8 @@ class Wedding extends React.Component {
                         </Fade>
                     </div>
                     <div className="crewHeader bride">
-                        <Fade id="crewheaderbrideflower" threshold="0">
-                            <img className="brideFlower" alt="flower" src="weddingImages/2.PNG"></img>
+                        <Fade id="crewheaderbrideflower" threshold="0.6">
+                            <img className="brideFlower" alt="flower" src="weddingImages/2.PNG" loading="lazy"></img>
                         </Fade>
                         <Fade id="crewheaderbridetext" threshold="0">
                             <p className="crewHeaderText bride">For the Bride</p>
@@ -129,14 +129,14 @@ class Wedding extends React.Component {
                     <div className="crewRow">
                         <Fade>
                             <div className="crewSection">
-                                <img className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg"></img>
+                                <img className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg" loading="lazy"></img>
                                 <div className="crewSectionText">
                                     <p className="crewSectionHeader">Keeley Cauble</p>
                                     <p className="crewSectionSubheader">Maid of Honor</p>
                                 </div>
                             </div>
                             <div className="crewSection">
-                                <img className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg"></img>
+                                <img className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg" loading="lazy"></img>
                                 <div className="crewSectionText">
                                     <p className="crewSectionHeader">Amelia Adkisson</p>
                                     <p className="crewSectionSubheader">Bridesmaid</p>
@@ -146,7 +146,7 @@ class Wedding extends React.Component {
                     </div>
                     <div className="crewHeader groom">
                         <Fade id="crewheadergroomflower" threshold="0.2">
-                            <img className="groomFlower" alt="flower" src="weddingImages/14.PNG"></img>
+                            <img className="groomFlower" alt="flower" src="weddingImages/14.PNG" loading="lazy"></img>
                         </Fade>
                         <Fade id="crewheadergroomtext" threshold="0">
                             <p className="crewHeaderText groom">For the Groom</p>
@@ -155,14 +155,14 @@ class Wedding extends React.Component {
                     <div className="crewRow groom">
                         <Fade>
                             <div className="crewSection">
-                                <img className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg"></img>
+                                <img className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg" loading="lazy"></img>
                                 <div className="crewSectionText">
                                     <p className="crewSectionHeader">Gabriel Torres</p>
                                     <p className="crewSectionSubheader">Best Man</p>
                                 </div>
                             </div>
                             <div className="crewSection">
-                                <img className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg"></img>
+                                <img className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg" loading="lazy"></img>
                                 <div className="crewSectionText">
                                     <p className="crewSectionHeader">Mike Veloso</p>
                                     <p className="crewSectionSubheader">Groomsman</p>
@@ -171,7 +171,7 @@ class Wedding extends React.Component {
                         </Fade>
                     </div>
                     <Fade id="crewflowerend" threshold="0.5">
-                        <img className="crewFlower" alt="flower" src="weddingImages/bouquet.png"></img>
+                        <img className="crewFlower" alt="flower" src="weddingImages/bouquet.png" loading="lazy"></img>
                     </Fade>
                 </div>
             </motion.div>
@@ -179,8 +179,7 @@ class Wedding extends React.Component {
     }
 
     addResizeListener() {
-        const classes = [document.getElementById('navmenu').classList, document.getElementById('navoptions').classList,
-        document.getElementById('crewheadergroomtext').classList];
+        const classes = [document.getElementById('navmenu').classList, document.getElementById('navoptions').classList];
         let timer = 0;
         window.addEventListener('resize', function () {
             if (timer) {

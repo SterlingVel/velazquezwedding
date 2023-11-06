@@ -50,58 +50,58 @@ class Home extends React.Component {
                 <div className="homeGalleryContainer">
                     <div className="homeGalleryDiv">
                         <div className="homeGalleryColumn left">
-                            <Link to='/wedding'>
-                                <Fade id="weddinglink">
-                                    <div className="homeGallerySection wedding">
+                            <div className="homeGallerySection wedding">
+                                <Link to='/wedding'>
+                                    <Fade id="weddinglink">
                                         <p className="homeGalleryText">WEDDING</p>
-                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/twirl.jpg" />
-                                    </div>
-                                </Fade>
-                            </Link>
-                            <Link to='/wedding'>
-                                <Fade id="travellink">
-                                    <div className="homeGallerySection travel">
-                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/field.jpg" />
+                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/twirl.jpg" loading="lazy"/>
+                                    </Fade>
+                                </Link>
+                            </div>
+                            <div className="homeGallerySection travel">
+                                <Link to='/wedding'>
+                                    <Fade id="travellink">
+                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/field.jpg" loading="lazy"/>
                                         <p className="homeGalleryText">TRAVEL</p>
-                                    </div>
-                                </Fade>
-                            </Link>
+                                    </Fade>
+                                </Link>
+                            </div>
                             <Fade id="faqbuttonfade">
                                 <button className="faqButton">FAQs</button>
                             </Fade>
                         </div>
                         <div className="homeGalleryColumn right">
-                            <Link to='/wedding'>
-                                <Fade id="storylink">
-                                    <div className="homeGallerySection ourStory">
+                            <div className="homeGallerySection ourStory">
+                                <Link to='/wedding'>
+                                    <Fade id="storylink">
                                         <p className="homeGalleryText">OUR STORY</p>
-                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/ring.jpg" />
-                                    </div>
-                                </Fade>
-                            </Link>
-                            <Link to='/wedding' id="storylink">
-                                <Fade id="giftslink">
-                                    <div className="homeGallerySection gifts">
-                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/arms.jpg" />
+                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/ring.jpg" loading="lazy"/>
+                                    </Fade>
+                                </Link>
+                            </div>
+                            <div className="homeGallerySection gifts">
+                                <Link to='/wedding' id="storylink">
+                                    <Fade id="giftslink">
+                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/arms.jpg" loading="lazy"/>
                                         <p className="homeGalleryText">GIFTS</p>
-                                    </div>
-                                </Fade>
-                            </Link>
+                                    </Fade>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                     <div className="galleryFlower left">
                         <Fade id="homeflowerleft" threshold="0.2">
-                            <img className="flowerImage" alt="flower" src="introImages/homeflowers.png"></img>
+                            <img className="flowerImage" alt="flower" src="introImages/homeflowers.png" loading="lazy"></img>
                         </Fade>
                     </div>
                     <div className="galleryFlower right1">
                         <Fade id="homeflowerright1" threshold="0.1">
-                            <img className="flowerImage" alt="flower" src="introImages/homeflowers2.png"></img>
+                            <img className="flowerImage" alt="flower" src="introImages/homeflowers2.png" loading="lazy"></img>
                         </Fade>
                     </div>
                     <div className="galleryFlower right2">
                         <Fade id="homeflowerright2" threshold="0.1">
-                            <img className="flowerImage" alt="flower" src="introImages/homeflowers.png"></img>
+                            <img className="flowerImage" alt="flower" src="introImages/homeflowers.png" loading="lazy"></img>
                         </Fade>
                     </div>
                     <div className="homeContainer fade"></div>

@@ -90,7 +90,11 @@
 
 .homeGalleryPic {
   width:100%;
+  transition:filter 0.3s;
 }
+.homeGallerySection:hover .homeGalleryPic {
+  filter:contrast(0.5) brightness(1.4) grayscale(0.1)
+} 
 .homeGallerySection.wedding .homeGalleryPic {
   width:85%;
 }
