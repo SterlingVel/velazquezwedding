@@ -29,7 +29,7 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
         this.addResizeListener();
     }
 
@@ -66,7 +66,9 @@ class Home extends React.Component {
                                     </div>
                                 </Fade>
                             </Link>
-                            <button className="faqButton">FAQs</button>
+                            <Fade id="faqbuttonfade">
+                                <button className="faqButton">FAQs</button>
+                            </Fade>
                         </div>
                         <div className="homeGalleryColumn right">
                             <Link to='/wedding'>
@@ -87,20 +89,35 @@ class Home extends React.Component {
                             </Link>
                         </div>
                     </div>
-                    <img className="homeBody flowerImage left" alt="flower" src="introImages/homeflowers.png"></img>
-                    <img className="homeBody flowerImage right1" alt="flower" src="introImages/homeflowers2.png"></img>
-                    <img className="homeBody flowerImage right2" alt="flower" src="introImages/homeflowers.png"></img>
-                    {/* <Fade id="homeflowerleft"><img className="homeBody flowerImage left" alt="flower" src="introImages/homeflowers.png"></img></Fade>
-                    <Fade id="homeflowerright1"><img className="homeBody flowerImage right1" alt="flower" src="introImages/homeflowers2.png"></img></Fade>
-                    <Fade id="homeflowerright2"><img className="homeBody flowerImage right2" alt="flower" src="introImages/homeflowers.png"></img></Fade> */}
+                    <div className="galleryFlower left">
+                        <Fade id="homeflowerleft" threshold="0.2">
+                            <img className="flowerImage" alt="flower" src="introImages/homeflowers.png"></img>
+                        </Fade>
+                    </div>
+                    <div className="galleryFlower right1">
+                        <Fade id="homeflowerright1" threshold="0.1">
+                            <img className="flowerImage" alt="flower" src="introImages/homeflowers2.png"></img>
+                        </Fade>
+                    </div>
+                    <div className="galleryFlower right2">
+                        <Fade id="homeflowerright2" threshold="0.1">
+                            <img className="flowerImage" alt="flower" src="introImages/homeflowers.png"></img>
+                        </Fade>
+                    </div>
                     <div className="homeContainer fade"></div>
                 </div>
 
                 <div className="rsvpFormDiv">
                     <div className="rsvpHeaderContainer">
-                        <p className="rsvpHeaderCursive">Please</p>
-                        <p className="rsvpHeaderScript">RSVP</p>
-                        <p className="rsvpHeaderDate">by 03.06.2024</p>
+                        <Fade id="rsvpHeaderFade">
+                            <p className="rsvpHeaderCursive">Please</p>
+                        </Fade>
+                        <Fade id="rsvpSubheaderFade">
+                            <p className="rsvpHeaderScript">RSVP</p>
+                        </Fade>
+                        <Fade>
+                            <p className="rsvpHeaderDate">by 03.06.2024</p>
+                        </Fade>
                     </div>
                 </div>
             </motion.div>

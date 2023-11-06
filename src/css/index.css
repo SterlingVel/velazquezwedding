@@ -81,6 +81,13 @@ a {
 .navOptionText.story {
   width:8.9vw;
 }
+.navOption.selected {
+  cursor:pointer;
+  pointer-events:none;
+}
+.navOption.selected .navOptionText {
+  color:#9eb5c8;
+}
 .menuButtonText {
   color:#595959aa;
 }

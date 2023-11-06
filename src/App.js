@@ -13,19 +13,19 @@ function App() {
 
       <div className="navMenu" id="navmenu">
         <div className="navOptions" id="navoptions">
-          <Link to="/" className="navOption">
+          <Link to="/" className={"navOption" + (location.pathname === "/" ? " selected" : "")}>
             <p className="navOptionText">HOME</p>
           </Link>
-          <Link to="/wedding" className="navOption">
+          <Link to="/wedding" className={"navOption" + (location.pathname === "/wedding" ? " selected" : "")}>
             <p className="navOptionText">WEDDING</p>
           </Link>
-          <Link to="/wedding" className="navOption">
+          <Link to="/wedding" className={"navOption" + (location.pathname === "/ourstory" ? " selected" : "")}>
             <p className="navOptionText story">OUR STORY</p>
           </Link>
-          <Link to="/wedding" className="navOption">
+          <Link to="/wedding" className={"navOption" + (location.pathname === "/travel" ? " selected" : "")}>
             <p className="navOptionText">TRAVEL</p>
           </Link>
-          <Link to="/wedding" className="navOption">
+          <Link to="/wedding" className={"navOption" + (location.pathname === "/gifts" ? " selected" : "")}>
             <p className="navOptionText">GIFTS</p>
           </Link>
         </div>

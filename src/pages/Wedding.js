@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Wedding.css';
+import '../css/WeddingAnimations.css';
 import '../css/index.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
@@ -28,7 +29,7 @@ class Wedding extends React.Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
         this.addResizeListener();
     }
 
@@ -40,46 +41,71 @@ class Wedding extends React.Component {
                         <p className="weddingSubHeader">WELCOME TO OUR</p>
                         <p className="weddingTitle">Wedding Celebration</p>
                     </div>
-                    <img className="weddingImageFlower left1" alt="flowers" src="weddingImages/1.PNG"></img>
-                    <img className="weddingImageFlower left2" alt="flowers" src="weddingImages/b7.png"></img>
+                    <img className="weddingImageFlower left1" alt="flowers" src="weddingImages/b7.png"></img>
+                    <img className="weddingImageFlower left2" alt="flowers" src="weddingImages/1.PNG"></img>
                     <img className="weddingImageFlower right" alt="flowers" src="weddingImages/bouquet_top.png"></img>
                 </div>
 
                 <div className="hazlehurstDiv">
-                    <div className="hazlehurstImageWrapper">
-                        <div className="hazlehurstFade"></div>
-                        <img className='hazlehurstImage' src="weddingImages/hazelhurst-house.jpg" alt="house"></img>
-                        <div className="hazlehurstFade"></div>
-                    </div>
-                    <p className="hazlehurstHeader">Ceremony and Reception</p>
-                    <p className="hazlehurstDate">5:30 - 10:00 in the evening</p>
-                    <p className="hazlehurstAddressHeader">THE HAZLEHURST HOUSE</p>
-                    <p className='hazlehurstAddress'>77 Sloan Street<br />McDonough, GA 30253</p>
-                    <button className="hazlehurstMap">MAP</button>
-                    <div className="sectionDivider"></div>
+                    <Fade threshold="0.6">
+                        <div className="hazlehurstImageWrapper">
+                            <div className="hazlehurstFade"></div>
+                            <img className='hazlehurstImage' src="weddingImages/hazelhurst-house.jpg" alt="house"></img>
+                            <div className="hazlehurstFade"></div>
+                        </div>
+                    </Fade>
+                    <Fade threshold="1">
+                        <p className="hazlehurstHeader">Ceremony and Reception</p>
+                        <p className="hazlehurstDate">5:30 - 10:00 in the evening</p>
+                    </Fade>
+                    <Fade threshold="1">
+                        <p className="hazlehurstAddressHeader">THE HAZLEHURST HOUSE</p>
+                        <p className='hazlehurstAddress'>77 Sloan Street<br />McDonough, GA 30253</p>
+                    </Fade>
+                    <Fade threshold="1">
+                        <button className="hazlehurstMap">MAP</button>
+                    </Fade>
                 </div>
 
                 <div className="scheduleDiv">
-                    <div className="sectionDivider schedule"></div>
+                    <Fade id="sectionDividerFade" threshold="0">
+                        <div className="sectionDivider"></div>
+                    </Fade>
                     <div className="scheduleWrapper">
                         <div className="scheduleSection">
-                            <p className="scheduleHeader">CEREMONY</p>
-                            <p className="scheduleTime">5:30 pm</p>
+                            <Fade threshold="1" id="schedule1">
+                                <p className="scheduleHeader">CEREMONY</p>
+                                <p className="scheduleTime">5:30 pm</p>
+                            </Fade>
                         </div>
                         <div className="scheduleSection">
-                            <p className="scheduleHeader">COCKTAILS</p>
-                            <p className="scheduleTime">6:00 pm</p>
+                            <Fade threshold="1" id="schedule2">
+                                <p className="scheduleHeader">COCKTAILS</p>
+                                <p className="scheduleTime">6:00 pm</p>
+                            </Fade>
                         </div>
                         <div className="scheduleSection">
-                            <p className="scheduleHeader">DINNER</p>
-                            <p className="scheduleTime">7:00 pm</p>
+                            <Fade threshold="1" id="schedule3">
+                                <p className="scheduleHeader">DINNER</p>
+                                <p className="scheduleTime">7:00 pm</p>
+                            </Fade>
                         </div>
                         <div className="scheduleSection">
-                            <p className="scheduleHeader">PARTY TIME</p>
-                            <p className="scheduleTime">8:00 pm and onward</p>
+                            <Fade threshold="1" id="schedule4">
+                                <p className="scheduleHeader">PARTY TIME</p>
+                                <p className="scheduleTime">8:00 pm and onward</p>
+                            </Fade>
                         </div>
-                        <img className="scheduleFlower" alt="flower" src="weddingImages/24.PNG"></img>
-                        <img className="scheduleButterfly" alt="butterfly" src="weddingImages/32.PNG"></img>
+                        <div className="scheduleFlowerWrapper">
+                            <Fade threshold="0" id="scheduleflower">
+                                <img className="scheduleFlower" alt="flower" src="weddingImages/24.PNG"></img>
+                            </Fade>
+                        </div>
+                        <div className="scheduleButterflyWrapper">
+                            <Fade threshold="1" id="schedulebutterfly">
+                                <img className="scheduleButterfly" alt="butterfly" src="weddingImages/32.PNG"></img>
+                            </Fade>
+                        </div>
                     </div>
                 </div>
 
@@ -134,8 +160,8 @@ class Wedding extends React.Component {
         );
     }
 
-    addResizeListener() { 
-        const classes = document.getElementById('navoptions').classList;
+    addResizeListener() {
+        const classes = [document.getElementById('navmenu').classList, document.getElementById('navoptions').classList];
         let timer = 0;
         window.addEventListener('resize', function () {
             if (timer) {
@@ -143,15 +169,15 @@ class Wedding extends React.Component {
                 timer = null;
             }
             else
-                classes.add('stop-transitions');
-      
+                classes.forEach(e => e.add('stop-transitions'));
+
             timer = setTimeout(() => {
-                classes.remove('stop-transitions');
+                classes.forEach(e => e.remove('stop-transitions'));
                 timer = null;
             }, 100);
         });
     }
-    
+
 }
 
 export default Wedding;

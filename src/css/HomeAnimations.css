@@ -79,14 +79,14 @@
     transform:translateX(-4vw);
   }
   #travellink.is-visible {
-    transform:translateY(0vw);
+    transform:translateX(0vw);
   }
   
   #storylink {
     transform:translateX(4vw);
   }
   #storylink.is-visible {
-    transform:translateY(0vw);
+    transform:translateX(0vw);
   }
   
   #giftslink {
@@ -97,22 +97,42 @@
   }
   
   #homeflowerleft {
-    transform:translateY(4vw);
+    transform:translateX(12vw);
   }
   #homeflowerleft.is-visible {
-    transform:translateY(0vw);
+    transform:translateX(0vw);
   }
   
   #homeflowerright1 {
-    transform:translateY(4vw);
+    transform:translateX(-8vw);
   }
   #homeflowerright1.is-visible {
-    transform:translateY(0vw);
+    transform:translateX(0vw);
   }
   
   #homeflowerright2 {
-    transform:translateY(4vw);
+    transform:translateX(12vw);
   }
   #homeflowerright2.is-visible {
-    transform:translateY(0vw);
+    transform:translateX(0vw);
+  }
+
+  #faqbuttonfade {
+    transform:translateX(-8vw);
+  }
+  #faqbuttonfade.is-visible {
+    transform:translateX(0vw);
+  }
+
+  #rsvpHeaderFade {
+    transform:translateX(-3vw);
+  }
+  #rsvpHeaderFade.is-visible {
+    transform:translateX(0vw);
+  }
+  #rsvpSubheaderFade {
+    transform:translateX(3vw);
+  }
+  #rsvpSubheaderFade.is-visible {
+    transform:translateX(0vw);
   }

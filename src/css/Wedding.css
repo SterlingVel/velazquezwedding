@@ -21,6 +21,7 @@
     font-size:10vw;
     color: #595959;
     margin: 0;
+    animation:fadeIn 1.5s ease-out;
 }
 
 .weddingSubHeader {
@@ -29,24 +30,28 @@
     color: #595959;
     font-size:2.7vw;
     margin-bottom:-0.5vw;
+    animation:fadeIn 1s ease-out;
 }
 
 .weddingImageFlower {
     position: absolute;
 }
 .weddingImageFlower.left1 {
-    top:15vw; left:0vw;
-    width:14vw;
-}
-.weddingImageFlower.left2 {
     top:-7vw; left:-13vw;
     width:54vw;
     transform:rotate(-45deg);
+    animation:weddingFlowersLeft1 2s ease-out;
+}
+.weddingImageFlower.left2 {
+    top:15vw; left:0vw;
+    width:14vw;
+    animation:weddingFlowersLeft2 2.4s ease-out;
 }
 .weddingImageFlower.right {
     left:auto;
     bottom:-10vw; right:0;
     width:30vw;
+    animation:weddingFlowersRight 2.8s ease-out;
 }
 
 /* Hazlehurst Information */
@@ -107,13 +112,12 @@
 
 .sectionDivider {
     position:absolute;
-    bottom:-7vw; left:50%;
-    transform:translateX(-50%);
-    height:5vw; width:0.05vw;
+    top:-5vw; left:50%;
+    height:10vw; width:0.05vw;
     background:#595959;
-}
-.sectionDivider.schedule {
-    bottom:auto; top:0;
+    transform-origin: top;
+    transform:translateX(-50%);
+    transition:1.5s ease-in-out;
 }
 
 /* Schedule Section */
@@ -142,14 +146,20 @@
     font-size:2vw;
     margin-top:-0.5vw;
 }
-.scheduleFlower {
+.scheduleFlowerWrapper {
     position:absolute;
     bottom:-7vw; left:0;
+    z-index:1;
+}
+.scheduleButterflyWrapper {
+    position:absolute;
+    top:-1vw; right:1vw;
+    z-index:0;
+}
+.scheduleFlower {
     height:29vw;
 }
 .scheduleButterfly {
-    position:absolute;
-    top:-1vw; right:1vw;
     height:13vw;
 }
 
@@ -157,6 +167,7 @@
 
 .crewDiv {
     position:relative;
+    background: #FEFEFB;
 }
 .crewDivHeader {
     background: #DFE9F2;
@@ -267,12 +278,12 @@
     margin-bottom:-0.9vh;
 }
 .weddingImageFlower.left1 {
-    top:26vh;
-    width:24vh;
-}
-.weddingImageFlower.left2 {
     top:-12vh; left:-22vh;
     width:93vh;
+}
+.weddingImageFlower.left2 {
+    top:26vh;
+    width:24vh;
 }
 .weddingImageFlower.right {
     bottom:-17vh; right:0;
@@ -317,8 +328,8 @@
 }
 
 .sectionDivider {
-    bottom:-12vh;
-    height:9vh; width:0.1vh;
+    top:-9vh;
+    height:18vh; width:0.1vh;
 }
 
 /* Schedule Section */
@@ -339,12 +350,16 @@
     font-size:3.3vh;
     margin-top:-1vh;
 }
-.scheduleFlower {
+.scheduleFlowerWrapper {
     bottom:-15vh;
+}
+.scheduleButterflyWrapper {
+    top:-2vh; right:4vh;
+}
+.scheduleFlower {
     height:53vh;
 }
 .scheduleButterfly {
-    top:-2vh; right:4vh;
     height:22vh;
 }
 

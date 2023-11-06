@@ -6,7 +6,7 @@ function Fade(props) {
     var options = {
         root: document.querySelector("#scrollArea"),
         rootMargin: "0px",
-        threshold: 0.4,
+        threshold: props.threshold ? props.threshold : 0.4,
     }
     React.useEffect(() => {
         const observer = new IntersectionObserver(entries => {
