@@ -65,6 +65,7 @@
   background:#FEFEFB;
   padding:4.9vw 0 13vw 0;
   margin:-0.1vw;
+  z-index:0;
 }
 .homeGalleryDiv {
   position:relative;
@@ -141,6 +142,7 @@
 
 .galleryFlower {
   position:absolute;
+  z-index:-1;
 }
 .galleryFlower.left {
   top:9vw; left:-18.3vw;
