@@ -163,6 +163,7 @@
   top:9vw; left:-18.3vw;
   width:39vw;
   transform:rotateY(180deg) rotateZ(-30deg);
+  z-index:-1;
 }
 .galleryFlower.right1 {
   width:13vw;

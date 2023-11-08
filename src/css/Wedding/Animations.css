@@ -192,7 +192,7 @@
 
   #crewflowerend {
     animation:none;
-    transform:translateY(-5vw);
+    transform:translateY(-5vw) rotate(10deg);
   }
   #crewflowerend.is-visible {
     animation:crewFlowerEnd 1.5s ease-out;

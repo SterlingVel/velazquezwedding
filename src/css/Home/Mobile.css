@@ -34,6 +34,7 @@
     padding:12vw 0 28vw 0;
     margin:-0.2vw;
     z-index:0;
+    overflow:hidden;
   }
   .homeGalleryDiv {
     position:relative;
@@ -136,6 +137,7 @@
     width:62vw;
     transform:rotateY(0deg) rotateZ(-30deg);
     opacity:0.5;
+    z-index:-1;
   }
   .galleryFlower.right1 {
     width:30vw;
@@ -253,6 +255,12 @@
     transform:translateY(0);
   }
   
+  #homeflowerleft {
+    transform:translateX(12vw);
+  }
+  #homeflowerleft.is-visible {
+    transform:translateX(0vw);
+  }
   #homeflowerright1 {
     transform:translateX(-12vw);
   }
