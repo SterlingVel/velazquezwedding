@@ -1,0 +1,235 @@
+@media (max-aspect-ratio: 1/1) {
+
+    /* Top of Wedding Page */
+
+    .weddingHeaderSection {
+        width: 90vw;
+    }
+    .weddingTitle {
+        font-size:15.5vw;
+        line-height:19vw;
+    }
+    .weddingSubHeader {
+        font-size:5.5vw;
+        margin-bottom:0.5vw;
+    }
+    .weddingImageFlower.left1 {
+        top:-14vw; left:-32vw;
+        width:115vw;
+        transform:rotate(-45deg);
+    }
+    .weddingImageFlower.left2 {
+        top:30vw; left:0vw;
+        width:27vw;
+    }
+    .weddingImageFlower.right {
+        bottom:-28vw; right:0;
+        width:70vw;
+    }
+
+    /* Hazlehurst Information */
+
+    .hazlehurstDiv {
+        margin:35vw 0 12vw 0;
+    }
+    .hazlehurstImageWrapper {
+        height:37vw;
+    }
+    .hazlehurstFade {
+        height:37vw; width:8vw;
+    }
+
+    .hazlehurstHeader {
+        font-size:9.5vw;
+        margin-top:1.2vw;
+    }
+    .hazlehurstDate {
+        font-size:4vw;
+        margin-top:-2.5vw;
+    }
+    .hazlehurstAddressHeader {
+        font-size:3.7vw;
+        margin-top:4vw;
+    }
+    .hazlehurstAddress {
+        font-size:3.6vw;
+        margin-top:0.2vw;
+    }
+    .hazlehurstMap {
+        font-size:4.5vw;
+        border: thin solid #595959;
+        padding:0.6vw 7vw;
+        margin-top:5vw;
+    }
+
+    .sectionDivider {
+        top:-6vw; left:50%;
+        height:12vw; width:0.05vw;
+        transform:translateX(-50%);
+    }
+
+    /* Schedule Section */
+
+    .scheduleDiv {
+        padding:12vw 0 6vw 0;
+    }
+    .scheduleWrapper {
+        width:110vw;
+        left:50%; transform: translateX(-50%);
+    }
+    .scheduleSection {
+        margin-bottom:7vw;
+    }
+    .scheduleHeader {
+        font-size:5.4vw;
+    }
+    .scheduleTime {
+        font-size:4.7vw;
+        margin-top:-0.5vw;
+    }
+    .scheduleFlowerWrapper {
+        bottom:-15vw; left:0;
+    }
+    .scheduleButterflyWrapper {
+        top:-1vw; right:6vw;
+    }
+    .scheduleFlower {
+        height:70vw;
+    }
+    .scheduleButterfly {
+        height:25vw;
+    }
+
+    /* The Crew Section */
+
+    .crewDivHeader {
+        padding:7vw 0;
+    }
+    .crewDivHeaderText {
+        font-size:10vw;
+        margin:0 0 -9vw 1.8vw;
+    }
+    .crewDivSubheaderText {
+        font-size:11vw;
+        margin-top:0vw;
+    }
+
+    #crewheaderbrideflower {
+        top:-13vw; left:-8vw;
+        transform:rotate(12deg);
+        width:42vw;
+    }
+    .groomFlower {
+        top:-9vw; left:-5.3vw;
+        transform:rotate(-115deg);
+        width:40vw;
+    }
+    .crewHeaderText {
+        font-size:10vw;
+        padding:0.4vw 3vw;
+    }
+    .crewHeaderText.bride {
+        top:-37vw; left:5vw;
+    }
+    #crewheadergroomtext {
+        top:23vw; right:6vw;
+    }
+
+    .crewRow {
+        margin-top:-21vw;
+    }
+    .crewRow.groom {
+        margin:-20vw 0 37vw 0;
+    }
+    .crewSection {
+        width:48vw;
+        text-align:center;
+    }
+    .crewImage {
+        display:inline-block;
+        width:32vw;
+    }
+    .crewSectionText {
+        display:block;
+        top:1vw; left:7vw;
+    }
+    .crewSectionHeader {
+        font-size:8vw;
+    }
+    .crewSectionSubheader {
+        font-size:4.2vw;
+        margin-top:-0.4vw;
+    }
+
+    #crewflowerend {
+        bottom:-44vw; left:0;
+        width:60vw;
+        transform:rotate(10deg);
+    }
+    .crewFlower {
+        width:100%;
+    }
+
+    /* Animations */
+    
+      #schedule1, #schedule2, #schedule3, #schedule4 {
+        transform: translateY(6vw);
+      }
+      #schedule1.is-visible, #schedule2.is-visible, 
+      #schedule3.is-visible, #schedule4.is-visible {
+        transform: translateY(0vw);
+      }
+    
+      @keyframes flowerFade {
+        from {
+            transform:translateY(50vw)
+        } to {
+            transform:translateY(0vw)
+        }
+      }
+    
+      @keyframes flight1 {
+        from {
+            transform:rotate(-240deg) translate(255%, -25vw) rotate(240deg);
+        } to {
+            transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg);
+        }
+      }
+    
+      @keyframes flight2 {
+        0% {
+            transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg);
+        } 16% {
+            transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg) rotateZ(6deg);
+        } 33% {
+            transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg) rotateZ(-6deg);
+        } 50% {
+            transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg) rotateZ(6deg);
+        } 67% {
+            transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg) rotateZ(-6deg);
+        } 83% {
+            transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg);
+        } 100% {
+            transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg);
+        }
+      }
+    
+      @keyframes flight3 {
+        0% {
+            transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg);
+        } 20% {
+            opacity:1;
+        } 100% {
+            opacity:0;
+            transform:rotate(-150deg) translate(150%, -100vw) rotate(110deg);
+        }
+      }
+    
+      #crewheaderfade {
+        transform:translateX(-3vw)
+      }
+      #crewsubheaderfade {
+        transform:translateX(3vw)
+      }
+
+}

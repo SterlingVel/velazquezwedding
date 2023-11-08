@@ -76,16 +76,16 @@ class Home extends React.Component {
                             </Fade>
                         </div>
                         <div className="homeGalleryColumn right">
-                            <Fade id="storylink">
-                                <div className="homeGallerySection ourStory">
+                            <div className="homeGallerySection ourStory">
+                                <Fade id="storylink">
                                     <Link to='/wedding'>
                                         <p className="homeGalleryText">OUR STORY</p>
                                     </Link>
                                     <Link to='/wedding'>
                                         <img className="homeGalleryPic" alt="weddingmenu" src="introImages/ring.jpg" loading="lazy" />
                                     </Link>
-                                </div>
-                            </Fade>
+                                </Fade>
+                            </div>
                             <Fade id="giftslink">
                                 <div className="homeGallerySection gifts">
                                     <Link to='/wedding'>

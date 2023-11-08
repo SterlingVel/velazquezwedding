@@ -128,20 +128,20 @@ a {
   .navMenu {
     display:inline-block;
     top:3vw; right:3vw;
-    font-size:5vw;
-    width:24vw; height:7.7vw;
+    font-size:6vw;
+    width:27vw; height:9vw;
   }
   .navMenu.show {
-    width:35vw;
-    height:66vw;
+    width:40vw;
+    height:72vw;
   }
   .menuButton {
-    width:24vw;
+    width:27vw;
     right:0; top:0.8vw;
     transition:width 1s;
   }
   .navMenu.show .menuButton {
-    width:18vw;
+    width:23vw;
     right:0;
   }
   .navOptions {
@@ -165,7 +165,7 @@ a {
     width:100%;
   }
   .navOptionText.story {
-    width:100%;
+    width:37vw;
   }
 
   a {

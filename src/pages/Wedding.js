@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/Wedding/Wedding.css';
 import '../css/Wedding/Animations.css';
+import '../css/Wedding/Mobile.css';
 import '../css/index.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
@@ -73,25 +74,25 @@ class Wedding extends React.Component {
                     </Fade>
                     <div className="scheduleWrapper">
                         <div className="scheduleSection">
-                            <Fade threshold="1" id="schedule1">
+                            <Fade threshold="0.9" id="schedule1">
                                 <p className="scheduleHeader">CEREMONY</p>
                                 <p className="scheduleTime">5:30 pm</p>
                             </Fade>
                         </div>
                         <div className="scheduleSection">
-                            <Fade threshold="1" id="schedule2">
+                            <Fade threshold="0.9" id="schedule2">
                                 <p className="scheduleHeader">COCKTAILS</p>
                                 <p className="scheduleTime">6:00 pm</p>
                             </Fade>
                         </div>
                         <div className="scheduleSection">
-                            <Fade threshold="1" id="schedule3">
+                            <Fade threshold="0.9" id="schedule3">
                                 <p className="scheduleHeader">DINNER</p>
                                 <p className="scheduleTime">7:00 pm</p>
                             </Fade>
                         </div>
                         <div className="scheduleSection">
-                            <Fade threshold="1" id="schedule4">
+                            <Fade threshold="0.9" id="schedule4">
                                 <p className="scheduleHeader">PARTY TIME</p>
                                 <p className="scheduleTime">8:00 pm and onward</p>
                             </Fade>
