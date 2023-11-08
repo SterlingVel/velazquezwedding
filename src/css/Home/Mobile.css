@@ -1,0 +1,279 @@
+@media (max-aspect-ratio: 1/1) {
+
+    /* Top of Home Page */
+
+  .introImageFlower {
+    width:200vh;
+  }
+  .introImageButterfly {
+    width:14vw;
+    top:-12vw; right:2vw;
+  }
+  .introHeaderSection {
+    transform:translate(-50%, -80%);
+    width:82vw;
+  }
+  .introTitle {
+    font-size:16vw;
+  }
+  .introSubHeader {
+    font-size:4.8vw;
+    margin:5vw 0 1vw 0;
+  }
+  .introDate {
+    font-size:4vw;
+  }
+  .introFade {
+    width:100%; height:50px;
+  }
+  
+  /* Gallery Menu of Home Page */
+  
+  .homeGalleryContainer {
+    position:relative;
+    padding:12vw 0 28vw 0;
+    margin:-0.2vw;
+    z-index:0;
+  }
+  .homeGalleryDiv {
+    position:relative;
+    top:0; left:50%;
+    transform:translateX(-50%);
+    width:81vw;
+  }
+  .homeGalleryColumn {
+    position:relative;
+    display:inline-table;
+    width:100%;
+  }
+  .homeGalleryColumn.left {
+    text-align:right;
+  }
+  .homeGalleryColumn.right {
+    top:9vw;
+  }
+  .homeGallerySection {
+    margin:0;
+  }
+  
+  .homeGallerySection.wedding {
+    position:relative;
+    width:57%;
+    overflow:hidden;
+    z-index:-3;
+  }
+  .homeGallerySection.ourStory {
+    position:relative;
+    width:60%;
+    top:-102vw; left:35vw;
+    overflow:hidden;
+    z-index:-2;
+  }
+  .homeGallerySection.travel {
+    width:95%;
+    margin:60vw 0 0 -10vw;
+    z-index:1;
+  }
+  .homeGallerySection.gifts {
+    position:relative;
+    width:90%;
+    margin:-65vw 0 0 40vw;
+    z-index:-2;
+  }
+
+  .homeGallerySection.wedding .homeGalleryPic {
+    width:120%;
+    margin:2vw 0 0 -10%;
+  }
+  .homeGallerySection.ourStory .homeGalleryPic {
+    width:150%;
+    margin: -27vw 0 0 -25%;
+  }
+  .homeGallerySection.travel .homeGalleryPic {
+    margin-top:-5vw;
+  }
+  
+  .homeGalleryText {
+    width:fit-content;
+    line-height: 3.8vw;
+  }
+  .homeGallerySection.wedding .homeGalleryText {
+    font-size:7.5vw;
+    margin-top:1vw;
+    margin-left:12.1vw;
+  }
+  .homeGallerySection.ourStory .homeGalleryText {
+    font-size:7.5vw;
+    line-height: 8vw;
+    margin:27.4vw 0 0 0vw;
+    transform: translate(23.5vw, -27vw);
+    width:25vw;
+    text-align:right;
+  }
+  .homeGallerySection.travel .homeGalleryText  {
+    font-size:7.5vw;
+    margin-top:-52.5vw;
+    transform: translate(13vw, -6vw);
+  }
+  .homeGallerySection.gifts .homeGalleryText {
+    font-size:7.5vw;
+    line-height: 3vw;
+    margin-top:-5vw;
+    transform:translate(-23vw, -50vw)
+  }
+  
+  .faqButton {
+    display:none;
+  }
+  .faqButton.mobile {
+    display:block;
+  }
+  .faqButton.mobile {
+    font-size:6vw;
+    padding:1.5vw 8vw;
+    margin:5vw 0 0 40vw;
+  }
+  
+  .galleryFlower.left {
+    top:1vw; left:62vw;
+    width:62vw;
+    transform:rotateY(0deg) rotateZ(-30deg);
+    opacity:0.5;
+  }
+  .galleryFlower.right1 {
+    width:30vw;
+    top:97vw; right:auto;
+    left:-6vw;
+    transform:rotateY(0deg) rotateZ(-30deg);
+    opacity:0.5;
+  }
+  .galleryFlower.right2 {
+    width:68vw;
+    top:210vw; right:auto;
+    left:-24vw;
+    transform:rotateY(180deg);
+    opacity:0.5;
+  }
+  .flowerImage {
+    width:100%;
+  }
+  
+  .homeContainer.fade {
+    height:2vw;
+  }
+  
+  /* RSVP Form of Home Page */
+  
+  .rsvpFormDiv {
+    padding:10vw 0 10vw 0;
+  }
+  .rsvpHeaderCursive {
+    font-size:14vw;
+    margin-right:30vw;
+  }
+  .rsvpHeaderScript {
+    font-size:14vw;
+    margin-top:-8vw;
+  }
+  .rsvpHeaderDate {
+    font-size:5.5vw;
+    margin-top:-.8vw;
+  }
+
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+      opacity:0;
+    } to {
+      opacity:1;
+    }
+  }
+  
+  @keyframes butterflyIntro {
+    0% {
+      opacity:0; 
+    } 20% {
+      opacity:0;
+      transform: rotate(0deg) translate(12vw, -6vw); 
+    }
+    100% {
+      transform: rotate(180deg) translate(0, -0) rotate(-180deg); 
+    }
+  }
+  
+  @keyframes topFlowersIntro {
+    0% {
+      opacity:0;
+      transform: translate(-50%, 20vw);
+    } 10% {
+      opacity:0;
+      transform: translate(-50%, 20vw);
+    } 100% {
+      opacity:1;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  @keyframes subheaderIntro {
+    0% {
+      transform: translate(0, 5vw);
+      opacity:0;
+    } 20% {
+      transform: translate(0, 5vw);
+      opacity:0;
+    } to {
+      transform: translate(0, 0);
+      opacity:1;
+    }
+  }
+  
+  @keyframes dateIntro {
+    0% {
+      transform: translate(0, 5vw);
+      opacity:0;
+    } 40% {
+      transform: translate(0, 5vw);
+      opacity:0;
+    } to {
+      transform: translate(0, 0);
+      opacity:1;
+    }
+  }
+  
+  #weddinglink {
+    transform:translateY(0);
+  }
+  #weddinglink.is-visible {
+    transform:translateY(0vw);
+  }
+  
+  #travellink {
+    transform:translateX(0);
+  }
+  #travellink.is-visible {
+    transform:translateX(0vw);
+  }
+  
+  #storylink {
+    transform:translateX(0);
+  }
+  #storylink.is-visible {
+    transform:translateX(0vw);
+  }
+  
+  #giftslink {
+    transform:translateY(0);
+  }
+  #giftslink.is-visible {
+    transform:translateY(0vw);
+  }
+  
+  #homeflowerright1 {
+    transform:translateX(-12vw);
+  }
+  #homeflowerright1.is-visible {
+    transform:translateX(0vw);
+  }

@@ -40,7 +40,7 @@
   font-weight: 400;
   color: #595959;
   font-size:2.1vw;
-  margin:30px 0 10px 0;
+  margin:2vw 0 0.6vw 0;
   animation:subheaderIntro ease-out 1.3s;
 }
 .introDate {
@@ -72,11 +72,13 @@
   top:0; left:50%;
   transform:translateX(-50%);
   width:75vw;
+  pointer-events:none;
 }
 .homeGalleryColumn {
   position:relative;
   display:inline-table;
   width:45%;
+  pointer-events:none;
 }
 .homeGalleryColumn.left {
   text-align:right;
@@ -87,15 +89,14 @@
 }
 .homeGallerySection {
   margin:1.3vw 0.8vw;
+  pointer-events:none;
 }
 
 .homeGalleryPic {
   width:100%;
   transition:filter 0.3s;
+  pointer-events: all;
 }
-.homeGallerySection:hover .homeGalleryPic {
-  filter:contrast(0.5) brightness(1.4) grayscale(0.1)
-} 
 .homeGallerySection.wedding .homeGalleryPic {
   width:85%;
 }
@@ -112,6 +113,7 @@
 .homeGalleryText {
   line-height: 3.8vw;
   text-decoration: none;
+  pointer-events: all;
 }
 .homeGallerySection.wedding .homeGalleryText {
   font-size:4vw;
@@ -129,15 +131,28 @@
   line-height: 3vw;
 }
 
+.homeGalleryPic:hover {
+  filter:contrast(0.5) brightness(1.4) grayscale(0.1)
+} 
+
 .faqButton {
   font-family: 'Cormorant Garamond', serif;
   color: #595959;
   margin-right:1vw;
   font-size:2.3vw;
   border: 1px solid #595959;
-  background:none;
+  background-color:#FEFEFB;
   padding:0.5vw 3.4vw;
   margin-top:5vw;
+  pointer-events: all;
+  cursor:pointer;
+  transition:background-color 0.3s;
+}
+.faqButton.mobile {
+  display:none;
+}
+.faqButton:hover {
+  background-color:#f6f6f3;
 }
 
 .galleryFlower {

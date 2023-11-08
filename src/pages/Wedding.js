@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/Wedding.css';
-import '../css/WeddingAnimations.css';
+import '../css/Wedding/Wedding.css';
+import '../css/Wedding/Animations.css';
 import '../css/index.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'

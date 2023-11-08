@@ -1,6 +1,7 @@
 import React from 'react';
-import '../css/Home.css';
-import '../css/HomeAnimations.css';
+import '../css/Home/Home.css';
+import '../css/Home/Animations.css';
+import '../css/Home/Mobile.css';
 import '../css/index.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
@@ -50,43 +51,54 @@ class Home extends React.Component {
                 <div className="homeGalleryContainer">
                     <div className="homeGalleryDiv">
                         <div className="homeGalleryColumn left">
-                            <div className="homeGallerySection wedding">
-                                <Link to='/wedding'>
-                                    <Fade id="weddinglink">
+                            <Fade id="weddinglink">
+                                <div className="homeGallerySection wedding">
+                                    <Link to='/wedding'>
                                         <p className="homeGalleryText">WEDDING</p>
-                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/twirl.jpg" loading="lazy"/>
-                                    </Fade>
-                                </Link>
-                            </div>
-                            <div className="homeGallerySection travel">
-                                <Link to='/wedding'>
-                                    <Fade id="travellink">
-                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/field.jpg" loading="lazy"/>
+                                    </Link>
+                                    <Link to='/wedding'>
+                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/twirl.jpg" loading="lazy" />
+                                    </Link>
+                                </div>
+                            </Fade>
+                            <Fade id="travellink">
+                                <div className="homeGallerySection travel">
+                                    <Link to='/wedding'>
+                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/field.jpg" loading="lazy" />
+                                    </Link>
+                                    <Link to='/wedding'>
                                         <p className="homeGalleryText">TRAVEL</p>
-                                    </Fade>
-                                </Link>
-                            </div>
+                                    </Link>
+                                </div>
+                            </Fade>
                             <Fade id="faqbuttonfade">
                                 <button className="faqButton">FAQs</button>
                             </Fade>
                         </div>
                         <div className="homeGalleryColumn right">
-                            <div className="homeGallerySection ourStory">
-                                <Link to='/wedding'>
-                                    <Fade id="storylink">
+                            <Fade id="storylink">
+                                <div className="homeGallerySection ourStory">
+                                    <Link to='/wedding'>
                                         <p className="homeGalleryText">OUR STORY</p>
-                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/ring.jpg" loading="lazy"/>
-                                    </Fade>
-                                </Link>
-                            </div>
-                            <div className="homeGallerySection gifts">
-                                <Link to='/wedding' id="storylink">
-                                    <Fade id="giftslink">
-                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/arms.jpg" loading="lazy"/>
+                                    </Link>
+                                    <Link to='/wedding'>
+                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/ring.jpg" loading="lazy" />
+                                    </Link>
+                                </div>
+                            </Fade>
+                            <Fade id="giftslink">
+                                <div className="homeGallerySection gifts">
+                                    <Link to='/wedding'>
+                                        <img className="homeGalleryPic" alt="weddingmenu" src="introImages/arms.jpg" loading="lazy" />
+                                    </Link>
+                                    <Link to='/wedding'>
                                         <p className="homeGalleryText">GIFTS</p>
-                                    </Fade>
-                                </Link>
-                            </div>
+                                    </Link>
+                                </div>
+                            </Fade>
+                            <Fade id="faqbuttonfade2">
+                                <button className="faqButton mobile">FAQs</button>
+                            </Fade>
                         </div>
                     </div>
                     <div className="galleryFlower left">

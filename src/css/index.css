@@ -122,3 +122,54 @@ a {
   }
 
 }
+
+@media (max-aspect-ratio: 1/1) {
+
+  .navMenu {
+    display:inline-block;
+    top:3vw; right:3vw;
+    font-size:5vw;
+    width:24vw; height:7.7vw;
+  }
+  .navMenu.show {
+    width:35vw;
+    height:66vw;
+  }
+  .menuButton {
+    width:24vw;
+    right:0; top:0.8vw;
+    transition:width 1s;
+  }
+  .navMenu.show .menuButton {
+    width:18vw;
+    right:0;
+  }
+  .navOptions {
+    position:absolute;
+    left:-2vw; top:14vw;
+    transform:translateX(40vw);
+    display:inline-block;
+    transition:1s ease-in-out;
+    width:100%;
+    text-align:right;
+  }
+  .navOption {
+    pointer-events:none;
+    padding: 0vw 1.5vw;
+    text-align:right;
+  }
+  .navOptionText {
+    pointer-events:all;
+    text-align:right;
+    padding: 2vw 4vw 2vw 0;
+    width:100%;
+  }
+  .navOptionText.story {
+    width:100%;
+  }
+
+  a {
+    display:block;
+  }
+
+}
