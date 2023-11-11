@@ -1,4 +1,4 @@
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 0.93/1) {
 
     /* Top of Wedding Page */
 
@@ -14,17 +14,17 @@
         margin-bottom:0.5vw;
     }
     .weddingImageFlower.left1 {
-        top:-14vw; left:-32vw;
-        width:115vw;
+        top:-14vw; left:-20vw;
+        width:85vw;
         transform:rotate(-45deg);
     }
     .weddingImageFlower.left2 {
-        top:30vw; left:0vw;
-        width:27vw;
+        top:18vw; left:0vw;
+        width:20vw;
     }
     .weddingImageFlower.right {
         bottom:-28vw; right:0;
-        width:70vw;
+        width:50vw;
     }
 
     /* Hazlehurst Information */
@@ -171,41 +171,41 @@
 
     /* Animations */
     
-      #schedule1, #schedule2, #schedule3, #schedule4 {
-        transform: translateY(6vw);
-      }
-      #schedule1.is-visible, #schedule2.is-visible, 
-      #schedule3.is-visible, #schedule4.is-visible {
+    #schedule1, #schedule2, #schedule3, #schedule4 {
         transform: translateY(0vw);
-      }
+    }
+    #schedule1.is-visible, #schedule2.is-visible, 
+    #schedule3.is-visible, #schedule4.is-visible {
+        transform: translateY(0vw);
+    }
     
-      #scheduleflower {
+    #scheduleflower {
         opacity:1;
         animation:none;
         transform:translate(20vw)
-      }
-      #scheduleflower.is-visible {
+    }
+    #scheduleflower.is-visible {
         animation:flowerFade 2s ease-out;
         transform:translateY(0vw);
-      }
+    }
 
-      @keyframes flowerFade {
+    @keyframes flowerFade {
         from {
             transform:translateY(50vw)
         } to {
             transform:translateY(0vw)
         }
-      }
+    }
     
-      @keyframes flight1 {
+    @keyframes flight1 {
         from {
             transform:rotate(-240deg) translate(255%, -25vw) rotate(240deg);
         } to {
             transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg);
         }
-      }
+    }
     
-      @keyframes flight2 {
+    @keyframes flight2 {
         0% {
             transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg);
         } 16% {
@@ -221,9 +221,9 @@
         } 100% {
             transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg);
         }
-      }
+    }
     
-      @keyframes flight3 {
+    @keyframes flight3 {
         0% {
             transform:rotate(-180deg) translate(255%, -13.5vw) rotate(180deg);
         } 20% {
@@ -232,22 +232,53 @@
             opacity:0;
             transform:rotate(-150deg) translate(150%, -100vw) rotate(110deg);
         }
-      }
+    }
     
-      #crewheaderfade {
+    #crewheaderfade {
         transform:translateX(-3vw)
-      }
-      #crewsubheaderfade {
+    }
+    #crewsubheaderfade {
         transform:translateX(3vw)
-      }
+    }
 
-      #crewflowerend {
+    #crewflowerend {
         animation:none;
         transform:translateY(-5vw) rotate(10deg);
-      }
-      #crewflowerend.is-visible {
+    }
+    #crewflowerend.is-visible {
         animation:crewFlowerEnd 1.5s ease-out;
         transform:translateY(0vw) rotate(10deg);
-      }
+    }
+    
+}
+
+@media (max-aspect-ratio: 0.67/1) {
+
+    /* Top of Wedding Page */
+
+    .weddingHeaderSection {
+        width: 90vw;
+    }
+    .weddingTitle {
+        font-size:15.5vw;
+        line-height:19vw;
+    }
+    .weddingSubHeader {
+        font-size:5.5vw;
+        margin-bottom:0.5vw;
+    }
+    .weddingImageFlower.left1 {
+        top:-14vw; left:-32vw;
+        width:115vw;
+        transform:rotate(-45deg);
+    }
+    .weddingImageFlower.left2 {
+        top:30vw; left:0vw;
+        width:27vw;
+    }
+    .weddingImageFlower.right {
+        bottom:-28vw; right:0;
+        width:70vw;
+    }
 
 }

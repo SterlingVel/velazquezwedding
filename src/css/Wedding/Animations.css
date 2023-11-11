@@ -27,13 +27,6 @@
       opacity:1;
     }
   }
-  
-  #weddinglink {
-    transform:translateY(-4vw);
-  }
-  #weddinglink.is-visible {
-    transform:translateY(0vw);
-  }
 
   #sectionDividerFade {
     position:absolute;

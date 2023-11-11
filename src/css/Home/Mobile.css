@@ -1,40 +1,39 @@
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 0.93/1) {
 
-    /* Top of Home Page */
+  /* Top of Home Page */
 
   .introImageFlower {
     width:200vh;
   }
   .introImageButterfly {
-    width:15vw;
-    top:-12vw; right:2vw;
+    width:12vw;
+    top:-9vw; right:2vw;
   }
   .introHeaderSection {
     transform:translate(-50%, -80%);
     width:85vw;
   }
   .introTitle {
-    font-size:17vw;
+    font-size:14vw;
   }
   .introSubHeader {
-    font-size:5.3vw;
+    font-size:4.4vw;
     margin:5vw 0 1vw 0;
   }
   .introDate {
-    font-size:4.5vw;
+    font-size:3.7vw;
   }
   .introFade {
     width:100%; height:50px;
   }
-  
+
   /* Gallery Menu of Home Page */
-  
+
   .homeGalleryContainer {
     position:relative;
     padding:12vw 0 28vw 0;
     margin:-0.2vw;
     z-index:0;
-    overflow:hidden;
   }
   .homeGalleryDiv {
     position:relative;
@@ -56,7 +55,7 @@
   .homeGallerySection {
     margin:0;
   }
-  
+
   .homeGallerySection.wedding {
     position:relative;
     width:57%;
@@ -90,7 +89,7 @@
   .homeGallerySection.travel .homeGalleryPic {
     margin-top:-5vw;
   }
-  
+
   .homeGalleryText {
     width:fit-content;
     line-height: 3.8vw;
@@ -119,7 +118,7 @@
     margin-top:-5vw;
     transform:translate(-23vw, -50vw)
   }
-  
+
   .faqButton {
     display:none;
   }
@@ -131,7 +130,7 @@
     padding:1.5vw 8vw;
     margin:5vw 0 0 40vw;
   }
-  
+
   .galleryFlower.left {
     top:1vw; left:62vw;
     width:62vw;
@@ -156,13 +155,13 @@
   .flowerImage {
     width:100%;
   }
-  
+
   .homeContainer.fade {
     height:2vw;
   }
-  
+
   /* RSVP Form of Home Page */
-  
+
   .rsvpFormDiv {
     padding:10vw 0 10vw 0;
   }
@@ -179,18 +178,16 @@
     margin-top:-.8vw;
   }
 
-}
+  /* Animations */
 
-/* Animations */
-
-@keyframes fadeIn {
+  @keyframes fadeIn {
     from {
       opacity:0;
     } to {
       opacity:1;
     }
   }
-  
+
   @keyframes butterflyIntro {
     0% {
       opacity:0; 
@@ -202,7 +199,7 @@
       transform: rotate(180deg) translate(0, -0) rotate(-180deg); 
     }
   }
-  
+
   @keyframes topFlowersIntro {
     0% {
       opacity:0;
@@ -215,7 +212,7 @@
       transform: translate(-50%, 0);
     }
   }
-  
+
   @keyframes subheaderIntro {
     0% {
       transform: translate(0, 5vw);
@@ -228,7 +225,7 @@
       opacity:1;
     }
   }
-  
+
   @keyframes dateIntro {
     0% {
       transform: translate(0, 5vw);
@@ -241,7 +238,7 @@
       opacity:1;
     }
   }
-  
+
   #weddinglink {
     transform:translateY(0);
   }
@@ -254,7 +251,7 @@
   #giftslink {
     transform:translateY(0);
   }
-  
+
   #homeflowerleft {
     transform:translateX(12vw);
   }
@@ -267,3 +264,36 @@
   #homeflowerright1.is-visible {
     transform:translateX(0vw);
   }
+
+}
+
+@media (max-aspect-ratio: 0.67/1) {
+
+    /* Top of Home Page */
+
+  .introImageFlower {
+    width:200vh;
+  }
+  .introImageButterfly {
+    width:15vw;
+    top:-12vw; right:2vw;
+  }
+  .introHeaderSection {
+    transform:translate(-50%, -80%);
+    width:85vw;
+  }
+  .introTitle {
+    font-size:17vw;
+  }
+  .introSubHeader {
+    font-size:5.3vw;
+    margin:5vw 0 1vw 0;
+  }
+  .introDate {
+    font-size:4.5vw;
+  }
+  .introFade {
+    width:100%; height:50px;
+  }
+
+}

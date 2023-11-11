@@ -76,31 +76,31 @@ class Wedding extends React.Component {
                     </Fade>
                     <div className="scheduleWrapper">
                         <div className="scheduleSection">
-                            <Fade threshold="0.9" id="schedule1">
+                            <Fade threshold="0.8" id="schedule1">
                                 <p className="scheduleHeader">CEREMONY</p>
                                 <p className="scheduleTime">5:30 pm</p>
                             </Fade>
                         </div>
                         <div className="scheduleSection">
-                            <Fade threshold="0.9" id="schedule2">
+                            <Fade threshold="0.8" id="schedule2">
                                 <p className="scheduleHeader">COCKTAILS</p>
                                 <p className="scheduleTime">6:00 pm</p>
                             </Fade>
                         </div>
                         <div className="scheduleSection">
-                            <Fade threshold="0.9" id="schedule3">
+                            <Fade threshold="0.8" id="schedule3">
                                 <p className="scheduleHeader">DINNER</p>
                                 <p className="scheduleTime">7:00 pm</p>
                             </Fade>
                         </div>
                         <div className="scheduleSection">
-                            <Fade threshold="0.9" id="schedule4">
+                            <Fade threshold="0.8" id="schedule4">
                                 <p className="scheduleHeader">PARTY TIME</p>
                                 <p className="scheduleTime">8:00 pm and onward</p>
                             </Fade>
                         </div>
                         <div className="scheduleFlowerWrapper">
-                            <Fade threshold="0" id="scheduleflower">
+                            <Fade threshold="0.5" id="scheduleflower">
                                 <LazyLoadImage className="scheduleFlower" alt="flower" src="weddingImages/24.PNG" loading="lazy"/>
                             </Fade>
                         </div>

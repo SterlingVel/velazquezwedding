@@ -68,6 +68,33 @@
     visibility: visible;
   }
   
+  #weddinglink {
+    transform:translateY(-4vw);
+  }
+  #weddinglink.is-visible {
+    transform:translateY(0vw);
+  }
+  
+  #travellink {
+    transform:translateX(-4vw);
+  }
+  #travellink.is-visible {
+    transform:translateX(0vw);
+  }
+
+  #storylink {
+    transform:translateX(4vw);
+  }
+  #storylink.is-visible {
+    transform:translateX(0vw);
+  }
+
+  #giftslink {
+    transform:translateY(4vw);
+  }
+  #giftslink.is-visible {
+    transform:translateY(0vw);
+  }
   
   #homeflowerleft {
     transform:translateX(12vw);
