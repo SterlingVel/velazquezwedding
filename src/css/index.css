@@ -34,6 +34,8 @@ p {
 }
 
 a {
+  font-family: 'Cormorant Garamond', serif;
+  color: #595959;
   text-decoration: none;
 }
 
@@ -96,6 +98,8 @@ a {
   transition:none;
 }
 
+/* Widescreen Ratio */
+
 @media (min-aspect-ratio: 1/0.50) {
 
   .navMenu {
@@ -122,6 +126,8 @@ a {
   }
 
 }
+
+/* Tablet Ratio */
 
 @media (max-aspect-ratio: 1.17/1) {
 
@@ -168,11 +174,13 @@ a {
     width:24.8vw;
   }
 
-  a {
+  .navOption {
     display:block;
   }
 
 }
+
+/* Mobile Ratio */
 
 @media (max-aspect-ratio: 0.67/1) {
 

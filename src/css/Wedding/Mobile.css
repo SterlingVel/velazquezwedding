@@ -107,11 +107,11 @@
     }
     .crewDivHeaderText {
         font-size:10vw;
-        margin:0 0 -9vw 1.8vw;
+        margin-left:1.8vw;
     }
     .crewDivSubheaderText {
         font-size:11vw;
-        margin-top:0vw;
+        margin-top:9vw;
     }
 
     #crewheaderbrideflower {

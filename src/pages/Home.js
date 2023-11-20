@@ -18,7 +18,7 @@ const pageVariants = {
     out: {
         opacity: 0,
         transition: {
-            duration: 0.5
+            duration: 0.2
         }
     }
 }
@@ -33,7 +33,6 @@ class Home extends React.Component {
     componentDidMount() {
         window.scrollTo(0, 0);
         this.addResizeListener();
-        document.getElementById("navmenu").className = "navMenu"
     }
 
     render() {
@@ -65,10 +64,10 @@ class Home extends React.Component {
                             </Fade>
                             <Fade id="travellink">
                                 <div className="homeGallerySection travel">
-                                    <Link to='/wedding'>
+                                    <Link to='/travel'>
                                         <LazyLoadImage className="homeGalleryPic" alt="weddingmenu" src="introImages/field.jpg" loading="lazy" />
                                     </Link>
-                                    <Link to='/wedding'>
+                                    <Link to='/travel'>
                                         <p className="homeGalleryText">TRAVEL</p>
                                     </Link>
                                 </div>
@@ -90,10 +89,10 @@ class Home extends React.Component {
                             </div>
                             <Fade id="giftslink">
                                 <div className="homeGallerySection gifts">
-                                    <Link to='/wedding'>
+                                    <Link to='/gifts'>
                                         <LazyLoadImage className="homeGalleryPic" alt="weddingmenu" src="introImages/arms.jpg" loading="lazy" />
                                     </Link>
-                                    <Link to='/wedding'>
+                                    <Link to='/gifts'>
                                         <p className="homeGalleryText">GIFTS</p>
                                     </Link>
                                 </div>

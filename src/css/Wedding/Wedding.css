@@ -181,11 +181,11 @@
 .crewDivHeaderText {
     font-family: Angella;
     font-size:4.5vw;
-    margin:0 0 -5.8vw 0.4vw;
+    margin-left:0.4vw;
 }
 .crewDivSubheaderText {
     font-size:6vw;
-    margin-top:1.8vw;
+    margin-top:3.5vw;
 }
 
 .crewHeader {
@@ -387,7 +387,7 @@
 }
 .crewDivSubheaderText {
     font-size:10.5vh;
-    margin-top:3.8vh;
+    margin-top:6.6vh;
 }
 
 #crewheaderbrideflower {

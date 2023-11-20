@@ -1,0 +1,317 @@
+/* Top of Travel Page */
+
+.travelDiv {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+.travelHeaderSection {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+}
+.travelTitle {
+    font-family: Angella;
+    font-size:10vw;
+    color: #595959;
+    margin: 0;
+    animation:fadeIn 1.5s ease-out;
+}
+.travelSubHeader {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: #595959;
+    font-size:2.7vw;
+    margin:-2.2vw 0 -3.5vw 0;
+    animation:fadeIn 1s ease-out;
+}
+.travelImageWreath {
+    position: absolute;
+    top:59%; left:50%;
+    height:135vh;
+    transform:translate(-50%, -50%) rotate(-135deg);
+}
+
+/* Hotel Section */
+
+.hotelDiv {
+    position:relative;
+    background: #FEFEFB;
+}
+.hotelDivHeader {
+    background: #DFE9F2;
+    padding:5vw 0;
+}
+.hotelDivHeaderText {
+    font-family: Angella;
+    font-size:4.5vw;
+    margin-left:-10vw;
+}
+.hotelDivSubheaderText {
+    font-size:6vw;
+    margin-top:3.4vw;
+}
+
+.hotelSubheader {
+    font-size:1.6vw;
+    font-style: italic;
+    padding: 5vw 0 4vw 0;
+    width:47vw;
+    margin-left:50%; transform:translateX(-50%);
+}
+.hotelRow {
+    position:relative;
+    margin-bottom:3vw;
+}
+.hotelSection {
+    display:inline-block;
+    margin:0 5vw;
+}
+.hotelImage {
+    width:16vw; height:10vw;
+    object-fit:cover;
+}
+.hotelSectionHeader {
+    font-size:1.6vw;
+    font-weight:500;
+    margin:0.6vw 0;
+}
+.hotelSectionDetails {
+    font-size:1.2vw;
+    font-style: italic;
+    margin:0.6vw 0 1.8vw 0;
+}
+.hotelLink {
+    font-size:1.5vw;
+    padding:0.3vw 2vw;
+    border:thin solid #595959;
+}
+
+/* Places to Visit Section */
+
+.placesDiv {
+    position:relative;
+    background: #FEFEFB;
+    margin-top:7vw;
+}
+.placesDivHeader {
+    background: #DFE9F2;
+    padding:5vw 0 7vw 0;
+}
+.placesDivHeaderText {
+    font-family: Angella;
+    font-size:4.5vw;
+    margin-left:-10vw;
+}
+.placesDivSubheaderText {
+    font-size:6vw;
+    margin-top:4vw;
+}
+.placesDetailsText {
+    font-size:1.5vw;
+    font-style: italic;
+    width:42vw;
+    margin:1.8vw 0 3vw 50%;
+    transform:translateX(-50%);
+}
+.travelTipSection {
+    position:relative;
+    display:inline-block;
+    width:16vw;
+    margin: 0 2.5vw;
+}
+.travelTipHeader {
+    font-size:1.5vw;
+    font-weight: 500;
+    margin-bottom:1vw;
+}
+.travelTipDetails {
+    font-size:1.3vw;
+    font-style: italic;
+}
+
+.locationSection {
+    position:relative;
+    width:100vw; height:35vw;
+}
+.locationImage {
+    position:absolute;
+    left:0;
+    object-fit: cover;
+    display:inline-table;
+    width:50%; height:100%;
+    opacity:0.6;
+}
+.locationImage.city {
+    left:auto; right:0;
+}
+.locationSectionDetails {
+    position:absolute;
+    display:inline-table;
+    width:50%; height:100%;
+    text-align:left;
+}
+.locationSectionDetails.city {
+    left:0;
+    text-align:right;
+}
+.location {
+    margin:6vw 3.5vw;
+    width:80%;
+}
+.locationSectionDetails.city .location {
+    margin:6vw 5.5vw;
+}
+.locationHeader {
+    font-size:1.5vw;
+    font-weight: 500;
+    margin-bottom:1vw;
+}
+.locationSubheader {
+    font-size:1.5vw;
+    font-style: italic;
+}
+
+.pageFooter {
+    position:relative;
+    width:100vw; height:5vw;
+    background: #DFE9F2;
+}
+
+@media (min-aspect-ratio: 1/0.58) {
+
+/* Top of Travel Page */
+
+.travelHeaderSection {
+    width: 100vh;
+}
+.travelTitle {
+    font-size:17.3vh;
+}
+.travelSubHeader {
+    font-size:4.7vh;
+    margin:-3.8vh 0 -6vh 0;
+}
+
+/* Hotel Section */
+
+.hotelDivHeader {
+    padding:8.6vh 0;
+}
+.hotelDivHeaderText {
+    font-size:7.75vh;
+    margin:0 0 0 -17.25vh;
+}
+.hotelDivSubheaderText {
+    font-size:10.35vh;
+    margin-top:5.865vh;
+}
+
+.hotelSubheader {
+    font-size:2.76vh;
+    padding: 8.625vh 0 6.9vh 0;
+    width:81.1vh;
+}
+.hotelRow {
+    margin-bottom:5.175vh;
+}
+.hotelSection {
+    margin:0 8.625vh;
+}
+.hotelImage {
+    width:27.6vh; height:17.25vh;
+}
+.hotelSectionHeader {
+    font-size:2.76vh;
+    margin:1.035vh 0;
+}
+.hotelSectionDetails {
+    font-size:2.07vh;
+    margin:1.035vh 0 3.105vh 0;
+}
+.hotelLink {
+    font-size:2.59vh;
+    padding:0.52vh 2.45vh;
+}
+
+/* Places to Visit Section */
+
+.placesDiv {
+    margin-top:12.075vh;
+}
+.placesDivHeader {
+    padding:8.625vh 0 12.075vh 0;
+}
+.placesDivHeaderText {
+    font-size:7.76vh;
+    margin-left:-17.25vh;
+}
+.placesDivSubheaderText {
+    font-size:10.35vh;
+    margin-top:6.9vh;
+}
+.placesDetailsText {
+    font-size:2.59vh;
+    width:72.45vh;
+    margin:3.105vh 0 5.175vh 50%;
+    transform:translateX(-50%);
+}
+.travelTipSection {
+    width:27.6vh;
+    margin: 0 4.32vh;
+}
+.travelTipHeader {
+    font-size:2.59vh;
+    margin-bottom:1.725vh;
+}
+.travelTipDetails {
+    font-size:2.24vh;
+}
+
+.locationSection {
+    width:100vw; height:35vw;
+}
+.locationImage {
+    left:0;
+    display:inline-table;
+    width:50%; height:100%;
+    opacity:0.6;
+}
+.locationImage.city {
+    left:auto; right:0;
+}
+.locationSectionDetails {
+    position:absolute;
+    display:inline-table;
+    width:50%; height:100%;
+    text-align:left;
+}
+.locationSectionDetails.city {
+    left:0;
+    text-align:right;
+}
+.location {
+    margin:6vw 3.5vw;
+    width:80%;
+}
+.locationSectionDetails.city .location {
+    margin:6vw 5.5vw;
+}
+.locationHeader {
+    font-size:1.5vw;
+    font-weight: 500;
+    margin-bottom:1vw;
+}
+.locationSubheader {
+    font-size:1.5vw;
+}
+
+.travelPageFooter {
+    height:5vw;
+}
+
+}

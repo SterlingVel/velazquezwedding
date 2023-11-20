@@ -1,8 +1,12 @@
 import React from 'react';
 import Home from "./pages/Home.js";
 import Wedding from "./pages/Wedding.js";
+import Story from "./pages/Story.js";
+import Travel from "./pages/Travel.js";
+import Gifts from "./pages/Gifts.js";
 import { AnimatePresence } from 'framer-motion';
 import { Link, Routes, Route, useLocation } from "react-router-dom";
+import MenuLink from "./tools/menuLink.js"
 
 function App() {
 
@@ -13,21 +17,11 @@ function App() {
 
       <div className="navMenu" id="navmenu">
         <div className="navOptions" id="navoptions">
-          <Link to="/" className={"navOption" + (location.pathname === "/" ? " selected" : "")}>
-            <p className="navOptionText">HOME</p>
-          </Link>
-          <Link to="/wedding" className={"navOption" + (location.pathname === "/wedding" ? " selected" : "")}>
-            <p className="navOptionText">WEDDING</p>
-          </Link>
-          <Link to="/wedding" className={"navOption" + (location.pathname === "/ourstory" ? " selected" : "")}>
-            <p className="navOptionText story">OUR STORY</p>
-          </Link>
-          <Link to="/wedding" className={"navOption" + (location.pathname === "/travel" ? " selected" : "")}>
-            <p className="navOptionText">TRAVEL</p>
-          </Link>
-          <Link to="/wedding" className={"navOption" + (location.pathname === "/gifts" ? " selected" : "")}>
-            <p className="navOptionText">GIFTS</p>
-          </Link>
+          <MenuLink link="" text="HOME"/>
+          <MenuLink link="wedding" text="WEDDING"/>
+          <MenuLink link="story" text="OUR STORY"/>
+          <MenuLink link="travel" text="TRAVEL"/>
+          <MenuLink link="gifts" text="GIFTS"/>
         </div>
         <div className="menuButton" onClick={e => openMenu()}>
           <p className="menuButtonText">MENU</p>
@@ -38,6 +32,9 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" exact element={<Home />} />
           <Route path="/wedding" element={<Wedding />} />
+          <Route path="/story" element={<Story />} />
+          <Route path="/travel" element={<Travel />} />
+          <Route path="/gifts" element={<Gifts />} />
         </Routes>
       </AnimatePresence>
     </div>
@@ -46,6 +43,6 @@ function App() {
 
 export default App;
 
-function openMenu() {
+export function openMenu() {
   document.getElementById("navmenu").classList.toggle("show");
 }

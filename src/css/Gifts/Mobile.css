@@ -1,0 +1,103 @@
+@media (max-aspect-ratio: 0.93/1) {
+
+/* Top of Gifts Page */
+
+.giftsTitle {
+    font-size:18vw;
+    margin-left:-40vw;
+}
+.giftsSubHeader {
+    font-size:18vw;
+    margin-top:-10vw;
+}
+
+.giftsImageFlower.top {
+    top:-45vw; right:-43vw;
+    width:100vw;
+    transform:rotate(-45deg);
+}
+.giftsImageFlower.bottom {
+    bottom:-45vw; left:-46vw;
+    width:100vw;
+}
+
+/* Gift Details Section */
+
+.giftDetailsDiv {
+    position:relative;
+    background: #DFE9F2;
+    padding:18vw 0 11vw 0;
+    width:100vw;
+}
+.giftDetailsSection {
+    width:100vw;
+}
+.giftDetailsSection.registry {
+    margin-top:24vw;
+}
+.honeymoonHeader {
+    font-size:6vw;
+    font-weight:500;
+}
+.honeymoonDetails {
+    font-size:5vw;
+    margin:5vw 0 10vw 0;
+    width:77%;
+    margin-left:50%;
+    line-height:7vw;
+    transform:translateX(-50%);
+}
+.honeymoonLink {
+    font-size:5vw;
+    padding:1.4vw 5vw;
+}
+
+.registryHeader {
+    font-size:6vw;
+    font-weight:500;
+}
+.registryDetails {
+    font-size:5vw;
+    margin:5vw 0 8vw 0;
+    width:70%;
+    margin-left:50%;
+    transform:translateX(-50%);
+}
+.registryDetails.cards {
+    margin-top:10vw;
+    line-height:7vw;
+}
+.registryLink {
+    font-size:5vw;
+    padding:1.4vw 5vw;
+    margin:0 2.5vw;
+}
+
+.pageFooter.gifts {
+    height:10vw;
+}
+
+}
+
+@media (max-aspect-ratio: 0.63/1) {
+
+    .giftsTitle {
+        font-size:22vw;
+        margin-left: -45vw;
+    }
+    .giftsSubHeader {
+        font-size:22vw;
+        margin-top:-11vw;
+    }
+    
+    .giftsImageFlower.top {
+        top:-65vw; right:-70vw;
+        width:150vw;
+        transform:rotate(-45deg);
+    }
+    .giftsImageFlower.bottom {
+        bottom:-59vw; left:-70vw;
+        width:150vw;
+    }
+
+}

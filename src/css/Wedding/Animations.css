@@ -125,7 +125,8 @@
   }
 
   #crewheaderfade {
-    transform:translateX(-2vw)
+    transform:translateX(-2vw);
+    height:0;
   }
   #crewheaderfade.is-visible {
     transform:translateX(0)

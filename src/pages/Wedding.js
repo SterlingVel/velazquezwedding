@@ -18,7 +18,7 @@ const pageVariants = {
     out: {
         opacity: 0,
         transition: {
-            duration: 0.5
+            duration: 0.2
         }
     }
 }
@@ -33,7 +33,6 @@ class Wedding extends React.Component {
     componentDidMount() {
         window.scrollTo(0, 0);
         this.addResizeListener();
-        document.getElementById("navmenu").className = "navMenu"
     }
 
     render() {
