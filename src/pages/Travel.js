@@ -111,7 +111,7 @@ class Travel extends React.Component {
                     </div>
 
                     <div className="locationSection">
-                        <img className="locationImage country" src="travelImages/McDonough.jpg" alt="McDonough"></img>
+                        <LazyLoadImage className="locationImage country" src="travelImages/McDonough.jpg" alt="McDonough"/>
                         <div className="locationSectionDetails">
                             <div className="location">
                                 <p className="locationHeader">The McDonough Square</p>
@@ -126,7 +126,7 @@ class Travel extends React.Component {
                         </div>
                     </div>
                     <div className="locationSection">
-                        <img className="locationImage city" src="travelImages/Atlanta.jpg" alt="McDonough"></img>
+                        <LazyLoadImage className="locationImage city" src="travelImages/Atlanta.jpg" alt="McDonough"/>
                         <div className="locationSectionDetails city">
                             <div className="location">
                                 <p className="locationHeader">Ponce City Market</p>
