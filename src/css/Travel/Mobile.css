@@ -56,6 +56,16 @@
     font-size:4.8vw;
     padding:1.4vw 8vw;
 }
+.hotelDivLeftFlower {
+    top:80vw; left:-32vw;
+    width:48vw;
+    transform:rotate(6deg);
+}
+.hotelDivRightFlower {
+    top:301vw; right:-16svw;
+    width:37vw;
+    transform:rotate(-5deg);
+}
 
 /* Places to Visit Section */
 
@@ -92,10 +102,16 @@
     font-size:4.2vw;
     font-style: italic;
 }
+.travelButterfly {
+    position:absolute;
+    top:10.6vw; left:60.5vw;
+    width:15vw;
+}
 
 .locationSection {
     width:auto; height:auto;
-    margin-bottom:20vw;
+    margin-bottom:27vw;
+    overflow:visible;
 }
 .locationImage {
     position:relative;
@@ -131,11 +147,17 @@
 .locationSubheader {
     font-size:4.2vw;
 }
+.locationFlowerTop {
+    display:none;
+}
+.locationFlowerBottom {
+    top:52vw; left:10vw;
+    transform:rotate(270deg);
+    width:25vw;
+}
 
 .pageFooter {
-    position:relative;
-    width:100vw; height:5vw;
-    background: #DFE9F2;
+    display:none;
 }
 
 }

@@ -42,6 +42,12 @@
     bottom:-30vw; left:-24vw;
     width:63vw;
 }
+.giftsButterfly {
+    position:absolute;
+    top:15.4vw; right:11vw;
+    width:12vw;
+    z-index:-1;
+}
 
 /* Gift Details Section */
 
@@ -128,6 +134,10 @@
 .giftsImageFlower.bottom {
     bottom:-51.75vh; left:-41.4vh;
     width:108.675vh;
+}
+.giftsButterfly {
+    top:26.565vh; right:18.975vh;
+    width:20.7vh;
 }
 
 /* Gift Details Section */

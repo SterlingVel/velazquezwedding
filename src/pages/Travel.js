@@ -46,6 +46,8 @@ class Travel extends React.Component {
                         <p className="travelTitle">Accommodations</p>
                     </div>
                     <img className="travelImageWreath" alt="wreath" src="travelImages/w2.png" />
+                    <div className="travelWreathFade"/>
+                    <div className="travelWreathFade"/>
                     <div className="introFade"></div>
                 </div>
 
@@ -79,6 +81,8 @@ class Travel extends React.Component {
                                 link="https://www.marriott.com/en-us/hotels/atlbd-renaissance-atlanta-midtown-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
                         </div>
                     </div>
+                    <LazyLoadImage className="hotelDivLeftFlower" src="travelImages/12.PNG" alt="flower"/>
+                    <LazyLoadImage className="hotelDivRightFlower" src="travelImages/15.png" alt="flower"/>
                 </div>
 
                 <div className="placesDiv">
@@ -96,7 +100,7 @@ class Travel extends React.Component {
                         <div className="travelTipSection">
                             <p className="travelTipHeader">Transportation</p>
                             <p className="travelTipDetails">Our shuttle service will leave from Hilton Garden Inn at 4 PM and return at 10:45 PM. Rideshare services like Uber 
-                            are also widely available in the city.</p>
+                                are also widely available in the city.</p>
                         </div>
                         <div className="travelTipSection">
                             <p className="travelTipHeader">Parking</p>
@@ -108,6 +112,7 @@ class Travel extends React.Component {
                             <p className="travelTipDetails">For anyone staying in Atlanta, be sure to check traffic before leaving as the trip can take anywhere up to an hour. And 
                                 check the weather, it might be cold!</p>
                         </div>
+                        <LazyLoadImage className="travelButterfly" src="weddingImages/32.PNG" alt="butterfly"/> 
                     </div>
 
                     <div className="locationSection">
@@ -123,6 +128,7 @@ class Travel extends React.Component {
                                 <p className="locationSubheader">Early April is the best time to stop by this farm and pick all the fresh strawberries you can carry! You can also 
                                     enjoy their petting zoo, gem mining, and more.</p>
                             </div>
+                            <LazyLoadImage className="locationFlowerTop" src="travelImages/40.png" alt="flower"/>
                         </div>
                     </div>
                     <div className="locationSection">
@@ -138,6 +144,7 @@ class Travel extends React.Component {
                                 <p className="locationSubheader">Spring is the best time to visit these gardens because all the flowers are in full bloom! And there's no better 
                                     place than the surrounding Piedmont Park to unwind.</p>
                             </div>
+                            <LazyLoadImage className="locationFlowerBottom" src="travelImages/10.png" alt="flower"/>
                         </div>
                     </div>
 
