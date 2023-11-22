@@ -1,6 +1,17 @@
-#hotelheaderfade {
+#hotelheaderfade, #placesheaderfade {
+    transform:translateX(-2vw);
     height:0;
 }
-#placesheaderfade {
-    height:0;
+#hotelheaderfade.is-visible, #placesheaderfade.is-visible {
+    transform:translateX(0)
+}
+#hotelsubheaderfade, #placessubheaderfade {
+    transform:translateX(2vw)
+}
+#hotelsubheaderfade.is-visible, #placessubheaderfade.is-visible {
+    transform:translateX(0)
+}
+
+#traveltipwrapper1, #traveltipwrapper2, #traveltipwrapper3 {
+    display:inline-table;
 }

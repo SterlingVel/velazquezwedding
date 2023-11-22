@@ -46,8 +46,8 @@ class Travel extends React.Component {
                         <p className="travelTitle">Accommodations</p>
                     </div>
                     <img className="travelImageWreath" alt="wreath" src="travelImages/w2.png" />
-                    <div className="travelWreathFade"/>
-                    <div className="travelWreathFade"/>
+                    <div className="travelWreathFade" />
+                    <div className="travelWreathFade" />
                     <div className="introFade"></div>
                 </div>
 
@@ -61,28 +61,36 @@ class Travel extends React.Component {
                         </Fade>
                     </div>
                     <div className="hotelWrapper">
-                        <p className="hotelSubheader">There are plenty of hotels in the area to fit all budgets.<br/>
-                            We highly recommend the Hilton Garden Inn as it will have a shuttle service 
-                            to the ceremony and a room block for all our traveling guests!
-                        </p>
-                        <div className="hotelRow">
-                            <Hotel name="Hilton Garden Inn" image="travelImages/hilton.jpg" time="10" price="165"
-                                link="https://www.hilton.com/en/hotels/atlmcgi-hilton-garden-inn-atlanta-south-mcdonough/" />
-                            <Hotel name="Holiday Inn Express" image="travelImages/holiday.jpg" time="10" price="160"
-                                link="https://www.ihg.com/holidayinnexpress/hotels/us/en/mcdonough/atlmd/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-ATLMD" />
-                        </div>
-                        <p className="hotelSubheader">These Atlanta hotels are much further from the venue, but you'll find many more activities to do 
-                            in the city!
-                        </p>
-                        <div className="hotelRow atlanta">
-                            <Hotel name="The Moxy - Midtown" image="travelImages/moxy.jpg" time="38" price="232"
-                                link="https://www.marriott.com/en-us/hotels/atlox-moxy-atlanta-midtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
-                            <Hotel name="The Renaissance - Midtown" image="travelImages/renaissance.jpg" time="37" price="265"
-                                link="https://www.marriott.com/en-us/hotels/atlbd-renaissance-atlanta-midtown-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
-                        </div>
+                        <Fade>
+                            <p className="hotelSubheader">There are plenty of hotels in the area to fit all budgets.<br />
+                                We highly recommend the Hilton Garden Inn as it will have a shuttle service
+                                to the ceremony and a room block for all our traveling guests!
+                            </p>
+                        </Fade>
+                        <Fade>
+                            <div className="hotelRow">
+                                <Hotel name="Hilton Garden Inn" image="travelImages/hilton.jpg" time="10" price="165"
+                                    link="https://www.hilton.com/en/hotels/atlmcgi-hilton-garden-inn-atlanta-south-mcdonough/" />
+                                <Hotel name="Holiday Inn Express" image="travelImages/holiday.jpg" time="10" price="160"
+                                    link="https://www.ihg.com/holidayinnexpress/hotels/us/en/mcdonough/atlmd/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-ATLMD" />
+                            </div>
+                        </Fade>
+                        <Fade>
+                            <p className="hotelSubheader">These Atlanta hotels are much further from the venue, but you'll find many more activities to do
+                                in the city!
+                            </p>
+                        </Fade>
+                        <Fade>
+                            <div className="hotelRow atlanta">
+                                <Hotel name="The Moxy - Midtown" image="travelImages/moxy.jpg" time="38" price="232"
+                                    link="https://www.marriott.com/en-us/hotels/atlox-moxy-atlanta-midtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
+                                <Hotel name="The Renaissance - Midtown" image="travelImages/renaissance.jpg" time="37" price="265"
+                                    link="https://www.marriott.com/en-us/hotels/atlbd-renaissance-atlanta-midtown-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
+                            </div>
+                        </Fade>
                     </div>
-                    <LazyLoadImage className="hotelDivLeftFlower" src="travelImages/12.PNG" alt="flower"/>
-                    <LazyLoadImage className="hotelDivRightFlower" src="travelImages/15.png" alt="flower"/>
+                    <LazyLoadImage className="hotelDivLeftFlower" src="travelImages/12.PNG" alt="flower" />
+                    <LazyLoadImage className="hotelDivRightFlower" src="travelImages/15.png" alt="flower" />
                 </div>
 
                 <div className="placesDiv">
@@ -94,59 +102,69 @@ class Travel extends React.Component {
                             <p className='placesDivSubheaderText'>THERE</p>
                         </Fade>
                         <Fade id="placesdetails" threshold="0.9">
-                            <p className='placesDetailsText'>We're excited to share some of our favorite places in the area with you!<br/>
+                            <p className='placesDetailsText'>We're excited to share some of our favorite places in the area with you!<br />
                                 We also have some information / tips below on how we'll be moving around this wedding weekend.</p>
                         </Fade>
-                        <div className="travelTipSection">
-                            <p className="travelTipHeader">Transportation</p>
-                            <p className="travelTipDetails">Our shuttle service will leave from Hilton Garden Inn at 4 PM and return at 10:45 PM. Rideshare services like Uber 
-                                are also widely available in the city.</p>
-                        </div>
-                        <div className="travelTipSection">
-                            <p className="travelTipHeader">Parking</p>
-                            <p className="travelTipDetails">There is enough parking for all guests in front of the venue. If you wish to arrive early and explore around The Square, you
-                                may also use this parking area.</p>
-                        </div>
-                        <div className="travelTipSection">
-                            <p className="travelTipHeader">Travel Tips</p>
-                            <p className="travelTipDetails">For anyone staying in Atlanta, be sure to check traffic before leaving as the trip can take anywhere up to an hour. And 
-                                check the weather, it might be cold!</p>
-                        </div>
-                        <LazyLoadImage className="travelButterfly" src="weddingImages/32.PNG" alt="butterfly"/> 
+                        <Fade id="traveltipwrapper1">
+                            <div className="travelTipSection">
+                                <p className="travelTipHeader">Transportation</p>
+                                <p className="travelTipDetails">Our shuttle service will leave from Hilton Garden Inn at 4 PM and return at 10:45 PM. Rideshare services like Uber
+                                    are also widely available in the city.</p>
+                            </div>
+                        </Fade>
+                        <Fade id="traveltipwrapper2">
+                            <div className="travelTipSection">
+                                <p className="travelTipHeader">Parking</p>
+                                <p className="travelTipDetails">There is enough parking for all guests in front of the venue. If you wish to arrive early and explore around The Square, you
+                                    may also use this parking area.</p>
+                            </div>
+                        </Fade>
+                        <Fade id="traveltipwrapper3">
+                            <div className="travelTipSection">
+                                <p className="travelTipHeader">Travel Tips</p>
+                                <p className="travelTipDetails">For anyone staying in Atlanta, be sure to check traffic before leaving as the trip can take anywhere up to an hour. And
+                                    check the weather, it might be cold!</p>
+                            </div>
+                        </Fade>
+                        <LazyLoadImage className="travelButterfly" src="weddingImages/32.PNG" alt="butterfly" />
                     </div>
 
-                    <div className="locationSection">
-                        <LazyLoadImage className="locationImage country" src="travelImages/McDonough.jpg" alt="McDonough"/>
-                        <div className="locationSectionDetails">
-                            <div className="location">
-                                <p className="locationHeader">The McDonough Square</p>
-                                <p className="locationSubheader">Located right by the wedding venue, this block in McDonough's historic downtown is the perfect place to shop, eat, 
-                                    and relax for the weekend.</p>
+                    <Fade>
+                        <div className="locationSection">
+                            <LazyLoadImage className="locationImage country" src="travelImages/McDonough.jpg" alt="McDonough" />
+                            <div className="locationSectionDetails">
+                                <div className="location">
+                                    <p className="locationHeader">The McDonough Square</p>
+                                    <p className="locationSubheader">Located right by the wedding venue, this block in McDonough's historic downtown is the perfect place to shop, eat,
+                                        and relax for the weekend.</p>
+                                </div>
+                                <div className="location">
+                                    <p className="locationHeader">Southern Belle Farm</p>
+                                    <p className="locationSubheader">Early April is the best time to stop by this farm and pick all the fresh strawberries you can carry! You can also
+                                        enjoy their petting zoo, gem mining, and more.</p>
+                                </div>
+                                <LazyLoadImage className="locationFlowerTop" src="travelImages/40.png" alt="flower" />
                             </div>
-                            <div className="location">
-                                <p className="locationHeader">Southern Belle Farm</p>
-                                <p className="locationSubheader">Early April is the best time to stop by this farm and pick all the fresh strawberries you can carry! You can also 
-                                    enjoy their petting zoo, gem mining, and more.</p>
-                            </div>
-                            <LazyLoadImage className="locationFlowerTop" src="travelImages/40.png" alt="flower"/>
                         </div>
-                    </div>
-                    <div className="locationSection">
-                        <LazyLoadImage className="locationImage city" src="travelImages/Atlanta.jpg" alt="McDonough"/>
-                        <div className="locationSectionDetails city">
-                            <div className="location">
-                                <p className="locationHeader">Ponce City Market</p>
-                                <p className="locationSubheader">This destination is famous for its food hall, shops, and its rooftop theme park (which is adults only on weekend 
-                                    nights). It's one of our favorite places in the city!</p>
+                    </Fade>
+                    <Fade>
+                        <div className="locationSection">
+                            <LazyLoadImage className="locationImage city" src="travelImages/Atlanta.jpg" alt="McDonough" />
+                            <div className="locationSectionDetails city">
+                                <div className="location">
+                                    <p className="locationHeader">Ponce City Market</p>
+                                    <p className="locationSubheader">This destination is famous for its food hall, shops, and its rooftop theme park (which is adults only on weekend
+                                        nights). It's one of our favorite places in the city!</p>
+                                </div>
+                                <div className="location">
+                                    <p className="locationHeader">Atlanta Botanical Gardens</p>
+                                    <p className="locationSubheader">Spring is the best time to visit these gardens because all the flowers are in full bloom! And there's no better
+                                        place than the surrounding Piedmont Park to unwind.</p>
+                                </div>
+                                <LazyLoadImage className="locationFlowerBottom" src="travelImages/10.png" alt="flower" />
                             </div>
-                            <div className="location">
-                                <p className="locationHeader">Atlanta Botanical Gardens</p>
-                                <p className="locationSubheader">Spring is the best time to visit these gardens because all the flowers are in full bloom! And there's no better 
-                                    place than the surrounding Piedmont Park to unwind.</p>
-                            </div>
-                            <LazyLoadImage className="locationFlowerBottom" src="travelImages/10.png" alt="flower"/>
                         </div>
-                    </div>
+                    </Fade>
 
                     <div className="pageFooter"></div>
                 </div>

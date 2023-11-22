@@ -1,0 +1,15 @@
+#crewheaderfade {
+    transform:translateX(-2vw);
+    height:0;
+}
+#crewheaderfade.is-visible {
+    transform:translateX(0)
+}
+
+#crewheaderfade {
+    transform:translateX(-2vw);
+    height:0;
+}
+#crewheaderfade.is-visible {
+    transform:translateX(0)
+}
