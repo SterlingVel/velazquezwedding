@@ -45,7 +45,7 @@ class Gifts extends React.Component {
                     </div>
                     <img className="giftsImageFlower top" id="giftsimageflower" alt="flowers" src="giftsImages/b5.png"/>
                     <img className="giftsImageFlower bottom" id="giftsimageflower2" alt="flowers" src="giftsImages/b6.png"/>
-                    <img className="giftsButterfly" src="weddingImages/32.png" alt="butterfly"/>
+                    <img className="giftsButterfly" src="weddingImages/32.PNG" alt="butterfly"/>
 
                     <div className="introFade"></div>
                 </div>
