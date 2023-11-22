@@ -21,8 +21,8 @@
     width:100vw;
 }
 .giftsButterfly {
-    top:30vw; right:22vw;
-    width:30vw;
+    top:13.9vw; right:17vw;
+    width:24vw;
 }
 
 /* Gift Details Section */
@@ -92,6 +92,10 @@
     .giftsSubHeader {
         font-size:22vw;
         margin-top:-11vw;
+    }
+    .giftsButterfly {
+        top:30vw; right:22vw;
+        width:30vw;
     }
     
     .giftsImageFlower.top {
