@@ -32,6 +32,8 @@ class Travel extends React.Component {
     }
 
     componentDidMount() {
+        if (window.screen.height / window.screen.width > 0.855)
+            document.getElementById("navmenu").className = "navMenu";
         window.scrollTo(0, 0);
         this.addResizeListener();
     }
@@ -46,8 +48,8 @@ class Travel extends React.Component {
                         <p className="travelTitle">Accommodations</p>
                     </div>
                     <img className="travelImageWreath" alt="wreath" src="travelImages/w2.png" />
-                    <div className="travelWreathFade" />
-                    <div className="travelWreathFade" />
+                    <div className="travelWreathFade left" />
+                    <div className="travelWreathFade right" />
                     <div className="introFade"></div>
                 </div>
 
@@ -60,47 +62,69 @@ class Travel extends React.Component {
                             <p className='hotelDivSubheaderText'>STAY</p>
                         </Fade>
                     </div>
+
                     <div className="hotelWrapper">
                         <Fade>
                             <p className="hotelSubheader">There are plenty of hotels in the area to fit all budgets.<br />
                                 We highly recommend the Hilton Garden Inn as it will have a shuttle service
-                                to the ceremony and a room block for all our traveling guests!
+                                to the ceremony and a room block  for all our traveling guests!
                             </p>
                         </Fade>
-                        <Fade>
-                            <div className="hotelRow">
+                        <div className="hotelRow">
+                            <Fade id="hotel1">
                                 <Hotel name="Hilton Garden Inn" image="travelImages/hilton.jpg" time="10" price="165"
                                     link="https://www.hilton.com/en/hotels/atlmcgi-hilton-garden-inn-atlanta-south-mcdonough/" />
+                            </Fade>
+                            <Fade id="hotel2">
                                 <Hotel name="Holiday Inn Express" image="travelImages/holiday.jpg" time="10" price="160"
                                     link="https://www.ihg.com/holidayinnexpress/hotels/us/en/mcdonough/atlmd/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-ATLMD" />
-                            </div>
-                        </Fade>
+                            </Fade>
+                        </div>
                         <Fade>
                             <p className="hotelSubheader">These Atlanta hotels are much further from the venue, but you'll find many more activities to do
                                 in the city!
                             </p>
                         </Fade>
-                        <Fade>
-                            <div className="hotelRow atlanta">
+                        <div className="hotelRow atlanta">
+                            <Fade id="hotel3">
                                 <Hotel name="The Moxy - Midtown" image="travelImages/moxy.jpg" time="38" price="232"
                                     link="https://www.marriott.com/en-us/hotels/atlox-moxy-atlanta-midtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
+                            </Fade>
+                            <Fade id="hotel4">
                                 <Hotel name="The Renaissance - Midtown" image="travelImages/renaissance.jpg" time="37" price="265"
                                     link="https://www.marriott.com/en-us/hotels/atlbd-renaissance-atlanta-midtown-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
-                            </div>
+                            </Fade>
+                        </div>
+                    </div>
+
+                    <div className="hotelFlowerWrapperLeft">
+                        <Fade id="hotelflowerleft" threshold="0.2">
+                            <LazyLoadImage className="hotelDivLeftFlower" src="travelImages/12.PNG" alt="flower" />
                         </Fade>
                     </div>
-                    <LazyLoadImage className="hotelDivLeftFlower" src="travelImages/12.PNG" alt="flower" />
-                    <LazyLoadImage className="hotelDivRightFlower" src="travelImages/15.png" alt="flower" />
+                    <div className="hotelFlowerWrapperRight">
+                        <Fade id="hotelflowerright">
+                            <LazyLoadImage className="hotelDivRightFlower" src="travelImages/15.png" alt="flower" />
+                        </Fade>
+                    </div>
+
                 </div>
 
                 <div className="placesDiv">
                     <div className="placesDivHeader">
-                        <Fade id="placesheaderfade" threshold="0.9">
-                            <p className="placesDivHeaderText">Once You're</p><br />
-                        </Fade>
-                        <Fade id="placessubheaderfade" threshold="0.9">
-                            <p className='placesDivSubheaderText'>THERE</p>
-                        </Fade>
+                        <div className='placesDivHeaderWrapper'>
+                            <Fade id="placesheaderfade" threshold="0.9">
+                                <p className="placesDivHeaderText">Once You're</p><br />
+                            </Fade>
+                            <Fade id="placessubheaderfade" threshold="0.9">
+                                <p className='placesDivSubheaderText'>THERE</p>
+                            </Fade>
+                            <div className="travelButterflyWrapper">
+                                <Fade id="travelbutterfly" threshold="0.9">
+                                    <LazyLoadImage className="travelButterfly" src="weddingImages/32.PNG" alt="butterfly" />
+                                </Fade>
+                            </div>
+                        </div>
                         <Fade id="placesdetails" threshold="0.9">
                             <p className='placesDetailsText'>We're excited to share some of our favorite places in the area with you!<br />
                                 We also have some information / tips below on how we'll be moving around this wedding weekend.</p>
@@ -126,10 +150,9 @@ class Travel extends React.Component {
                                     check the weather, it might be cold!</p>
                             </div>
                         </Fade>
-                        <LazyLoadImage className="travelButterfly" src="weddingImages/32.PNG" alt="butterfly" />
                     </div>
 
-                    <Fade>
+                    <Fade id="locationsectionfade" threshold="0.2">
                         <div className="locationSection">
                             <LazyLoadImage className="locationImage country" src="travelImages/McDonough.jpg" alt="McDonough" />
                             <div className="locationSectionDetails">
@@ -143,11 +166,15 @@ class Travel extends React.Component {
                                     <p className="locationSubheader">Early April is the best time to stop by this farm and pick all the fresh strawberries you can carry! You can also
                                         enjoy their petting zoo, gem mining, and more.</p>
                                 </div>
-                                <LazyLoadImage className="locationFlowerTop" src="travelImages/40.png" alt="flower" />
+                                <div className="locationFlowerTop">
+                                    <Fade id="locationflower" threshold="0.2">
+                                        <img className="locationFlower" src="travelImages/40.png" alt="flower" />
+                                    </Fade>
+                                </div>
                             </div>
                         </div>
                     </Fade>
-                    <Fade>
+                    <Fade id="locationsectionfade2" threshold="0.2">
                         <div className="locationSection">
                             <LazyLoadImage className="locationImage city" src="travelImages/Atlanta.jpg" alt="McDonough" />
                             <div className="locationSectionDetails city">
@@ -161,7 +188,11 @@ class Travel extends React.Component {
                                     <p className="locationSubheader">Spring is the best time to visit these gardens because all the flowers are in full bloom! And there's no better
                                         place than the surrounding Piedmont Park to unwind.</p>
                                 </div>
-                                <LazyLoadImage className="locationFlowerBottom" src="travelImages/10.png" alt="flower" />
+                                <div className="locationFlowerBottom">
+                                    <Fade id="locationflower2" threshold="0.2">
+                                        <img className="locationFlower2" src="travelImages/10.png" alt="flower" />
+                                    </Fade>
+                                </div>
                             </div>
                         </div>
                     </Fade>

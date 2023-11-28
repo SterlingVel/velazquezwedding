@@ -13,6 +13,16 @@
   padding:0;
 }
 
+img {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  pointer-events:none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -58,8 +68,8 @@ a {
 .menuButton {
   position:absolute;
   display:inline-table;
-  width:9vw;
-  right:0; top:0.5vw;
+  width:9vw; height:100%;
+  right:0; top:0vw;
   z-index:12;
   cursor:pointer;
 }
@@ -91,6 +101,7 @@ a {
   color:#9eb5c8;
 }
 .menuButtonText {
+  margin-top:0.5vw;
   color:#595959aa;
 }
 
@@ -112,7 +123,9 @@ a {
   }
   .menuButton {
     width:17vh;
-    top:1vh;
+  }
+  .menuButtonText {
+    margin-top:1vh;
   }
   .navOptions {
     left:2.2vh;
@@ -143,8 +156,12 @@ a {
   }
   .menuButton {
     width:17vw;
-    right:0; top:0.8vw;
+    right:0;
     transition:width 1s;
+    height:6vw;
+  }
+  .menuButtonText {
+    margin-top:0.8vw;
   }
   .navMenu.show .menuButton {
     width:16.7vw;
@@ -195,7 +212,10 @@ a {
   }
   .menuButton {
     width:27vw;
-    right:0; top:0.8vw;
+    right:0;
+  }
+  .menuButtonText {
+    margin-top:0.8vw;
   }
   .navMenu.show .menuButton {
     width:23vw;

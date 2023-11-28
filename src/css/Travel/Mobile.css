@@ -56,12 +56,12 @@
     font-size:4.8vw;
     padding:1.4vw 8vw;
 }
-.hotelDivLeftFlower {
+.hotelFlowerWrapperLeft {
     top:80vw; left:-32vw;
     width:48vw;
     transform:rotate(6deg);
 }
-.hotelDivRightFlower {
+.hotelFlowerWrapperRight {
     top:301vw; right:-16svw;
     width:37vw;
     transform:rotate(-5deg);
@@ -102,9 +102,8 @@
     font-size:4.2vw;
     font-style: italic;
 }
-.travelButterfly {
-    position:absolute;
-    top:10.6vw; left:60.5vw;
+.travelButterflyWrapper {
+    top:-2%; right:-24%;
     width:15vw;
 }
 
@@ -151,7 +150,7 @@
     display:none;
 }
 .locationFlowerBottom {
-    top:52vw; left:10vw;
+    top:53vw; left:10vw;
     transform:rotate(270deg);
     width:25vw;
 }
@@ -160,6 +159,20 @@
     display:none;
 }
 
+#locationflower2 {
+    animation:none;
+}
+#locationflower2.is-visible {
+    animation:locationflower2 1.4s ease-out;
+}
+
+@keyframes locationflower2 {
+    from {
+        transform:translate(-10vw, -10vw);
+    } to {
+        transform:translate(0);
+    }
+}
 }
 
 @media (max-aspect-ratio: 0.75/1) {

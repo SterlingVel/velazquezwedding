@@ -31,6 +31,8 @@ class Wedding extends React.Component {
     }
 
     componentDidMount() {
+        if (window.screen.height / window.screen.width > 0.855)
+            document.getElementById("navmenu").className = "navMenu";
         window.scrollTo(0, 0);
         this.addResizeListener();
     }
@@ -101,7 +103,7 @@ class Wedding extends React.Component {
                             </Fade>
                         </div>
                         <div className="scheduleFlowerWrapper">
-                            <Fade threshold="0.5" id="scheduleflower">
+                            <Fade threshold="0.2" id="scheduleflower">
                                 <LazyLoadImage className="scheduleFlower" alt="flower" src="weddingImages/24.PNG" loading="lazy"/>
                             </Fade>
                         </div>
@@ -118,7 +120,7 @@ class Wedding extends React.Component {
                         <Fade id="crewheaderfade" threshold="0.9">
                             <p className="crewDivHeaderText">The</p><br />
                         </Fade>
-                        <Fade id="crewsubheaderfade" threshold="0.9">
+                        <Fade id="crewsubheaderfade" threshold="0.2">
                             <p className='crewDivSubheaderText'>CREW</p>
                         </Fade>
                     </div>

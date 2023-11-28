@@ -46,3 +46,20 @@ export default App;
 export function openMenu() {
   document.getElementById("navmenu").classList.toggle("show");
 }
+
+
+// {/* <Link to="/" className={"navOption" + (location.pathname === "/" ? " selected" : "")} onClick={e => window.screen.height / window.screen.width > 0.855 ? openMenu() : ""}>
+//     <p className="navOptionText">HOME</p>
+// </Link>
+// <Link to="/wedding" className={"navOption" + (location.pathname === "/wedding" ? " selected" : "")} onClick={e => window.screen.height / window.screen.width > 0.855 ? openMenu() : ""}>
+//     <p className="navOptionText">WEDDING</p>
+// </Link>
+// <Link to="/story" className={"navOption" + (location.pathname === "/story" ? " selected" : "")} onClick={e => window.screen.height / window.screen.width > 0.855 ? openMenu() : ""}>
+//     <p className="navOptionText story">OUR STORY</p>
+// </Link>
+// <Link to="/travel" className={"navOption" + (location.pathname === "/travel" ? " selected" : "")} onClick={e => window.screen.height / window.screen.width > 0.855 ? openMenu() : ""}>
+//     <p className="navOptionText">TRAVEL</p>
+// </Link>
+// <Link to="/gifts" className={"navOption" + (location.pathname === "/gifts" ? " selected" : "")} onClick={e => window.screen.height / window.screen.width > 0.855 ? openMenu() : ""}>
+//     <p className="navOptionText">GIFTS</p>
+// </Link> */}

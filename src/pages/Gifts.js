@@ -31,6 +31,8 @@ class Gifts extends React.Component {
     }
 
     componentDidMount() {
+        if (window.screen.height / window.screen.width > 0.855)
+            document.getElementById("navmenu").className = "navMenu";
         window.scrollTo(0, 0);
         this.addResizeListener();
     }

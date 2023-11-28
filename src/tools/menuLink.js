@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link, Routes, Route, useLocation } from "react-router-dom";
-import openMenu from "../App.js"
+
+function openMenu() {
+    document.getElementById("navmenu").classList.toggle("show");
+}
 
 function MenuLink(props) {
 

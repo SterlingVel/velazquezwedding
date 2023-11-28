@@ -12,6 +12,148 @@
     transform:translateX(0)
 }
 
+#hotelflowerleft {
+    transform:translateX(10vw);
+    animation:none;
+}
+#hotelflowerleft.is-visible {
+    transform:translateX(0);
+    animation:hotelflowerleft 2s ease-out;
+}
+#hotelflowerright {
+    transform:translateX(-10vw);
+    animation:none;
+}
+#hotelflowerright.is-visible {
+    transform:translateX(0);
+    animation:hotelflowerright 2.5s ease-out;
+}
+
 #traveltipwrapper1, #traveltipwrapper2, #traveltipwrapper3 {
-    display:inline-table;
+    display:inline-block;
+}
+#travelbutterfly {
+    animation:none;
+}
+#travelbutterfly.is-visible {
+    animation:travelbutterfly1 ease-in-out 3.5s;
+}
+
+#locationflower {
+    transform:translate(5vw, 2vw);
+}
+#locationflower.is-visible {
+    transform:translateX(0);
+}
+#locationflower2 {
+    transform:translate(-5vw, 2vw);
+}
+#locationflower2.is-visible {
+    transform:translateX(0);
+}
+
+@keyframes travelWreathFade {
+    from {
+        transform:translate(0) rotate(0);
+    } to {
+        transform:translate(-20vw, 95vh) rotate(240deg) scale(0);
+    }
+}
+
+@keyframes travelWreathFade2 {
+    from {
+        transform:translate(0) rotate(0);
+    } to {
+        transform:translate(20vw, 95vh) rotate(-240deg) scale(0);
+    }
+}
+
+@keyframes hotelflowerleft {
+    from {
+        opacity:0;
+        transform:translateX(-10vw);
+    } to {
+        opacity:1;
+        transform:translateX(0vw);
+    }
+}
+@keyframes hotelflowerright {
+    from {
+        opacity:0;
+        transform:translateX(10vw);
+    } to {
+        opacity:1;
+        transform:translateX(0vw);
+    }
+}
+
+@keyframes travelbutterfly1 {
+
+    0% {
+        opacity:0;
+        transform:rotate(0deg) translate(-25vw, -1.2vw) rotate(0deg) rotateZ(-55deg) rotateY(180deg);
+    } 20% {
+        opacity:0;
+        transform:rotate(0deg) translate(-26vw, -1vw) rotate(0deg) rotateZ(-55deg) rotateY(180deg);
+    } 50% {
+        opacity:1;
+        transform:rotate(0deg) translate(-24.5vw, -1.8vw) rotate(0deg) rotateZ(-40deg) rotateY(180deg);
+    } 100% {
+        transform:rotate(120deg) translate(0) rotate(-120deg) rotateY(0);
+    }
+
+}
+
+@media (min-aspect-ratio: 1/0.58) {
+
+    @keyframes travelWreathFade {
+        from {
+            transform:translate(0) rotate(0);
+        } to {
+            transform:translate(-40vw, 95vh) rotate(240deg) scale(0);
+        }
+    }
+    
+    @keyframes travelWreathFade2 {
+        from {
+            transform:translate(0) rotate(0);
+        } to {
+            transform:translate(40vw, 95vh) rotate(-240deg) scale(0);
+        }
+    }
+
+    @keyframes travelbutterfly1 {
+        0% {
+            opacity:0;
+            transform:rotate(0deg) translate(-25vw, -1.2vw) rotate(0deg) rotateZ(-55deg) rotateY(180deg);
+        } 20% {
+            opacity:0;
+            transform:rotate(0deg) translate(-370%, -10%) rotate(0deg) rotateZ(-55deg) rotateY(180deg);
+        } 50% {
+            opacity:1;
+            transform:rotate(0deg) translate(-320%, -40%) rotate(0deg) rotateZ(-30deg) rotateY(180deg);
+        } 100% {
+            transform:rotate(120deg) translate(0) rotate(-120deg) rotateY(0);
+        }
+    }
+
+}
+
+@media (max-aspect-ratio: 0.93/1) {
+
+    @keyframes travelbutterfly1 {
+        0% {
+            opacity:0;
+            transform:rotate(0deg) translate(-25vw, -1.2vw) rotate(0deg) rotateZ(-55deg) rotateY(180deg);
+        } 20% {
+            opacity:0;
+            transform:rotate(0deg) translate(-54vw, -10%) rotate(0deg) rotateZ(-55deg) rotateY(180deg);
+        } 50% {
+            opacity:1;
+            transform:rotate(0deg) translate(-48vw, -35%) rotate(0deg) rotateZ(-35deg) rotateY(180deg);
+        } 100% {
+            transform:rotate(120deg) translate(0) rotate(-120deg) rotateY(0);
+        }
+    }
+
 }

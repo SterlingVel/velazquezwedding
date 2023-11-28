@@ -13,6 +13,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
+    z-index:1;
 }
 .travelTitle {
     font-family: Angella;
@@ -36,7 +37,20 @@
     transform:translate(-50%, -50%) rotate(-135deg);
 }
 .travelWreathFade {
-
+    position:absolute;
+    top:0; left:50%;
+    height:135vh;
+    width:50vw;
+    background:#FEFEFB;
+    box-shadow:0 0 200px 200px #FEFEFB;
+    animation:travelWreathFade 3s linear;
+    transform:translate(-20vw, 95vh) rotate(240deg) scale(0);
+    z-index:0;
+}
+.travelWreathFade.right {
+    left:0;
+    animation:travelWreathFade2 3s linear;
+    transform:translate(20vw, 95vh) rotate(240deg) scale(0);
 }
 
 /* Hotel Section */
@@ -70,6 +84,10 @@
     position:relative;
     margin-bottom:3vw;
 }
+#hotel1, #hotel2, #hotel3, #hotel4 {
+    width:fit-content;
+    display:inline-block;
+}
 .hotelSection {
     display:inline-block;
     margin:0 5vw;
@@ -93,17 +111,20 @@
     padding:0.3vw 2vw;
     border:thin solid #595959;
 }
-.hotelDivLeftFlower {
+.hotelFlowerWrapperLeft {
     position:absolute;
     top:24vw; left:-10vw;
     width:20vw;
     transform:rotate(15deg);
 }
-.hotelDivRightFlower {
+.hotelFlowerWrapperRight {
     position:absolute;
     top:20vw; right:-6vw;
     width:15vw;
     transform:rotate(2deg);
+}
+.hotelDivLeftFlower, .hotelDivRightFlower {
+    width:100%;
 }
 
 /* Places to Visit Section */
@@ -117,6 +138,12 @@
     background: #DFE9F2;
     padding:5vw 0 7vw 0;
 }
+.placesDivHeaderWrapper {
+    position:relative;
+    width:fit-content;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
 .placesDivHeaderText {
     font-family: Angella;
     font-size:4.5vw;
@@ -126,6 +153,15 @@
     font-size:6vw;
     margin-top:4vw;
 }
+.travelButterflyWrapper {
+    position:absolute;
+    top:-5%; right:-22%;
+    width:7.5vw;
+}
+.travelButterfly {
+    width:100%;
+}
+
 .placesDetailsText {
     font-size:1.5vw;
     font-style: italic;
@@ -147,11 +183,6 @@
 .travelTipDetails {
     font-size:1.3vw;
     font-style: italic;
-}
-.travelButterfly {
-    position:absolute;
-    top:4.4vw; left:56vw;
-    width:7.5vw;
 }
 
 .locationSection {
@@ -199,15 +230,19 @@
 }
 .locationFlowerTop {
     position:absolute; 
-    top:-9.9vw; right:0.5vw;
+    top:-10.5vw; right:2vw;
     transform:rotate(-95deg);
     width:13vw;
 }
 .locationFlowerBottom {
     position:absolute; 
-    top:-15.9vw; left:2vw;
+    top:-16vw; left:2vw;
     transform:rotate(70deg);
     width:13vw;
+}
+.locationFlower, .locationFlower2 {
+    position:relative;
+    width:100%;
 }
 
 .pageFooter {
@@ -229,6 +264,13 @@
 .travelSubHeader {
     font-size:4.7vh;
     margin:-3.8vh 0 -6vh 0;
+}
+.travelWreathFade {
+    width:50vw;
+    transform:translate(-40vw, 95vh) rotate(240deg) scale(0);
+}
+.travelWreathFade.right {
+    transform:translate(40vw, 95vh) rotate(240deg) scale(0);
 }
 
 /* Hotel Section */
@@ -271,11 +313,11 @@
     font-size:2.59vh;
     padding:0.52vh 2.45vh;
 }
-.hotelDivLeftFlower {
+.hotelFlowerWrapperLeft {
     top:41.4vh; left:-17.25vh;
     width:34.5vh;
 }
-.hotelDivRightFlower {
+.hotelFlowerWrapperRight {
     top:34.5vh; right:-10.35vh;
     width:25.875vh;
 }
@@ -313,9 +355,7 @@
 .travelTipDetails {
     font-size:2.24vh;
 }
-.travelButterfly {
-    position:absolute;
-    top:7.59vh; left:96.6vh;
+.travelButterflyWrapper {
     width:12.94vh;
 }
 
@@ -357,7 +397,7 @@
     font-size:1.5vw;
 }
 
-.travelPageFooter {
+.pageFooter {
     height:5vw;
 }
 
