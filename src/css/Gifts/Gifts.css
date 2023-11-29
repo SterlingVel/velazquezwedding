@@ -83,6 +83,11 @@
     padding:0.3vw 2vw;
     border:thin solid #595959;
     background:#595959;
+    transition:background 0.2s, color 0.2s;
+}
+.honeymoonLink:hover {
+    background:transparent;
+    color:#595959;
 }
 
 .registryHeader {
@@ -107,6 +112,11 @@
     margin:0 1vw;
     border:thin solid #595959;
     background:#595959;
+    transition:background 0.2s, color 0.2s;
+}
+.registryLink:hover {
+    background:transparent;
+    color:#595959;
 }
 
 .pageFooter.gifts {

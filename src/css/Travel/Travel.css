@@ -110,6 +110,11 @@
     font-size:1.5vw;
     padding:0.3vw 2vw;
     border:thin solid #595959;
+    transition:background 0.2s, color 0.2s;
+}
+.hotelLink:hover {
+    background:#595959;
+    color:#FEFEFB;
 }
 .hotelFlowerWrapperLeft {
     position:absolute;

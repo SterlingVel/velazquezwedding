@@ -110,7 +110,7 @@
   .homeGallerySection.travel .homeGalleryText  {
     font-size:7.5vw;
     margin-top:-52.5vw;
-    transform: translate(13vw, -6vw);
+    transform: translate(-3vw, -6vw);
   }
   .homeGallerySection.gifts .homeGalleryText {
     font-size:7.5vw;

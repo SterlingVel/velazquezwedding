@@ -110,6 +110,11 @@
     margin-top:2vw;
     pointer-events:all;
     cursor:pointer;
+    transition:background 0.2s, color 0.2s;
+}
+.hazlehurstMap:hover {
+    background:#595959;
+    color:#FEFEFB;
 }
 .mapLink {
     pointer-events:none;
