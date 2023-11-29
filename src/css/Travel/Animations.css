@@ -141,6 +141,22 @@
 
 @media (max-aspect-ratio: 0.93/1) {
 
+    @keyframes travelWreathFade {
+        from {
+            transform:translate(0) rotate(0);
+        } to {
+            transform:translate(-50vw, 110vh) rotate(240deg) scale(0);
+        }
+    }
+    
+    @keyframes travelWreathFade2 {
+        from {
+            transform:translate(0) rotate(0);
+        } to {
+            transform:translate(50vw, 110vh) rotate(-240deg) scale(0);
+        }
+    }
+
     @keyframes travelbutterfly1 {
         0% {
             opacity:0;

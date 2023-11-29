@@ -14,6 +14,15 @@
     height:164vw;
     transform:translate(-50%, -50%) rotate(-135deg);
 }
+.travelWreathFade {
+    box-shadow:0 0 100px 100px #FEFEFB;
+    animation:travelWreathFade 4s linear;
+    transform:translate(-50vw, 110vh) rotate(240deg) scale(0);
+}
+.travelWreathFade.right {
+    animation:travelWreathFade2 4s linear;
+    transform:translate(50vw, 110vh) rotate(240deg) scale(0);
+}
 
 /* Hotel Section */
 
