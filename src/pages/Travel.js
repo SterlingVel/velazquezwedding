@@ -3,6 +3,7 @@ import '../css/Travel/Travel.css';
 import '../css/Travel/Animations.css';
 import '../css/Travel/Mobile.css';
 import '../css/index.css';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 import Fade from '../tools/fade.js'
 import { LazyLoadImage } from "react-lazy-load-image-component";
