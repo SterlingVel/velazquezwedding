@@ -45,33 +45,35 @@ class Gifts extends React.Component {
                         <p className="giftsTitle">Our</p>
                         <p className="giftsSubHeader">Registry</p>
                     </div>
-                    <img className="giftsImageFlower top" id="giftsimageflower" alt="flowers" src="giftsImages/b5.png"/>
-                    <img className="giftsImageFlower bottom" id="giftsimageflower2" alt="flowers" src="giftsImages/b6.png"/>
-                    <img className="giftsButterfly" src="weddingImages/32.PNG" alt="butterfly"/>
+                    <img className="giftsImageFlower top" id="giftsimageflower" alt="flowers" src="giftsImages/b5.png" />
+                    <img className="giftsImageFlower bottom" id="giftsimageflower2" alt="flowers" src="giftsImages/b6.png" />
+                    <img className="giftsButterfly" src="weddingImages/32.PNG" alt="butterfly" />
 
                     <div className="introFade"></div>
                 </div>
 
                 <div className="giftDetailsDiv">
                     <div className="giftDetailsSection">
-                        <p className="honeymoonHeader">HONEYMOON</p>
-                        <p className="honeymoonDetails">Please know that your presence on our special day is the greatest 
-                            present of all! However, if you do wish to celebrate with a gift, a contribution to our honeymoon 
-                            fund would be warmly appreciated.
-                        </p>
-                        <a className="honeymoonLink" href="">OUR FUND</a>
+                        <Fade>
+                            <p className="honeymoonHeader">HONEYMOON</p>
+                            <p className="honeymoonDetails">Please know that your presence on our special day is the greatest
+                                present of all! However, if you do wish to celebrate with a gift, a contribution to our honeymoon
+                                fund would be warmly appreciated.
+                            </p>
+                            <a className="honeymoonLink" href="">OUR FUND</a>
+                        </Fade>
                     </div>
                     <div className="giftDetailsSection registry">
-                        <p className="registryHeader">GIFT REGISTRY</p>
-                        <p className="registryDetails">We're registered at:</p>
-                        <a className="registryLink" href="">Amazon</a>
-                        <a className="registryLink" href="">Target</a>
-                        <a className="registryLink" href="">Zola</a>
-                        <p className="registryDetails cards">If you prefer giving gift cards, we'd happily accept one from any 
-                            of the stores above!</p>
+                        <Fade>
+                            <p className="registryHeader">GIFT REGISTRY</p>
+                            <p className="registryDetails">We're registered at</p>
+                            <a className="registryLink" href="">Amazon</a>
+                            <p className="registryDetails cards">If you prefer giving gift cards, we love:<br />Amazon, HomeGoods, Target,
+                                Home Depot, and Costco!</p>
+                        </Fade>
                     </div>
                 </div>
-                
+
                 <div className="pageFooter gifts"></div>
             </motion.div>
         );

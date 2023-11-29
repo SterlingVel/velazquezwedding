@@ -37,16 +37,19 @@
     top:-21vw; right:-24vw;
     width:58vw;
     transform:rotate(-45deg);
+    animation:giftFlowerTop 2.2s ease-out;
 }
 .giftsImageFlower.bottom {
     bottom:-30vw; left:-24vw;
     width:63vw;
+    animation:giftFlowerBottom 2.8s ease-out;
 }
 .giftsButterfly {
     position:absolute;
     top:15.4vw; right:11vw;
     width:12vw;
     z-index:-1;
+    animation:giftButterfly 2.8s ease-in-out;
 }
 
 /* Gift Details Section */
@@ -186,4 +189,37 @@
     height:8.625vh;
 }
 
+}
+
+@keyframes giftFlowerTop {
+    from {
+        transform:translate(5vw, -5vw) rotate(-45deg);
+        opacity:0;
+    } to {
+        transform:translate(0) rotate(-45deg);
+        opacity:1;
+    }
+}
+
+@keyframes giftFlowerBottom {
+    from {
+        transform:translate(-5vw, 5vw);
+        opacity:0;
+    } to {
+        transform:translate(0);
+        opacity:1;
+    }
+}
+
+@keyframes giftButterfly {
+    0% {
+        opacity:0;
+        transform:rotate(30deg) translate(-18vw, 51.82vh) rotate(-10deg) scale(1) rotateY(140deg);    
+    } 30% {
+        opacity:0;
+    } 60% {
+        opacity:1;
+    } 100% {
+        transform:rotate(140deg) translate(0) rotate(-140deg) scale(1) rotateY(360deg);
+    }
 }
