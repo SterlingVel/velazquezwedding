@@ -63,7 +63,7 @@ class Story extends React.Component {
                         <ImageWrapper className="sbPicture" id="sbpicture1" image="storyImages/RC.jpg" />
                     </div>
                     <div className="storybookSection">
-                        <ImageWrapper className="sbFlower" id="sbflower2" image="storyImages/SB2.PNG" />
+                        <ImageWrapper className="sbFlower" id="sbflower2" image="storyImages/SB2.png" />
                         <ImageWrapper className="sbPicture" id="sbpicture2" image="storyImages/Alanna.jpg" />
                         <p className="sbText" id="sbtext2">There was Alanna, a girl born and raised in McDonough, Georgia, who had a strong desire
                             to leave her small town and explore what the world had to offer.</p>
