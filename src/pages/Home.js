@@ -42,7 +42,7 @@ class Home extends React.Component {
             <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants}>
                 <div className="introDiv">
                     <div className="introHeaderSection">
-                        <img className="introImageButterfly" id="introimagebutterfly" alt="butterfly" src="introImages/butterfly.png"/>
+                        <img className="introImageButterfly" id="introimagebutterfly" alt="butterfly" src="weddingImages/32.PNG"/>
                         <p className="introTitle">Sterling + Alanna</p>
                         <p className="introSubHeader">THE VELAZQUEZ WEDDING</p>
                         <p className="introDate">April 6th, 2024 | 5:30 pm</p>

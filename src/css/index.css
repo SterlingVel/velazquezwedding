@@ -49,6 +49,22 @@ a {
   text-decoration: none;
 }
 
+.wrappedImage {
+  width:100%;
+}
+.wrappedImageFadeLeft, .wrappedImageFadeRight {
+  position:absolute; 
+  top:0;
+  height:100%;
+  z-index:2;
+}
+.wrappedImageFadeLeft {
+  left:-0.1vw;
+}
+.wrappedImageFadeRight {
+  right:-0.1vw;
+}
+
 .navMenu {
   position:fixed;
   display:flex;

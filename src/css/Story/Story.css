@@ -1,0 +1,403 @@
+/* Top of Story Page */
+
+.storyDiv {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+.storyHeaderSection {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+}
+.storyTitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: #595959;
+    font-size:3.4vw;
+    margin-bottom:-0.5vw;
+    animation:fadeIn 1s ease-out;
+}
+.storySubHeader {
+    font-family: Angella;
+    font-size:10vw;
+    color: #595959;
+    margin: 0;
+    animation:fadeIn 1.5s ease-out;
+}
+
+.storyButterfly1 {
+    position:absolute;
+    top:5vw; left:13vw;
+    width:17vw;
+}
+.storyButterfly2 {
+    position:absolute;
+    bottom:33vw; right:16vw;
+    width:14vw;
+}
+.storyFlowerLeft {
+    position:absolute;
+    top:14vw; left:0;
+    transform:rotate(31.67deg);
+    width:22vw;
+}
+.storyFlowerRight {
+    position:absolute;
+    bottom:3vw; right:6vw;
+    transform:rotate(-40deg);
+    width:14vw;
+}
+.storyLeaf {
+    position:absolute;
+    bottom:-12vw; right:0;
+    transform:rotate(-50deg);
+    width:21vw;
+    z-index:-1;
+}
+
+/* Storybook Section */
+
+.storybookDiv {
+    margin-top:15vw;
+}
+.storybookSection {
+    position:relative;
+    display:inline-flex;
+    width:100vw;
+    align-items: center;
+    justify-content: center;
+    margin:2vw 0;
+}
+
+.sbFlower {
+    position:absolute;
+    top:0; left:0;
+    z-index:-1;
+}
+#sbflower1 {
+    top:-32vw; left:40vw;
+    transform:rotate(-60deg);
+    width:20vw;
+}
+#sbflower2 {
+    top:-30vw; left:40vw;
+    transform:rotate(80deg);
+    width:20vw;
+}
+#sbflower3 {
+    top:-23vw; left:45vw;
+    transform:rotateZ(120deg) rotateY(180deg) scaleX(0.5);
+    width:6vw;
+}
+#sbflower4 {
+    top:-30vw; left:30vw;
+    transform:rotateZ(-110deg);
+    width:20vw;
+}
+#sbflower5 {
+    top:-19vw; left:40vw;
+    transform:rotateZ(85deg);
+    width:23vw;
+}
+#sbflower6 {
+    top:-31vw; left:45vw;
+    transform:rotateZ(100deg) rotateY(180deg);
+    width:15vw;
+}
+
+
+.sbText {
+    position:relative;
+    display:inline-block;
+    width:40vw;
+    padding:5vw;
+    font-size:1.82vw;
+    font-style: italic;
+    line-height:3.2vw;
+    text-align:left;
+}
+#sbtext1 {
+    left:3.5vw;
+}
+#sbtext2 {
+    text-align:right;
+    right:4.5vw;
+    width:45vw;
+}
+#sbtext3 {
+    left:4.5vw;
+    width:45vw;
+}
+#sbtext4 {
+    text-align:center;
+    width:100vw;
+    padding:13vw 15vw;
+}
+#sbtext5 {
+    text-align:right;
+    right:2vw;
+    width:42vw;
+}
+.sbTextWrapper {
+    width:100vw;
+    margin:10vw 0 6vw 0;
+    padding:0vw 19vw;
+    background:#dfe9f282;
+}
+#sbtext6 {
+    text-align:center;
+    width:62vw;
+}
+
+.sbPicture {
+    position:relative;
+    display:inline-block;
+    width:50vw;
+    overflow:hidden;
+}
+#sbpicture1 {
+    right:-7vw;
+    height:46vw;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+#sbpicture2 {
+    left:-9vw;
+    width:50vw;
+    height:27vw;
+    border-top-right-radius: 25vw;
+    border-bottom-right-radius: 25vw;
+}
+#sbpicture3 {
+    right:-9vw;
+    width:50vw;
+    height:27vw;
+    border-top-left-radius: 25vw;
+    border-bottom-left-radius: 25vw;
+}
+#sbpicture4 {
+    left:-4vw;
+    height:46vw;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+#sbpicture1_faderight, 
+#sbpicture2_fadeleft, 
+#sbpicture3_faderight {
+    box-shadow:0 0 30px 50px #FEFEFB;
+}
+#sbpicture4_fadeleft {
+    box-shadow:0 0 20px 30px #FEFEFB;
+}
+
+/* Engagement Pictures Gallery Section */
+
+.engagementGalleryDiv {
+    width:100vw;
+}
+.engagementGallery {
+    position:relative;
+    width:100%;
+    height:97vw;
+    margin-top:-6vw;
+    overflow:hidden;
+}
+.engagementPic {
+    position:absolute;
+    margin:50% 0 0 50%;
+    transform: translate(-50%, -50%);
+    width:30vw;
+}
+#engagementpic1 {
+    margin:18% 0 0 30%;
+    width:35vw;
+}
+#engagementpic2 {
+    margin:22% 0 0 74.6%;
+    width:50vw;
+}
+#engagementpic3 {
+    margin:61.5% 0 0 70%;
+    width:27vw;
+}
+#engagementpic4 {
+    margin:75.1% 0 0 34.6%;
+    width:39vw;
+}
+#engagementpic5 {
+    margin:45.6% 0 0 19%;
+    width:39vw;
+}
+#engagementpic6 {
+    margin:44.5% 0 0 50%;
+    width:26vw;
+}
+#engagementpic6_image {
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.249);
+}
+
+@media (min-aspect-ratio: 1/0.58) {
+
+/* Top of Wedding Page */
+
+.storyTitle {
+    font-size:5.87vh;
+    margin-bottom:-0.86vh;
+}
+.storySubHeader {
+    font-size:17.25vh;
+}
+
+.storyButterfly1 {
+    top:8.63vh; left:22.43vh;
+    width:29.33vh;
+}
+.storyButterfly2 {
+    bottom:56.93vh; right:27.6vh;
+    width:24.15vh;
+}
+.storyFlowerLeft {
+    top:24.15vh;
+    width:37.92vh;
+}
+.storyFlowerRight {
+    bottom:5.18vh; right:10.35vh;
+    width:24.15vh;
+}
+.storyLeaf {
+    bottom:-20.7vh;
+    width:36.23vh;
+}
+
+.storybookDiv {
+    margin-top:25.88vh;
+}
+.storybookSection {
+    margin:3.45vh 0;
+}
+
+#sbflower1 {
+    top:-55.2vh; left:45%;
+    transform:translateX(-50%) rotate(-60deg);
+    width:34.5vh;
+}
+#sbflower2 {
+    top:-51.75vh; left:50%;
+    transform:translateX(-50%) rotate(80deg);
+    width:34.5vh;
+}
+#sbflower3 {
+    top:-39.68vh; left:50%;
+    transform:translateX(-50%) rotateZ(120deg) rotateY(180deg) scaleX(0.5);
+    width:10.35vh;
+}
+#sbflower4 {
+    top:-51.75vh; left:50%;
+    transform:translateX(-50%) rotateZ(-110deg);
+    width:34.5vh;
+}
+#sbflower5 {
+    top:-35vh; left:50%;
+    transform:translateX(-50%) rotateZ(85deg);
+    width:39.68vh;
+}
+#sbflower6 {
+    top:-53.48vh; left:50%;
+    transform:translateX(-50%) rotateZ(100deg) rotateY(180deg);
+    width:25.88vh;
+}
+
+.sbText {
+    width:69vh;
+    padding:8.625vh;
+    font-size:3.14vh;
+    line-height:5.52vh;
+}
+#sbtext1 {
+    left:6.04vh;
+}
+#sbtext2 {
+    right:7.76vh;
+    width:77.63vh;
+}
+#sbtext3 {
+    left:7.76vh;
+    width:77.63vh;
+}
+#sbtext4 {
+    width:120vh;
+    padding:22.425vh 25.88vh;
+}
+#sbtext5 {
+    right:3.45vh;
+    width:72.45vh;
+}
+.sbTextWrapper {
+    margin:17.25vh 0 10.35vh 0;
+    padding:0 55vh;
+}
+#sbtext6 {
+    width:106.95vh;
+}
+
+.sbPicture {
+    width:86.25vh;
+}
+#sbpicture1 {
+    right:-12.08vh;
+    height:79.35vh;
+}
+#sbpicture2 {
+    left:-15.53vh;
+    width:86.25vh;
+    height:46.58vh;
+    border-top-right-radius: 43.13vh;
+    border-bottom-right-radius: 43.13vh;
+}
+#sbpicture3 {
+    right:-15.53vh;
+    width:86.25vh;
+    height:46.58vh;
+    border-top-left-radius: 43.13vh;
+    border-bottom-left-radius: 43.13vh;
+}
+#sbpicture4 {
+    left:-6.9vh;
+    height:79.35vh;
+}
+
+.engagementGalleryDiv {
+    width:172.5vh;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+.engagementGallery {
+    width:100%;
+    height:167.33vh;
+    margin-top:-10.35vh;
+}
+#engagementpic1 {
+    width:60.38vh;
+}
+#engagementpic2 {
+    width:86.25vh;
+}
+#engagementpic3 {
+    width:46.58vh;
+}
+#engagementpic4 {
+    width:67.28vh;
+}
+#engagementpic5 {
+    width:67.28vh;
+}
+#engagementpic6 {
+    width:44.85vh;
+}
+
+}
