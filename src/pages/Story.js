@@ -76,7 +76,7 @@ class Story extends React.Component {
                         <div className="storybookSection" id="sb1">
                             <ImageWrapper className="sbFlower" id="sbflower1" image="storyImages/SB1.PNG" />
                             <p className="sbText" id="sbtext1">
-                                {sbtext1.map(word => <span className="sbWord" style={{transitionDelay: `${++index1 * 0.05}s`}}>{word} </span>)}
+                                {sbtext1.map(word => <span className="sbWord" style={{transitionDelay: `${++index1 * 0.04}s`}}>{word} </span>)}
                             </p>
                             <ImageWrapper className="sbPicture" id="sbpicture1" image="storyImages/RC.jpg" />
                         </div>
@@ -112,7 +112,7 @@ class Story extends React.Component {
                             <ImageWrapper className="sbFlower" id="sbflower5" image="storyImages/SB5.PNG" />
                             <ImageWrapper className="sbPicture" id="sbpicture4" image="storyImages/NY.jpg" />
                             <p className="sbText" id="sbtext5">
-                                {sbtext5.map(word => <span className="sbWord" style={{transitionDelay: `${++index5 * 0.05}s`}}>{word} </span>)}
+                                {sbtext5.map(word => <span className="sbWord" style={{transitionDelay: `${++index5 * 0.03}s`}}>{word} </span>)}
                             </p>
                         </div>
                     </Fade>

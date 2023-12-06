@@ -192,6 +192,9 @@
     border-top-left-radius: 25vw;
     border-bottom-left-radius: 25vw;
 }
+#sbpicture3_image {
+    transform: translateY(-1.5vw);
+}
 #sbpicture4 {
     left:-4vw;
     height:46vw;
@@ -377,6 +380,9 @@
     height:46.58vh;
     border-top-left-radius: 43.13vh;
     border-bottom-left-radius: 43.13vh;
+}
+#sbpicture3_image {
+    transform: translateY(-3vh);
 }
 #sbpicture4 {
     left:-6.9vh;
