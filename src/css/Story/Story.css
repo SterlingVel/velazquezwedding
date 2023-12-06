@@ -34,11 +34,13 @@
     position:absolute;
     top:5vw; left:13vw;
     width:17vw;
+    z-index:-1;
 }
 .storyButterfly2 {
     position:absolute;
     bottom:33vw; right:16vw;
     width:14vw;
+    z-index:-2;
 }
 .storyFlowerLeft {
     position:absolute;
@@ -73,6 +75,16 @@
     justify-content: center;
     margin:2vw 0;
 }
+#sbfade1, #sbfade2, #sbfade3, #sbfade4, #sbfade5, #sbfade6 { 
+    position:relative;
+    z-index:-1;
+    transition:0s;
+} 
+#sbfade2 { z-index:-2 } 
+#sbfade3 { z-index:-3 } 
+#sbfade4 { z-index:-4 } 
+#sbfade5 { z-index:-5 } 
+#sbfade6 { z-index:-6 }
 
 .sbFlower {
     position:absolute;

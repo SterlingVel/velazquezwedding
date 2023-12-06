@@ -1,0 +1,220 @@
+.storyButterfly1 {
+    animation:storybutterfly1_f1 3.8s ease-in-out;
+}
+.storyButterfly2 {
+    animation:storybutterfly2_f1 3s ease-in-out;
+}
+.storyFlowerLeft {
+    animation:storyflowerleft 2s ease-in-out;
+}
+.storyFlowerRight {
+    animation:storyflowerright 2.5s ease-in-out;
+}
+.storyLeaf {
+    animation:storyleaf 1.7s ease-out;
+}
+
+@keyframes storybutterfly1_f1 {
+    0% {
+        opacity:0;
+        transform:rotate(310deg) translate(0vw, 50vw) rotate(-330deg) scale(0.6);
+    } 60% {
+        opacity:1;
+    } 100% {
+        opacity:1;
+        transform:rotate(570deg) translate(0) rotate(-570deg) scale(1);
+    }
+}
+@keyframes storybutterfly2_f1 {
+    0% {
+        opacity:0;
+        transform:rotate(60deg) translate(-5vw, 45vw) rotate(-10deg) rotateY(180deg) scale(0.6);
+    } 30% {
+        opacity:1;
+    } 100% {
+        opacity:1;
+        transform:rotate(-230deg) translate(0) rotate(230deg) rotateY(0) scale(1);
+    }
+}
+
+@keyframes storyflowerleft {
+    from {
+        opacity:0;
+        transform: translate(-2vw, 3vw) rotate(31.67deg);
+    } to {
+        opacity:1;
+        transform: translate(0, 0) rotate(31.67deg);
+    }
+}
+@keyframes storyflowerright {
+    from {
+        opacity:0;
+        transform: translate(5vw, 4vw) rotate(-40deg);
+    } to {
+        opacity:1;
+        transform: translate(0, 0) rotate(-40deg);
+    }
+}
+@keyframes storyleaf {
+    from {
+        opacity:0;
+        transform: translate(4vw, 3vw) rotate(-50deg);
+    } to {
+        opacity:1;
+        transform: translate(0, 0) rotate(-50deg);
+    }
+}
+
+#sbfade1 .sbFlower .wrappedImageFadeLeft,
+#sbfade2 .sbFlower .wrappedImageFadeLeft,
+#sbfade3 .sbFlower .wrappedImageFadeLeft,
+#sbfade4 .sbFlower .wrappedImageFadeLeft,
+#sbfade5 .sbFlower .wrappedImageFadeLeft,
+#sbfade6 .sbFlower .wrappedImageFadeLeft {
+    width:100%;
+    background:#FEFEFB;
+    box-shadow:0 0 150px 200px #FEFEFB;
+    transition:2s ease-out;
+}
+#sbfade1.is-visible .sbFlower .wrappedImageFadeLeft,
+#sbfade2.is-visible .sbFlower .wrappedImageFadeLeft,
+#sbfade5.is-visible .sbFlower .wrappedImageFadeLeft {
+    transform:translateY(120%);
+}
+#sbfade3.is-visible .sbFlower .wrappedImageFadeLeft,
+#sbfade4.is-visible .sbFlower .wrappedImageFadeLeft,
+#sbfade6.is-visible .sbFlower .wrappedImageFadeLeft {
+    transform:translateY(-120%);
+}
+
+#sbfade1 .storybookSection .sbPicture,
+#sbfade2 .storybookSection .sbPicture,
+#sbfade3 .storybookSection .sbPicture,
+#sbfade5 .storybookSection .sbPicture {
+    animation:none;
+    opacity:0;
+    transition:0s;
+}
+#sbfade1.is-visible .storybookSection .sbPicture,
+#sbfade2.is-visible .storybookSection .sbPicture,
+#sbfade3.is-visible .storybookSection .sbPicture,
+#sbfade5.is-visible .storybookSection .sbPicture {
+    animation:pictureFadeRight 1.5s ease-in-out;
+    opacity:1;
+    transition:0s;
+}
+#sbfade2.is-visible .storybookSection .sbPicture,
+#sbfade5.is-visible .storybookSection .sbPicture {
+    animation:pictureFadeLeft 1.5s ease-in-out;
+    opacity:1;
+    transition:0s;
+}
+
+@keyframes pictureFadeRight {
+  0% {
+    opacity:0;
+    transform:translateX(3vw);
+  } 100% {
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes pictureFadeLeft {
+    0% {
+      opacity:0;
+      transform:translateX(-3vw);
+    } 100% {
+      opacity:1;
+      transform:translateX(0);
+    }
+}
+
+#sbfade1 .storybookSection .sbText .sbWord,
+#sbfade3 .storybookSection .sbText .sbWord {
+    opacity:0;
+    transition:opacity 1s;
+}
+#sbfade2 .storybookSection .sbText .sbWord,
+#sbfade5 .storybookSection .sbText .sbWord {
+    opacity:0;
+    transition:opacity 1s;
+}
+#sbfade4 .storybookSection .sbText .sbWord,
+#sbfade6 .storybookSection .sbText .sbWord {
+    opacity:0;
+    transition:opacity 1s;
+}
+#sbfade1.is-visible .storybookSection .sbText .sbWord,
+#sbfade2.is-visible .storybookSection .sbText .sbWord,
+#sbfade3.is-visible .storybookSection .sbText .sbWord,
+#sbfade4.is-visible .storybookSection .sbText .sbWord,
+#sbfade5.is-visible .storybookSection .sbText .sbWord,
+#sbfade6.is-visible .storybookSection .sbText .sbWord {
+    transform:translate(0);
+    opacity:1;
+}
+
+@media (min-aspect-ratio: 1/0.58) {
+
+    @keyframes storybutterfly1_f1 {
+        0% {
+            opacity:0;
+            transform:rotate(310deg) translate(0vw, 86.25vh) rotate(-330deg) scale(0.6);
+        } 60% {
+            opacity:1;
+        } 100% {
+            opacity:1;
+            transform:rotate(570deg) translate(0) rotate(-570deg) scale(1);
+        }
+    }
+    @keyframes storybutterfly2_f1 {
+        0% {
+            opacity:0;
+            transform:rotate(60deg) translate(-5vw, 77.63vh) rotate(-10deg) rotateY(180deg) scale(0.6);
+        } 30% {
+            opacity:1;
+        } 100% {
+            opacity:1;
+            transform:rotate(-230deg) translate(0) rotate(230deg) rotateY(0) scale(1);
+        }
+    }
+
+}
+
+@media (max-aspect-ratio: 0.93/1) {
+
+    #sbfade5.is-visible .sbFlower .wrappedImageFadeLeft {
+        transform:translateY(160%);
+    }
+    #sbfade4.is-visible .sbFlower .wrappedImageFadeLeft,
+    #sbfade6.is-visible .sbFlower .wrappedImageFadeLeft {
+        transform:translateY(-160%);
+    }
+
+    #engagementpic1_fade,
+    #engagementpic2_fade,
+    #engagementpic6_fade {
+        opacity:0; 
+        transform: translateX(-5vw);
+    }
+    #engagementpic1_fade.is-visible,
+    #engagementpic2_fade.is-visible,
+    #engagementpic6_fade.is-visible {
+        opacity:1; 
+        transform: translateX(0);
+    }
+    
+    #engagementpic3_fade,
+    #engagementpic4_fade,
+    #engagementpic5_fade {
+        opacity:0; 
+        transform: translateX(5vw);
+    }
+    #engagementpic3_fade.is-visible,
+    #engagementpic4_fade.is-visible,
+    #engagementpic5_fade.is-visible {
+        opacity:1; 
+        transform: translateX(0);
+    }
+}

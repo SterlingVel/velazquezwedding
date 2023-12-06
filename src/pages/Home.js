@@ -81,10 +81,10 @@ class Home extends React.Component {
                         <div className="homeGalleryColumn right">
                             <div className="homeGallerySection ourStory">
                                 <Fade id="storylink">
-                                    <Link to='/wedding'>
+                                    <Link to='/story'>
                                         <p className="homeGalleryText">OUR STORY</p>
                                     </Link>
-                                    <Link to='/wedding'>
+                                    <Link to='/story'>
                                         <LazyLoadImage className="homeGalleryPic" alt="weddingmenu" src="introImages/ring.jpg" loading="lazy" />
                                     </Link>
                                 </Fade>
