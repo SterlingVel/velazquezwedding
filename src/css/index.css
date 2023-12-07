@@ -43,10 +43,15 @@ p {
   color: #595959;
 }
 
-a {
+a, button, label, input, textarea {
   font-family: 'Cormorant Garamond', serif;
   color: #595959;
   text-decoration: none;
+}
+input {
+  background:none;
+  border:none;
+  border-bottom:thin solid #595959;
 }
 
 .fade-in-section {

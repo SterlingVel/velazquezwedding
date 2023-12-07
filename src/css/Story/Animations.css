@@ -65,12 +65,7 @@
     }
 }
 
-#sbfade1 .sbFlower .wrappedImageFadeLeft,
-#sbfade2 .sbFlower .wrappedImageFadeLeft,
-#sbfade3 .sbFlower .wrappedImageFadeLeft,
-#sbfade4 .sbFlower .wrappedImageFadeLeft,
-#sbfade5 .sbFlower .wrappedImageFadeLeft,
-#sbfade6 .sbFlower .wrappedImageFadeLeft {
+.sbFlower .wrappedImageFadeLeft {
     width:100%;
     background:#FEFEFB;
     box-shadow:0 0 150px 200px #FEFEFB;
@@ -79,54 +74,52 @@
 #sbfade1.is-visible .sbFlower .wrappedImageFadeLeft,
 #sbfade2.is-visible .sbFlower .wrappedImageFadeLeft,
 #sbfade5.is-visible .sbFlower .wrappedImageFadeLeft {
-    transform:translateY(120%);
+    transform:translateY(70vw);
 }
 #sbfade3.is-visible .sbFlower .wrappedImageFadeLeft,
 #sbfade4.is-visible .sbFlower .wrappedImageFadeLeft,
 #sbfade6.is-visible .sbFlower .wrappedImageFadeLeft {
-    transform:translateY(-120%);
+    transform:translateY(-70vw);
 }
 
-#sbfade1 .storybookSection .sbPicture,
-#sbfade2 .storybookSection .sbPicture,
-#sbfade3 .storybookSection .sbPicture,
-#sbfade5 .storybookSection .sbPicture {
+.sbPicture .fade-in-section {
+    transition:1s;
+}
+.sbPicture {
     animation:none;
-    opacity:0;
-    transition:0s;
 }
 #sbfade1.is-visible .storybookSection .sbPicture,
 #sbfade2.is-visible .storybookSection .sbPicture,
 #sbfade3.is-visible .storybookSection .sbPicture,
 #sbfade5.is-visible .storybookSection .sbPicture {
     animation:pictureFadeRight 1.5s ease-in-out;
-    opacity:1;
-    transition:0s;
 }
 #sbfade2.is-visible .storybookSection .sbPicture,
 #sbfade5.is-visible .storybookSection .sbPicture {
     animation:pictureFadeLeft 1.5s ease-in-out;
-    opacity:1;
-    transition:0s;
 }
 
 @keyframes pictureFadeRight {
-  0% {
-    opacity:0;
-    transform:translateX(3vw);
-  } 100% {
-    opacity:1;
-    transform:translateX(0);
-  }
+    0% {
+        opacity:0;
+        transform:translateX(3vw);
+    } 75% {
+        opacity:1;
+    } 100% {
+        opacity:1;
+        transform:translateX(0);
+    }
 }
 
 @keyframes pictureFadeLeft {
     0% {
-      opacity:0;
-      transform:translateX(-3vw);
+        opacity:0;
+        transform:translateX(-3vw);
+    } 75% {
+        opacity:1;
     } 100% {
-      opacity:1;
-      transform:translateX(0);
+        opacity:1;
+        transform:translateX(0);
     }
 }
 
@@ -193,18 +186,19 @@
 @media (max-aspect-ratio: 0.93/1) {
 
     #sbfade5.is-visible .sbFlower .wrappedImageFadeLeft {
-        transform:translateY(160%);
+        transform:translateY(120.75vh);
     }
     #sbfade4.is-visible .sbFlower .wrappedImageFadeLeft,
     #sbfade6.is-visible .sbFlower .wrappedImageFadeLeft {
-        transform:translateY(-160%);
+        transform:translateY(-120.75vh);
     }
 
     #engagementpic1_fade,
     #engagementpic2_fade,
     #engagementpic6_fade {
         opacity:0; 
-        transform: translateX(-5vw);
+        transform: translateX(-3vw);
+        transition:1.5s;
     }
     #engagementpic1_fade.is-visible,
     #engagementpic2_fade.is-visible,
@@ -217,7 +211,8 @@
     #engagementpic4_fade,
     #engagementpic5_fade {
         opacity:0; 
-        transform: translateX(5vw);
+        transform: translateX(3vw);
+        transition:1.5s;
     }
     #engagementpic3_fade.is-visible,
     #engagementpic4_fade.is-visible,
