@@ -188,7 +188,7 @@ class Home extends React.Component {
 
                     <div className="rsvpButtons">
                         <div className="radioButtonWrapper">
-                            <input className="radioButton" name="option" type="radio" id="acceptRSVP" onChange={e => {}} checked />
+                            <input className="radioButton" name="option" type="radio" id="acceptRSVP" defaultChecked />
                             <label className="rsvpLabel" htmlFor="acceptRSVP">Gladly Accept</label>
                         </div>
                         <div className="radioButtonWrapper">
