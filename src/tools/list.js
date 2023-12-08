@@ -1,10 +1,11 @@
-export var weddingList = [
-    {
-        "name": "Sterling Velazquez",
+export var weddingList = {
+    "Sterling Velazquez": {
         "guests": 1
     },
-    {
-        "name": "Alanna Adkisson",
+    "Alanna Adkisson": {
         "guests": 3
-    }
-]
+    },
+    "Amelia Adkisson": {
+        "guests": 3
+    },
+}
