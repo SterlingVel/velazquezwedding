@@ -269,6 +269,8 @@ label:after {
   font-size:1.7vw;
   margin-bottom:2.5vw;
   width:100%;
+  transform: none;
+  -webkit-transform: none;
 }
 .rsvpNameLabel {
   margin-bottom:0.3vw;
@@ -326,6 +328,8 @@ label:after {
   pointer-events:none;
   margin:0;
   width:4vw;
+  transform: none;
+  -webkit-transform: none;
 }
 #plus {
   margin-right:-2vw;

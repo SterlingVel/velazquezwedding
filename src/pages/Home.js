@@ -145,7 +145,7 @@ class Home extends React.Component {
                 To: 'sterling@velazquezwedding.com',
                 From: "sterling@velazquezwedding.com",
                 Subject: `TEST RSVP from ${this.state.name}`,
-                Body: `<html><p>Name: ${this.state.name}</p ></br><p>Email: " + ${this.state.email} + "</p></br><p>Message: " + ${this.state.note} + "</p></br></br></html>`
+                Body: `<html><p>Name: ${this.state.name}</p ></br><p>Email: ${this.state.email}</p></br><p>Message: ${this.state.note}</p></br></br></html>`
             }).then(function () { })
     
             console.log("Email Sent")
