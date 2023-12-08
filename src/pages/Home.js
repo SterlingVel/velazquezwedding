@@ -51,7 +51,7 @@ class Home extends React.Component {
         var list = keys.filter(function (a) { return a.substring(0, name.length).toLowerCase() === name.toLowerCase() && a !== name && name !== "" });
         
         if (list.length === 0 && weddingList[name])
-            this.changeGuests(null, 1) //weddingList[name].guests
+            this.changeGuests(null, 1)
         this.setState({
             name: name,
             list: list
@@ -65,7 +65,7 @@ class Home extends React.Component {
             name: e,
             list: []
         });
-        this.changeGuests(null, 1) //weddingList[name].guests
+        this.changeGuests(null, 1)
         document.getElementById("errorguests").style.display = "none"
         document.getElementById("errorname").style.display = "none"
     }
@@ -129,6 +129,9 @@ class Home extends React.Component {
             <p className="rsvpNameLabel">Guest Full Name *</p>
             <input className="rsvpInput name" id=${"rsvpname" + num} defaultValue="" required></input>
         </div>`
+    }
+    scrollDiv(id) {
+        document.getElementById(id).scrollIntoView();
     }
     // 400ECA7F36F148B012A87511AA76F7802C7A
     // 35935e09-e4b9-4cc1-bc74-ce32ca401db2
@@ -267,7 +270,7 @@ class Home extends React.Component {
                             <div className="rsvpContainer" id="rsvpcontainer">
                                 <div className="rsvpSection" onClick={e => this.openDropdown(e)}>
                                     <p className="rsvpNameLabel">First and Last Name *</p>
-                                    <input className="rsvpInput name" id="rsvpname" defaultValue="" onInput={e => this.setName(e)} required></input>
+                                    <input className="rsvpInput name" id="rsvpname" defaultValue="" onInput={e => this.setName(e)} onBlur={e => this.scrollDiv("rsvpname")} required></input>
                                     <div className="dropdownDiv" id="dropdowndiv">
                                         {
                                             this.state.list.map((each) =>
@@ -279,7 +282,7 @@ class Home extends React.Component {
                                 </div>
                                 <div className="rsvpSection">
                                     <p className="rsvpNameLabel">Email Address *</p>
-                                    <input className="rsvpInput email" id="rsvpemail" defaultValue="" onInput={e => this.setEmail(e)} required></input>
+                                    <input className="rsvpInput email" id="rsvpemail" defaultValue="" onInput={e => this.setEmail(e)} onBlur={e => this.scrollDiv("rsvpemail")} required></input>
                                     <p className="errorCatch" id="erroremail">Please enter a valid email</p>
                                 </div>
                                 <div className="rsvpSection">
@@ -292,7 +295,7 @@ class Home extends React.Component {
                                 <div className="rsvpSection">
                                     <div className="extraGuestDiv" id="extraguestdiv"></div>
                                 </div>
-                                <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} placeholder="Optional Notes (Dietary restrictions, requests, or send us a message!)"></textarea>
+                                <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} onBlur={e => this.scrollDiv("rsvpnote")} placeholder="Optional Message"></textarea>
                                 <button type="submit" className="rsvpSubmit">SUBMIT</button>
                             </div>
                         </form>
