@@ -113,15 +113,12 @@ class Home extends React.Component {
         document.getElementById("dropdowndiv").style.display = "block"
     }
     closeDropdown() {
+        if (document.getElementById("dropdowndiv").style.display === "block")
         document.getElementById("dropdowndiv").style.display = "none"
     }
     toggleGuestInput(toggle, input) {
         document.getElementById("rsvpguest").required = input
         document.getElementById("plusoneinput").className = "rsvpSection" + toggle
-    }
-    scrollDiv(id) {
-        var elem = document.getElementById(id)
-        elem.scrollIntoView();
     }
 
     submitForm(e) {
@@ -259,7 +256,7 @@ class Home extends React.Component {
                             <div className="rsvpContainer" id="rsvpcontainer">
                                 <div className="rsvpSection" onClick={e => this.openDropdown(e)}>
                                     <p className="rsvpNameLabel">First and Last Name *</p>
-                                    <input className="rsvpInput name" id="rsvpname" defaultValue="" onInput={e => this.setName(e)} onBlur={e => this.scrollDiv("rsvpname")} required></input>
+                                    <input className="rsvpInput name" id="rsvpname" defaultValue="" onInput={e => this.setName(e)} required></input>
                                     <div className="dropdownDiv" id="dropdowndiv">
                                         {
                                             this.state.list.map((each) =>
@@ -271,7 +268,7 @@ class Home extends React.Component {
                                 </div>
                                 <div className="rsvpSection">
                                     <p className="rsvpNameLabel">Email Address *</p>
-                                    <input className="rsvpInput email" id="rsvpemail" defaultValue="" onInput={e => this.setEmail(e)} onBlur={e => this.scrollDiv("rsvpemail")} required></input>
+                                    <input className="rsvpInput email" id="rsvpemail" defaultValue="" onInput={e => this.setEmail(e)} required></input>
                                     <p className="errorCatch" id="erroremail">Please enter a valid email</p>
                                 </div>
                                 <div className="rsvpSection" id="extraguests">
@@ -314,7 +311,7 @@ class Home extends React.Component {
                                     </div>
                                 </div>
 
-                                <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} onBlur={e => this.scrollDiv("rsvpnote")} placeholder="Optional Message"></textarea>
+                                <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} placeholder="Optional Message"></textarea>
                                 <button type="submit" className="rsvpSubmit">SUBMIT</button>
                             </div>
                         </form>
@@ -345,3 +342,9 @@ class Home extends React.Component {
 }
 
 export default Home;
+
+// Move dropdown div slightly up to fill gap
+// Add submit screen on rsvp
+// Format email with new info
+// FAQ page
+// Upgrade menu design, primarily make it better on mobile
