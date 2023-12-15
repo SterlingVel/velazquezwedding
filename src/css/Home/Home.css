@@ -223,10 +223,7 @@
   display:inline-block;
   margin: 5vw 3vw;
 }
-.radioButton {
-  display:none;
-}
-label:before {
+.rsvpLabel:before {
   content: "";
   display: block;
   position: absolute;
@@ -238,7 +235,7 @@ label:before {
   border: thin solid #595959;
   border-radius: 100%;
 }
-label:after {
+.rsvpLabel:after {
   content: "";
   display: block;
   position: absolute;
@@ -250,7 +247,7 @@ label:after {
   transition: .2s ease-in-out;
   transform:scale(0) translateY(-50%);
 }
-.rsvpButtons :checked + label:after {
+.rsvpButtons :checked + .rsvpLabel:after {
   transform:scale(1) translateY(-50%);
 }
 .rsvpLabel {
@@ -265,7 +262,7 @@ label:after {
   width:28vw;
   left:50%; transform:translateX(-50%);
 }
-.rsvpSection, #extraguests0, #extraguests1, #extraguests2 {
+.rsvpSection {
   font-size:1.7vw;
   margin-bottom:2.5vw;
   width:100%;
@@ -275,13 +272,13 @@ label:after {
 .rsvpNameLabel {
   margin-bottom:0.3vw;
 }
-.rsvpInput, #rsvpname0, #rsvpname1, #rsvpname2 {
+.rsvpInput {
   text-align:center;
   width:100%;
   font-size:1.6vw;
   opacity:0.8;
 }
-.rsvpInput:focus, #rsvpname0, #rsvpname1, #rsvpname2 {
+.rsvpInput:focus {
   outline:none;
 }
 .dropdownDiv {
@@ -290,6 +287,25 @@ label:after {
   top:4.8vw;
   width:100%;
   z-index:1;
+  max-height:15vw;
+  overflow:hidden;
+  overflow-y:auto;
+}
+.dropdownDiv::-webkit-scrollbar {
+  width:0.7vw; 
+  border-radius:50px;
+  background:none;
+}
+.dropdownDiv::-webkit-scrollbar-track {
+  background:none;
+  border: 0.1vw solid rgba(0, 0, 0, 0);
+  background-color: #595959;
+}
+.dropdownDiv::-webkit-scrollbar-thumb {
+  border: 0.23vw solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: white;
 }
 .dropdownName {
   font-size:1.6vw;
@@ -306,34 +322,84 @@ label:after {
   background:#595959;
 }
 
-.rsvpNumber {
-  display:inline-block;
-  margin-right:4vw;
+.partyDiv, .plusOneDiv {
+  display:none;
 }
-.rsvpSign {
-  display:inline-block;
-  font-size:2.5vw;
-  padding:2vw;
-  margin:-2vw 0;
-  cursor:pointer;
-  background:none;
-  border:none;
+#extraguests {
+  display:block;
+  margin:3vw 0 0.4vw 0;
 }
-.rsvpNumberInput {
-  display:inline-block;
-  font-size:2vw;
-  background: none;
-  text-align:center;
-  border:none;
-  pointer-events:none;
+.rsvpSection.hide {
+  display:none;
   margin:0;
-  width:4vw;
-  transform: none;
-  -webkit-transform: none;
 }
-#plus {
-  margin-right:-2vw;
+.additionalGuestsHeader {
+  display:inline-table;
+  float:left;
+  font-weight:600;
 }
+.attendingHeader {
+  display:inline-table;
+  float:right;
+  font-weight:600;
+}
+.partyGuests {
+  position:relative;
+  display:inline-block;
+  width:100%;
+  margin:1.5vw 0 2vw 0;
+  height:fit-content;
+}
+.partyGuestSection {
+
+}
+.partyGuest, .plusOneQuestion {
+  display:inline-table;
+  width:100%;
+  text-align:left;
+  margin:0.7vw 0;
+}
+.attendingDiv, .plusOneButtonDiv {
+  position:relative;
+  width:fit-content;
+  display:inline-table;
+  top:-1.9vw;
+}
+
+.rsvpLabelGuests {
+  position:absolute;
+  font-size:1.6vw;
+  color:#595959;
+  padding:0.3vw 1.5vw;
+  border:none;
+  background:none;
+  transition:background 0.2s, color 0.2s;
+  cursor:pointer;
+}
+.radioButtonGuests:checked + .rsvpLabelGuests {
+  color:#FEFEFB;
+  background:#595959;
+}
+.rsvpLabelGuests:nth-child(2) {
+  right:3.7vw;
+}
+.rsvpLabelGuests:nth-child(4) {
+  right:-1.9vw;
+}
+
+.plusOneButtonDiv {
+  top:-3.3vw;
+  float:right;
+  margin-bottom:2vw;
+}
+.plusOneQuestion {
+  margin:0;
+}
+#plusoneinput {
+  margin:0 0 3.5vw 0;
+  display:none;
+}
+
 textarea {
   width:100%;
   height:7vw;
@@ -341,8 +407,7 @@ textarea {
   background:none;
   border:thin solid #595959;
   padding:0vw 0.2vw;
-  margin-left:-0.2vw;
-  margin-bottom:2.5vw;
+  margin:1vw 0 2.5vw -0.2vw;
 }
 textarea:focus {
   outline:none;
@@ -352,6 +417,10 @@ textarea:focus::placeholder {
 }
 textarea::placeholder {
   opacity:0.8;
+}
+
+.partyDiv.show, .plusOneDiv.show, #plusoneinput.show {
+  display:block;
 }
 
 .rsvpSubmit {
@@ -463,7 +532,7 @@ textarea::placeholder {
 /* RSVP Form of Home Page */
 
 .rsvpFormDiv {
-  padding:7vh 0 14vh 0;
+  padding:10vh 0 14vh 0;
 }
 .rsvpHeaderCursive {
   font-size:13vh;
@@ -484,11 +553,11 @@ textarea::placeholder {
 .radioButtonWrapper {
   margin: 8.63vh 5.18vh;
 }
-label:before {
+.rsvpLabel:before {
   width: 2.59vh;
   height: 2.59vh;
 }
-label:after {
+.rsvpLabel:after {
   width:1.725vh;
   height:1.725vh;
   left:0.51vh;
@@ -514,33 +583,57 @@ label:after {
 }
 .dropdownDiv {
   top:8.28vh;
+  max-height:25.88vh;
+}
+.dropdownDiv::-webkit-scrollbar {
+  width:1.21vh; 
+}
+.dropdownDiv::-webkit-scrollbar-track {
+  border: 0.1725vh solid rgba(0, 0, 0, 0);
+}
+.dropdownDiv::-webkit-scrollbar-thumb {
+  border: 0.4vh solid rgba(0, 0, 0, 0);
 }
 .dropdownName {
   font-size:2.76vh;
   padding:1.04vh 0;
 }
 
-.rsvpNumber {
-  margin-right:6.9vh;
+#extraguests {
+  margin:5.175vh 0 0.69vh 0;
 }
-.rsvpSign {
-  font-size:4.31vh;
-  padding:3.45vh;
-  margin:-3.45vh 0;
+.partyGuests {
+  margin:2.59vh 0 3.45vh 0;
 }
-.rsvpNumberInput {
-  font-size:3.45vh;
-  width:6.9vh;
+.partyGuest, .plusOneQuestion {
+  margin:1.21vh 0;
 }
-#plus {
-  margin-right:-3.45vw;
+.attendingDiv, .plusOneButtonDiv {
+  top:-3.28vh;
 }
+.rsvpLabelGuests {
+  font-size:2.76vh;
+  padding:0.52vh 2.59vh;
+}
+.rsvpLabelGuests:nth-child(2) {
+  right:6.38vh;
+}
+.rsvpLabelGuests:nth-child(4) {
+  right:-3.28vh;
+}
+.plusOneButtonDiv {
+  top:-5.69vh;
+  margin-bottom:3.45vh;
+}
+#plusoneinput {
+  margin:0 0 6.04vh 0;
+}
+
 textarea {
   height:12.08vh;
   font-size:2.42vh;
   padding:0vw 0.345vh;
-  margin-left:-0.345vh;
-  margin-bottom:4.31vh;
+  margin: 1.725vh 0 4.31vh -0.345vh;
 }
 
 .rsvpSubmit {

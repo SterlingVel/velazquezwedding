@@ -163,7 +163,7 @@
   /* RSVP Form of Home Page */
 
   .rsvpFormDiv {
-    padding:10vw 0 10vw 0;
+    padding:12vw 0 10vw 0;
   }
   .rsvpHeaderCursive {
     font-size:14vw;
@@ -182,65 +182,89 @@
 
   }
   .radioButtonWrapper {
-    margin: 8vw 3vw;
+    margin: 10vw 3vw;
   }
-  label:before {
+  .rsvpLabel:before {
     width: 3vw;
     height: 3vw;
   }
-  label:after {
+  .rsvpLabel:after {
     width:2vw;
     height:2vw;
     left:0.695vw;
   }
   .rsvpLabel {
-    font-size:4.5vw;
+    font-size:5vw;
     padding:1vw 1.3vw;
     margin-left:4.5vw;
   }
-  
+
   .rsvpForm {
-    width:55vw;
+    width:75vw;
   }
   .rsvpSection, #extraguests0, #extraguests1, #extraguests2 {
-    font-size:4.2vw;
+    font-size:5vw;
     margin-bottom:7vw;
   }
   .rsvpNameLabel {
-    margin-bottom:0.3vw;
+    margin-bottom:1vw;
   }
   .rsvpInput, #rsvpname0, #rsvpname1, #rsvpname2 {
-    font-size:4vw;
+    font-size:4.8vw;
   }
   .dropdownDiv {
-    top:11.3vw;
+    top:14.5vw;
+    max-height:30vw;
   }
   .dropdownName {
-    font-size:4vw;
-    padding:1.4vw 0;
+    font-size:4.8vw;
+    padding:2vw 0;
   }
-  
-  .rsvpNumber {
-    margin-right:4vw;
+  .dropdownDiv::-webkit-scrollbar {
+    width:2.2vw; 
   }
-  .rsvpSign {
-    font-size:7vw;
-    padding:2.5vw;
-    margin:-2vw 0;
+  .dropdownDiv::-webkit-scrollbar-track {
+    border: 0.2vw solid rgba(0, 0, 0, 0);
   }
-  .rsvpNumberInput {
-    font-size:6vw;
-    width:7vw;
+  .dropdownDiv::-webkit-scrollbar-thumb {
+    border: 0.6vw solid rgba(0, 0, 0, 0);
   }
-  #plus {
-    margin-right:-2vw;
+
+  #extraguests {
+    margin:3vw 0 2vw 0;
   }
+  .partyGuests {
+    margin:3.8vw 0 4.7vw 0;
+  }
+  .partyGuest, .plusOneQuestion {
+    margin:1.7vw 0;
+  }
+  .attendingDiv, .plusOneButtonDiv {
+    top:-5vw;
+  }
+  .rsvpLabelGuests {
+    font-size:4.8vw;
+    padding:0.8vw 3.2vw;
+  }
+  .rsvpLabelGuests:nth-child(2) {
+    right:11.7vw;
+  }
+  .rsvpLabelGuests:nth-child(4) {
+    right:-4.3vw;
+  }
+  .plusOneButtonDiv {
+    top:-9.5vw;
+    margin-bottom:4.5vw;
+  }
+  #plusoneinput {
+    margin:0 0 7vw 0;
+  }
+
   textarea {
-    height:20vw;
-    font-size:3.7vw;
+    height:26vw;
+    font-size:4.8vw;
     padding:0.5vw 1vw;
-    margin-left:-0.5vw;
-    margin-bottom:7vw;
+    margin:4vw 0 8vw -0.5vw;
   }
   textarea::placeholder {
     opacity:1;
@@ -249,7 +273,7 @@
   .rsvpSubmit {
     font-size:5vw;
     padding:1.4vw 5vw;
-    margin:0 1vw;
+    margin:0 1vw 10vw 1vw;
   }
 
   .errorCatch {

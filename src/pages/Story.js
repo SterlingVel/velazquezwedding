@@ -9,6 +9,7 @@ import Fade from '../tools/fade.js'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ImageWrapper from '../tools/imageWrapper';
 
+var key = 0;
 const pageVariants = {
     in: {
         opacity: 1,
@@ -76,7 +77,7 @@ class Story extends React.Component {
                         <div className="storybookSection" id="sb1">
                             <ImageWrapper className="sbFlower" id="sbflower1" image="storyImages/SB1.PNG" />
                             <p className="sbText" id="sbtext1">
-                                {sbtext1.map(word => <span className="sbWord" style={{transitionDelay: `${++index1 * 0.03}s`}}>{word} </span>)}
+                                {sbtext1.map(word => <span className="sbWord" style={{transitionDelay: `${++index1 * 0.03}s`}} key={key++}>{word} </span>)}
                             </p>
                             <ImageWrapper className="sbPicture" id="sbpicture1" image="storyImages/RC.jpg" />
                         </div>
@@ -86,7 +87,7 @@ class Story extends React.Component {
                             <ImageWrapper className="sbFlower" id="sbflower2" image="storyImages/SB2.png" />
                             <ImageWrapper className="sbPicture" id="sbpicture2" image="storyImages/Alanna.jpg" />
                             <p className="sbText" id="sbtext2">
-                                {sbtext2.map(word => <span className="sbWord" style={{transitionDelay: `${++index2 * 0.03}s`}}>{word} </span>)}
+                                {sbtext2.map(word => <span className="sbWord" style={{transitionDelay: `${++index2 * 0.03}s`}} key={key++}>{word} </span>)}
                             </p>
                         </div>
                     </Fade>
@@ -94,7 +95,7 @@ class Story extends React.Component {
                         <div className="storybookSection" id="sb3">
                             <ImageWrapper className="sbFlower" id="sbflower3" image="storyImages/SB3.PNG" />
                             <p className="sbText" id="sbtext3">
-                                {sbtext3.map(word => <span className="sbWord" style={{transitionDelay: `${++index3 * 0.03}s`}}>{word} </span>)}
+                                {sbtext3.map(word => <span className="sbWord" style={{transitionDelay: `${++index3 * 0.03}s`}} key={key++}>{word} </span>)}
                             </p>
                             <ImageWrapper className="sbPicture" id="sbpicture3" image="storyImages/Sterling.jpg" />
                         </div>
@@ -103,7 +104,7 @@ class Story extends React.Component {
                         <div className="storybookSection" id="sb4">
                             <ImageWrapper className="sbFlower" id="sbflower4" image="storyImages/SB4.PNG" />
                             <p className="sbText" id="sbtext4">
-                                {sbtext4.map(word => <span className="sbWord" style={{transitionDelay: `${++index4 * 0.03}s`}}>{word} </span>)}
+                                {sbtext4.map(word => <span className="sbWord" style={{transitionDelay: `${++index4 * 0.03}s`}} key={key++}>{word} </span>)}
                             </p>
                         </div>
                     </Fade>
@@ -112,7 +113,7 @@ class Story extends React.Component {
                             <ImageWrapper className="sbFlower" id="sbflower5" image="storyImages/SB5.PNG" />
                             <ImageWrapper className="sbPicture" id="sbpicture4" image="storyImages/NY.jpg" />
                             <p className="sbText" id="sbtext5">
-                                {sbtext5.map(word => <span className="sbWord" style={{transitionDelay: `${++index5 * 0.03}s`}}>{word} </span>)}
+                                {sbtext5.map(word => <span className="sbWord" style={{transitionDelay: `${++index5 * 0.03}s`}} key={key++}>{word} </span>)}
                             </p>
                         </div>
                     </Fade>
@@ -121,7 +122,7 @@ class Story extends React.Component {
                             <ImageWrapper className="sbFlower" id="sbflower6" image="storyImages/SB6.PNG" />
                             <div className="sbTextWrapper">
                                 <p className="sbText" id="sbtext6">
-                                    {sbtext6.map(word => <span className="sbWord" style={{transitionDelay: `${++index6 * 0.03}s`}}>{word} </span>)}
+                                    {sbtext6.map(word => <span className="sbWord" style={{transitionDelay: `${++index6 * 0.03}s`}} key={key++}>{word} </span>)}
                                 </p>
                             </div>
                         </div>

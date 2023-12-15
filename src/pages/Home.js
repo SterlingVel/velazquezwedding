@@ -33,6 +33,7 @@ class Home extends React.Component {
         this.state = {
             name: '',
             email: '',
+            guest: '',
             note: '',
             list: []
         };
@@ -49,24 +50,26 @@ class Home extends React.Component {
         var name = e.target.value;
         var keys = Object.keys(weddingList)
         var list = keys.filter(function (a) { return a.substring(0, name.length).toLowerCase() === name.toLowerCase() && a !== name && name !== "" });
-        
+
         if (list.length === 0 && weddingList[name])
-            this.changeGuests(null, 1)
+            this.changeGuests(weddingList[name].guests)
+        else
+            this.changeGuests(false)
+
         this.setState({
             name: name,
             list: list
         });
-        document.getElementById("errorguests").style.display = "none"
         document.getElementById("errorname").style.display = "none"
     }
-    setDropName(e) {
-        document.getElementById("rsvpname").value = e
+    setDropName(e, name) {
+        e.stopPropagation()
+        document.getElementById("rsvpname").value = name
         this.setState({
-            name: e,
+            name: name,
             list: []
         });
-        this.changeGuests(null, 1)
-        document.getElementById("errorguests").style.display = "none"
+        this.changeGuests(weddingList[name].guests)
         document.getElementById("errorname").style.display = "none"
     }
     setEmail(e) {
@@ -74,49 +77,37 @@ class Home extends React.Component {
         this.setState({ email: email });
         document.getElementById("erroremail").style.display = "none"
     }
-    changeGuests(input, set) {
-        document.getElementById("errorguests").style.display = "none"
-        var guests = parseInt(document.getElementById("rsvpnumberinput").value);
-        var extraGuestDiv =
-            `<div className="rsvpSection" id=${"extraguests" + guests}>
-            <p className="rsvpNameLabel">Guest Full Name *</p>
-            <input className="rsvpInput name" id=${"rsvpname" + guests} defaultValue="" required></input>
-        </div>`
-        var list = Object.keys(weddingList)
-
-        if (set) {
-            var overIndex = 1, underIndex = 0
-            while (document.getElementById("extraguests" + (guests - overIndex))) {
-                document.getElementById("extraguests" + (guests - overIndex)).remove();
-                overIndex++
-            }
-            while (underIndex < set) {
-                if (!document.getElementById("extraguests" + underIndex))
-                    document.getElementById("extraguestdiv").innerHTML += this.createGuestDiv(underIndex);
-                underIndex++
-            }
-            guests = set
-        } else if (this.state.name === "") {
-            document.getElementById("errorguests").innerHTML = "Please enter a name first"
-            document.getElementById("errorguests").style.display = "block"
-        } else if (!list.includes(this.state.name)) {
-            document.getElementById("errorguests").innerHTML = "Name not found on wedding list"
-            document.getElementById("errorguests").style.display = "block"
-        } else if (guests > 0 && input === -1) {
-            document.getElementById("extraguests" + (guests - 1)).remove();
-            guests -= 1;
-        } else if (guests < (this.state.name ? weddingList[this.state.name].guests : 0) && input === 1) {
-            document.getElementById("extraguestdiv").innerHTML += this.createGuestDiv(guests);
-            guests += 1;
+    changeGuests(guests) {
+        if (guests === 1 && !document.getElementById("extraguests").className.includes("hide")) {
+            document.getElementById("partydiv").className = "partyDiv"
+            document.getElementById("rsvpguest").required = true
+            document.getElementById("plusonediv").className = "plusOneDiv show"
+        } else if (guests && !document.getElementById("extraguests").className.includes("hide")) {
+            document.getElementById("rsvpguest").required = false
+            document.getElementById("plusonediv").className = "plusOneDiv"
+            document.getElementById("partydiv").className = "partyDiv show"
+        } else {
+            document.getElementById("partydiv").className = "partyDiv"
+            document.getElementById("rsvpguest").required = false
+            document.getElementById("plusonediv").className = "plusOneDiv"
         }
-        document.getElementById("rsvpnumberinput").value = guests;
-        
+    }
+    setGuest(e) {
+        var guest = e.target.value;
+        this.setState({ guest: guest });
     }
     setNote(e) {
         var note = e.target.value;
         this.setState({ note: note });
     }
 
+    toggleGuests(input) {
+        document.getElementById("extraguests").className = "rsvpSection " + input
+        if (input === "")
+            this.changeGuests(weddingList[this.state.name] ? weddingList[this.state.name].guests : false)
+        else
+            this.changeGuests(false)
+    }
     openDropdown(e) {
         e.stopPropagation()
         document.getElementById("dropdowndiv").style.display = "block"
@@ -124,17 +115,26 @@ class Home extends React.Component {
     closeDropdown() {
         document.getElementById("dropdowndiv").style.display = "none"
     }
-    createGuestDiv(num) {
-        return `<div className="rsvpSection" id=${"extraguests" + num}>
-            <p className="rsvpNameLabel">Guest Full Name *</p>
-            <input className="rsvpInput name" id=${"rsvpname" + num} defaultValue="" required></input>
-        </div>`
+    toggleGuestInput(toggle, input) {
+        document.getElementById("rsvpguest").required = input
+        document.getElementById("plusoneinput").className = "rsvpSection" + toggle
     }
     scrollDiv(id) {
-        document.getElementById(id).scrollIntoView();
+        var elem = document.getElementById(id)
+        if (!this.isInViewport(elem))
+            elem.scrollIntoView();
     }
-    // 400ECA7F36F148B012A87511AA76F7802C7A
-    // 35935e09-e4b9-4cc1-bc74-ce32ca401db2
+    isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        var html = document.documentElement;
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || html.clientHeight) &&
+          rect.right <= (window.innerWidth || html.clientWidth)
+        );
+    }
+
     submitForm(e) {
         e.preventDefault();
         var list = Object.keys(weddingList)
@@ -150,7 +150,7 @@ class Home extends React.Component {
                 Subject: `TEST RSVP from ${this.state.name}`,
                 Body: `<html><p>Name: ${this.state.name}</p ></br><p>Email: ${this.state.email}</p></br><p>Message: ${this.state.note}</p></br></br></html>`
             }).then(function () { })
-    
+
             console.log("Email Sent")
         }
     }
@@ -258,11 +258,11 @@ class Home extends React.Component {
                         <div className="rsvpButtons">
                             <div className="radioButtonWrapper">
                                 <input className="radioButton" name="option" type="radio" id="acceptRSVP" defaultChecked />
-                                <label className="rsvpLabel" htmlFor="acceptRSVP">Gladly Accept</label>
+                                <label className="rsvpLabel" htmlFor="acceptRSVP" onClick={e => this.toggleGuests("")}>Gladly Accept</label>
                             </div>
                             <div className="radioButtonWrapper">
                                 <input className="radioButton" name="option" type="radio" id="declineRSVP" />
-                                <label className="rsvpLabel" htmlFor="declineRSVP">Regretfully Decline</label>
+                                <label className="rsvpLabel" htmlFor="declineRSVP" onClick={e => this.toggleGuests("hide")}>Regretfully Decline</label>
                             </div>
                         </div>
 
@@ -274,7 +274,7 @@ class Home extends React.Component {
                                     <div className="dropdownDiv" id="dropdowndiv">
                                         {
                                             this.state.list.map((each) =>
-                                                <p className="dropdownName" onClick={e => this.setDropName(each)} key={key++}>{each}</p>
+                                                <p className="dropdownName" onClick={e => this.setDropName(e, each)} key={key++}>{each}</p>
                                             )
                                         }
                                     </div>
@@ -285,16 +285,46 @@ class Home extends React.Component {
                                     <input className="rsvpInput email" id="rsvpemail" defaultValue="" onInput={e => this.setEmail(e)} onBlur={e => this.scrollDiv("rsvpemail")} required></input>
                                     <p className="errorCatch" id="erroremail">Please enter a valid email</p>
                                 </div>
-                                <div className="rsvpSection">
-                                    <p className="rsvpNumber">Number of Guests</p>
-                                    <button type="button" className="rsvpSign" id="minus" onClick={() => this.changeGuests(-1)}>-</button>
-                                    <input className="rsvpNumberInput" id="rsvpnumberinput" defaultValue={0} type="text" pattern="[0-3]{1}" tabIndex="-1"></input>
-                                    <button type="button" className="rsvpSign" id="plus" onClick={() => this.changeGuests(1)}>+</button>
-                                    <p className="errorCatch" id="errorguests">Please enter a name first</p>
+                                <div className="rsvpSection" id="extraguests">
+                                    <div className="partyDiv" id="partydiv">
+                                        <div className="partyHeader">
+                                            <p className="additionalGuestsHeader">Additional Guests</p>
+                                            <p className="attendingHeader">Attending?</p>
+                                        </div>
+                                        <div className="partyGuests" id="partyguests">
+                                            {
+                                                weddingList[this.state.name] && typeof weddingList[this.state.name].guests === "object" ?
+                                                    weddingList[this.state.name].guests.map((guest) =>
+                                                        <div className='partyGuestSection' key={key++}>
+                                                            <p className='partyGuest'>{guest}</p>
+                                                            <div className='attendingDiv'>
+                                                                <input className='radioButtonGuests' name={'option_' + guest} type='radio' id={'accept_' + guest} defaultChecked />
+                                                                <label className='rsvpLabelGuests' htmlFor={'accept_' + guest}>YES</label>
+                                                                <input className='radioButtonGuests' name={'option_' + guest} type='radio' id={'decline_' + guest} />
+                                                                <label className='rsvpLabelGuests' htmlFor={'decline_' + guest}>NO</label>
+                                                            </div>
+                                                        </div>
+                                                    ) : <div />
+                                            }
+                                        </div>
+                                    </div>
+                                    <div className="plusOneDiv" id="plusonediv" >
+                                        <div className="plusOneQuestion">
+                                            <p className="plusOneText">Will you be bringing<br />a guest?</p>
+                                            <div className="plusOneButtonDiv">
+                                                <input className="radioButtonGuests" name="plusone" type="radio" id="accept_plusone" defaultChecked />
+                                                <label className="rsvpLabelGuests" htmlFor="accept_plusone" onClick={e => this.toggleGuestInput(" show", true)}>YES</label>
+                                                <input className="radioButtonGuests" name="plusone" type="radio" id="decline_plusone" />
+                                                <label className="rsvpLabelGuests" htmlFor="decline_plusone" onClick={e => this.toggleGuestInput("", false)}>NO</label>
+                                            </div>
+                                        </div>
+                                        <div className="rsvpSection show" id="plusoneinput">
+                                            <p className="rsvpNameLabel">Guest Name *</p>
+                                            <input className="rsvpInput guest" id="rsvpguest" defaultValue="" onInput={e => this.setGuest(e)} onBlur={e => this.scrollDiv("rsvpguest")}></input>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="rsvpSection">
-                                    <div className="extraGuestDiv" id="extraguestdiv"></div>
-                                </div>
+
                                 <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} onBlur={e => this.scrollDiv("rsvpnote")} placeholder="Optional Message"></textarea>
                                 <button type="submit" className="rsvpSubmit">SUBMIT</button>
                             </div>

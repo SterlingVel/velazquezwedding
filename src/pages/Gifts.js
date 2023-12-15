@@ -60,14 +60,14 @@ class Gifts extends React.Component {
                                 present of all! However, if you do wish to celebrate with a gift, a contribution to our honeymoon
                                 fund would be warmly appreciated.
                             </p>
-                            <a className="honeymoonLink" href="">OUR FUND</a>
+                            <a className="honeymoonLink" href="https://www.zola.com/registry/alannaandsterling" target="_blank" rel='noreferrer'>OUR FUND</a>
                         </Fade>
                     </div>
                     <div className="giftDetailsSection registry">
                         <Fade>
                             <p className="registryHeader">GIFT REGISTRY</p>
                             <p className="registryDetails">We're registered at</p>
-                            <a className="registryLink" href="">Amazon</a>
+                            <a className="registryLink" href="https://www.amazon.com/wedding/registry/366USBWRUZ0WB" target="_blank" rel='noreferrer'>Amazon</a>
                             <p className="registryDetails cards">If you prefer giving gift cards, we love:<br />Amazon, HomeGoods, Target,
                                 Home Depot, and Costco!</p>
                         </Fade>

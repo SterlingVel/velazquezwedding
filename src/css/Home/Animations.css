@@ -107,7 +107,7 @@
   }
 
   #faqbuttonfade {
-    transform:translateX(-8vw);
+    transform:translateX(-7vw);
   }
   #faqbuttonfade.is-visible {
     transform:translateX(0vw);
