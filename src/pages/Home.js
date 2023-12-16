@@ -123,7 +123,7 @@ class Home extends React.Component {
     preventScroll(id) {
         setTimeout(() => {
             document.getElementById(id).scrollIntoView();
-        }, 1)
+        }, 5)
     }
 
     submitForm(e) {
@@ -360,7 +360,6 @@ class Home extends React.Component {
 
 export default Home;
 
-// Fix RSVP Submit snapping
 // Fix scroll on mobile input blur
 // Format email with new info
 // FAQ page
