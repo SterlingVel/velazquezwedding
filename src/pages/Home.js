@@ -152,11 +152,11 @@ class Home extends React.Component {
                 if (guests === 1 && document.getElementById("accept_plusone").checked) {
                     acceptedGuests = this.state.guest
                 } else if (guests) {
-                    acceptedGuests = guests.filter((name) => document.getElementById("accepted_" + name).checked).join(', ')
-                    declinedGuests = guests.filter((name) => document.getElementById("declined_" + name).checked).join(', ')
+                    acceptedGuests = guests.filter((name) => document.getElementById("accept_" + name).checked).join(', ')
+                    declinedGuests = guests.filter((name) => document.getElementById("decline_" + name).checked).join(', ')
                 }
             }
-
+            
             window.Email.send({
                 SecureToken: "35935e09-e4b9-4cc1-bc74-ce32ca401db2",
                 To: 'sterling@velazquezwedding.com',
