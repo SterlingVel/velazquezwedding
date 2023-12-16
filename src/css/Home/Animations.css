@@ -236,11 +236,7 @@
   }
 
 @media (min-aspect-ratio: 1/0.53) {
-
-  .rsvpFormDiv.submitted {
-    margin-bottom:-51.75vh;
-  }
-
+  
   @keyframes shrinkRSVP {
     from {
       padding:10vh 0 14vh 0;

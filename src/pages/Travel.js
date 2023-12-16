@@ -66,8 +66,7 @@ class Travel extends React.Component {
                     <div className="hotelWrapper">
                         <Fade>
                             <p className="hotelSubheader">There are plenty of hotels in the area to fit all budgets.<br />
-                                We highly recommend the Hilton Garden Inn as it will have a shuttle service
-                                to the ceremony and a room block  for all our traveling guests!
+                                We highly recommend the Hilton Garden Inn as it will have a room block for all our traveling guests!
                             </p>
                         </Fade>
                         <div className="hotelRow">
@@ -132,8 +131,8 @@ class Travel extends React.Component {
                         <Fade id="traveltipwrapper1">
                             <div className="travelTipSection">
                                 <p className="travelTipHeader">Transportation</p>
-                                <p className="travelTipDetails">Our shuttle service will leave from Hilton Garden Inn at 4 PM and return at 10:45 PM. Rideshare services like Uber
-                                    are also widely available in the city.</p>
+                                <p className="travelTipDetails">We recommend using a car rental or carpooling, especially for Atlanta hotels. Rideshare services like Uber
+                                    are also widely available.</p>
                             </div>
                         </Fade>
                         <Fade id="traveltipwrapper2">

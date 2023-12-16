@@ -120,8 +120,10 @@ class Home extends React.Component {
         document.getElementById("rsvpguest").required = input
         document.getElementById("plusoneinput").className = "rsvpSection" + toggle
     }
-    preventScroll(e) {
-        e.preventDefault();
+    preventScroll(id) {
+        setTimeout(() => {
+            document.getElementById(id).scrollIntoView();
+        }, 1)
     }
 
     submitForm(e) {
@@ -258,7 +260,7 @@ class Home extends React.Component {
                             <div className="rsvpContainer" id="rsvpcontainer">
                                 <div className="rsvpSection" onClick={e => this.openDropdown(e)}>
                                     <p className="rsvpNameLabel name">First and Last Name *</p>
-                                    <input className="rsvpInput name" id="rsvpname" defaultValue="" onInput={e => this.setName(e)} onBlur={e => this.preventScroll(e)} required></input>
+                                    <input className="rsvpInput name" id="rsvpname" defaultValue="" onInput={e => this.setName(e)} onBlur={e => this.preventScroll("rsvpname")} required></input>
                                     <div className="dropdownDiv" id="dropdowndiv">
                                         {
                                             this.state.list.map((each) =>
@@ -270,7 +272,7 @@ class Home extends React.Component {
                                 </div>
                                 <div className="rsvpSection">
                                     <p className="rsvpNameLabel email">Email Address *</p>
-                                    <input className="rsvpInput email" id="rsvpemail" defaultValue="" onInput={e => this.setEmail(e)} onBlur={e => this.preventScroll(e)} required></input>
+                                    <input className="rsvpInput email" id="rsvpemail" defaultValue="" onInput={e => this.setEmail(e)} onBlur={e => this.preventScroll("rsvpemail")} required></input>
                                     <p className="errorCatch" id="erroremail">Please enter a valid email</p>
                                 </div>
                                 <div className="rsvpSection" id="extraguests">
@@ -308,12 +310,12 @@ class Home extends React.Component {
                                         </div>
                                         <div className="rsvpSection show" id="plusoneinput">
                                             <p className="rsvpNameLabel">Guest Name *</p>
-                                            <input className="rsvpInput guest" id="rsvpguest" defaultValue="" onInput={e => this.setGuest(e)} onBlur={e => this.preventScroll(e)}></input>
+                                            <input className="rsvpInput guest" id="rsvpguest" defaultValue="" onInput={e => this.setGuest(e)} onBlur={e => this.preventScroll("rsvpguest")}></input>
                                         </div>
                                     </div>
                                 </div>
 
-                                <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} onBlur={e => this.preventScroll(e)} placeholder="Optional Message"></textarea>
+                                <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} onBlur={e => this.preventScroll("rsvpnote")} placeholder="Optional Message"></textarea>
                                 <button type="submit" className="rsvpSubmit">SUBMIT</button>
                             </div>
 
@@ -358,6 +360,7 @@ class Home extends React.Component {
 
 export default Home;
 
+// Fix RSVP Submit snapping
 // Fix scroll on mobile input blur
 // Format email with new info
 // FAQ page
