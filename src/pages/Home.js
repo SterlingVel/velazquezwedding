@@ -123,7 +123,7 @@ class Home extends React.Component {
     preventScroll(id) {
         setTimeout(() => {
             document.getElementById(id).scrollIntoView();
-        }, 5)
+        }, 1000)
     }
 
     submitForm(e) {
