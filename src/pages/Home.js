@@ -139,21 +139,35 @@ class Home extends React.Component {
 
     submitForm(e) {
         e.preventDefault();
-        // var list = Object.keys(weddingList)
-        // if (!list.includes(this.state.name)) {
-        //     document.getElementById("errorname").style.display = "block"
-        // } else if (!emailTest.test(this.state.email.toLowerCase())) {
-        //     document.getElementById("erroremail").style.display = "block"
-        // } else {
-        //     window.Email.send({
-        //         SecureToken: "35935e09-e4b9-4cc1-bc74-ce32ca401db2",
-        //         To: 'sterling@velazquezwedding.com',
-        //         From: "sterling@velazquezwedding.com",
-        //         Subject: `TEST RSVP from ${this.state.name}`,
-        //         Body: `<html><p>Name: ${this.state.name}</p ></br><p>Email: ${this.state.email}</p></br><p>Message: ${this.state.note}</p></br></br></html>`
-        //     }).then(function () { })
+        var list = Object.keys(weddingList)
+        if (!list.includes(this.state.name)) {
+            document.getElementById("errorname").style.display = "block"
+        } else if (!emailTest.test(this.state.email.toLowerCase())) {
+            document.getElementById("erroremail").style.display = "block"
+        } else {
+            var rsvp = document.getElementById('acceptRSVP').checked ? "Accepted" : "Declined"
+            var guests = weddingList[this.state.name].guests
+            var acceptedGuests = '', declinedGuests = ''
+            if (rsvp === "Accepted") {
+                if (guests === 1 && document.getElementById("accept_plusone").checked) {
+                    acceptedGuests = this.state.guest
+                } else if (guests) {
+                    acceptedGuests = guests.filter((name) => document.getElementById("accepted_" + name).checked).join(', ')
+                    declinedGuests = guests.filter((name) => document.getElementById("declined_" + name).checked).join(', ')
+                }
+            }
+
+            window.Email.send({
+                SecureToken: "35935e09-e4b9-4cc1-bc74-ce32ca401db2",
+                To: 'sterling@velazquezwedding.com',
+                From: "sterling@velazquezwedding.com",
+                Subject: `RSVP ${rsvp} from ${this.state.name}`,
+                Body: `<html><p>Name: ${this.state.name}</p></br><p>Email: ${this.state.email}</p></br>` + 
+                    `<p>Accepted Guests: ${acceptedGuests}</p></br><p>Declined Guests: ${declinedGuests}</p></br>` +
+                    `<p>Message: ${this.state.note}</p></br></br></html>`
+            }).then(function () { })
             document.getElementById("rsvpformdiv").classList.toggle("submitted")
-        // }
+        }
     }
 
     render() {
