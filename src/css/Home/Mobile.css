@@ -189,9 +189,9 @@
     height: 3vw;
   }
   .rsvpLabel:after {
-    width:2vw;
-    height:2vw;
-    left:0.695vw;
+    width:2.2vw;
+    height:2.2vw;
+    left:0.65vw;
   }
   .rsvpLabel {
     font-size:5vw;
@@ -202,19 +202,18 @@
   .rsvpForm {
     width:75vw;
   }
-  .rsvpSection, #extraguests0, #extraguests1, #extraguests2 {
+  .rsvpSection {
     font-size:5vw;
     margin-bottom:7vw;
   }
   .rsvpNameLabel {
     margin-bottom:1vw;
   }
-  .rsvpInput, #rsvpname0, #rsvpname1, #rsvpname2 {
+  .rsvpInput {
     font-size:4.8vw;
   }
   .dropdownDiv {
-    top:14.5vw;
-    max-height:30vw;
+    max-height:34vw;
   }
   .dropdownName {
     font-size:4.8vw;
@@ -279,6 +278,22 @@
   .errorCatch {
     margin-top:1vw;
     font-size:3.4vw;
+  }
+
+  .rsvpFormSubmitted {
+    top:10vw;
+  }
+  .rsvpSubmitCursive {
+    font-size:14vw;
+    margin-right:26vw;
+  }
+  .rsvpSubmitScript {
+    font-size:14vw;
+    margin-top:-5vw;
+  }
+  .submittedSubheader {
+    font-size:5.5vw;
+    margin-top:1vw;
   }
 
   /* Animations */

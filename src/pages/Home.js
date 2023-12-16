@@ -114,31 +114,33 @@ class Home extends React.Component {
     }
     closeDropdown() {
         if (document.getElementById("dropdowndiv").style.display === "block")
-        document.getElementById("dropdowndiv").style.display = "none"
+            document.getElementById("dropdowndiv").style.display = "none"
     }
     toggleGuestInput(toggle, input) {
         document.getElementById("rsvpguest").required = input
         document.getElementById("plusoneinput").className = "rsvpSection" + toggle
     }
+    preventScroll(e) {
+        e.preventDefault();
+    }
 
     submitForm(e) {
         e.preventDefault();
-        var list = Object.keys(weddingList)
-        if (!list.includes(this.state.name)) {
-            document.getElementById("errorname").style.display = "block"
-        } else if (!emailTest.test(this.state.email.toLowerCase())) {
-            document.getElementById("erroremail").style.display = "block"
-        } else {
-            window.Email.send({
-                SecureToken: "35935e09-e4b9-4cc1-bc74-ce32ca401db2",
-                To: 'sterling@velazquezwedding.com',
-                From: "sterling@velazquezwedding.com",
-                Subject: `TEST RSVP from ${this.state.name}`,
-                Body: `<html><p>Name: ${this.state.name}</p ></br><p>Email: ${this.state.email}</p></br><p>Message: ${this.state.note}</p></br></br></html>`
-            }).then(function () { })
-
-            console.log("Email Sent")
-        }
+        // var list = Object.keys(weddingList)
+        // if (!list.includes(this.state.name)) {
+        //     document.getElementById("errorname").style.display = "block"
+        // } else if (!emailTest.test(this.state.email.toLowerCase())) {
+        //     document.getElementById("erroremail").style.display = "block"
+        // } else {
+        //     window.Email.send({
+        //         SecureToken: "35935e09-e4b9-4cc1-bc74-ce32ca401db2",
+        //         To: 'sterling@velazquezwedding.com',
+        //         From: "sterling@velazquezwedding.com",
+        //         Subject: `TEST RSVP from ${this.state.name}`,
+        //         Body: `<html><p>Name: ${this.state.name}</p ></br><p>Email: ${this.state.email}</p></br><p>Message: ${this.state.note}</p></br></br></html>`
+        //     }).then(function () { })
+            document.getElementById("rsvpformdiv").classList.toggle("submitted")
+        // }
     }
 
     render() {
@@ -227,7 +229,7 @@ class Home extends React.Component {
                     <div className="homeContainer fade"></div>
                 </div>
 
-                <div className="rsvpFormDiv">
+                <div className="rsvpFormDiv" id="rsvpformdiv">
                     <div className="rsvpHeaderContainer">
                         <Fade id="rsvpHeaderFade">
                             <p className="rsvpHeaderCursive">Please</p>
@@ -242,11 +244,11 @@ class Home extends React.Component {
 
                     <Fade threshold="0.2">
                         <div className="rsvpButtons">
-                            <div className="radioButtonWrapper">
+                            <div className="radioButtonWrapper accept">
                                 <input className="radioButton" name="option" type="radio" id="acceptRSVP" defaultChecked />
                                 <label className="rsvpLabel" htmlFor="acceptRSVP" onClick={e => this.toggleGuests("")}>Gladly Accept</label>
                             </div>
-                            <div className="radioButtonWrapper">
+                            <div className="radioButtonWrapper decline">
                                 <input className="radioButton" name="option" type="radio" id="declineRSVP" />
                                 <label className="rsvpLabel" htmlFor="declineRSVP" onClick={e => this.toggleGuests("hide")}>Regretfully Decline</label>
                             </div>
@@ -255,8 +257,8 @@ class Home extends React.Component {
                         <form className="rsvpForm" id="rsvpform" onSubmit={e => this.submitForm(e)}>
                             <div className="rsvpContainer" id="rsvpcontainer">
                                 <div className="rsvpSection" onClick={e => this.openDropdown(e)}>
-                                    <p className="rsvpNameLabel">First and Last Name *</p>
-                                    <input className="rsvpInput name" id="rsvpname" defaultValue="" onInput={e => this.setName(e)} required></input>
+                                    <p className="rsvpNameLabel name">First and Last Name *</p>
+                                    <input className="rsvpInput name" id="rsvpname" defaultValue="" onInput={e => this.setName(e)} onBlur={e => this.preventScroll(e)} required></input>
                                     <div className="dropdownDiv" id="dropdowndiv">
                                         {
                                             this.state.list.map((each) =>
@@ -267,8 +269,8 @@ class Home extends React.Component {
                                     <p className="errorCatch" id="errorname">Name not found on wedding list</p>
                                 </div>
                                 <div className="rsvpSection">
-                                    <p className="rsvpNameLabel">Email Address *</p>
-                                    <input className="rsvpInput email" id="rsvpemail" defaultValue="" onInput={e => this.setEmail(e)} required></input>
+                                    <p className="rsvpNameLabel email">Email Address *</p>
+                                    <input className="rsvpInput email" id="rsvpemail" defaultValue="" onInput={e => this.setEmail(e)} onBlur={e => this.preventScroll(e)} required></input>
                                     <p className="errorCatch" id="erroremail">Please enter a valid email</p>
                                 </div>
                                 <div className="rsvpSection" id="extraguests">
@@ -306,16 +308,29 @@ class Home extends React.Component {
                                         </div>
                                         <div className="rsvpSection show" id="plusoneinput">
                                             <p className="rsvpNameLabel">Guest Name *</p>
-                                            <input className="rsvpInput guest" id="rsvpguest" defaultValue="" onInput={e => this.setGuest(e)} onBlur={e => this.scrollDiv("rsvpguest")}></input>
+                                            <input className="rsvpInput guest" id="rsvpguest" defaultValue="" onInput={e => this.setGuest(e)} onBlur={e => this.preventScroll(e)}></input>
                                         </div>
                                     </div>
                                 </div>
 
-                                <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} placeholder="Optional Message"></textarea>
+                                <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} onBlur={e => this.preventScroll(e)} placeholder="Optional Message"></textarea>
                                 <button type="submit" className="rsvpSubmit">SUBMIT</button>
                             </div>
+
                         </form>
                     </Fade>
+
+                    <div className="rsvpFormSubmitted" id="rsvpformsubmitted">
+                        <div className="rsvpHeaderContainer">
+                            <Fade id="rsvpHeaderFade">
+                                <p className="rsvpSubmitCursive">RSVP</p>
+                            </Fade>
+                            <Fade id="rsvpSubheaderFade">
+                                <p className="rsvpSubmitScript">SENT</p>
+                            </Fade>
+                        </div>
+                        <p className="submittedSubheader" id="submittedsubheader">Thank you!</p>
+                    </div>
                 </div>
 
             </motion.div>
@@ -343,8 +358,7 @@ class Home extends React.Component {
 
 export default Home;
 
-// Move dropdown div slightly up to fill gap
-// Add submit screen on rsvp
+// Fix scroll on mobile input blur
 // Format email with new info
 // FAQ page
 // Upgrade menu design, primarily make it better on mobile

@@ -282,12 +282,11 @@
   outline:none;
 }
 .dropdownDiv {
-  position:absolute;
+  position:relative;
   left:50%; transform: translateX(-50%);
-  top:4.8vw;
   width:100%;
   z-index:1;
-  max-height:15vw;
+  max-height:17vw;
   overflow:hidden;
   overflow-y:auto;
 }
@@ -445,6 +444,33 @@ textarea::placeholder {
   display:none;
 }
 
+.rsvpFormSubmitted {
+  position:absolute;
+  top:4.3vw; left:50%;
+  transform:translateX(-50%);
+  display:none;
+}
+.rsvpSubmitCursive {
+  font-family: Angella;
+  font-size:7vw;
+  color: #595959;
+  margin-right:15.3vw;
+  opacity:0;
+}
+.rsvpSubmitScript {
+  font-size:7vw;
+  margin-top:-3vw;
+  opacity:0;
+}
+.submittedSubheader {
+  font-size:2.5vw;
+  margin-top:0vw;
+  opacity:0;
+}
+.rsvpFormDiv.submitted .rsvpFormSubmitted {
+  display:block;
+}
+
 @media (min-aspect-ratio: 1/0.53) {
 
 /* Top of Home Page */
@@ -558,9 +584,9 @@ textarea::placeholder {
   height: 2.59vh;
 }
 .rsvpLabel:after {
-  width:1.725vh;
-  height:1.725vh;
-  left:0.51vh;
+  width:1.8vh;
+  height:1.8vh;
+  left:0.5vh;
 }
 .rsvpLabel {
   font-size:3.11vh;
@@ -571,19 +597,18 @@ textarea::placeholder {
 .rsvpForm {
   width:48.3vh;
 }
-.rsvpSection, #extraguests0, #extraguests1, #extraguests2 {
+.rsvpSection {
   font-size:2.93vh;
   margin-bottom:4.31vh;
 }
 .rsvpNameLabel {
   margin-bottom:0.52vh;
 }
-.rsvpInput, #rsvpname0, #rsvpname1, #rsvpname2 {
+.rsvpInput {
   font-size:2.76vh;
 }
 .dropdownDiv {
-  top:8.28vh;
-  max-height:25.88vh;
+  max-height:29vh;
 }
 .dropdownDiv::-webkit-scrollbar {
   width:1.21vh; 
@@ -645,6 +670,21 @@ textarea {
 .errorCatch {
   margin-top:0.86vh;
   font-size:2.07vh;
+}
+
+.rsvpFormSubmitted {
+  top:7.42vh;
+}
+.rsvpSubmitCursive {
+  font-size:12.075vh;
+  margin-right:26.39vh;
+}
+.rsvpSubmitScript {
+  font-size:12.075vh;
+  margin-top:-5.175vh;
+}
+.submittedSubheader {
+  font-size:4.31vh;
 }
   
 }
