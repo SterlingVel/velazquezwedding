@@ -135,10 +135,10 @@ export var weddingList = {
         "guests": ["Lawana Welch"]
     },
     "Caridad Alfaro": {
-        "guests": ["Esperanza Rodriguez"]
+        "guests": false``
     },
     "Esperanza Rodriguez": {
-        "guests": ["Caridad Alfaro"]
+        "guests": false
     },
     "Caridad Alvarez": {
         "guests": ["Ismael Tantaw"]
@@ -253,5 +253,14 @@ export var weddingList = {
     },
     "Carlos Garcia": {
         "guests": ["Olga Garcia"]
+    },
+    "Carmenza Arcila": {
+        "guests": ["Henry Losada"]
+    },
+    "Henry Losada": {
+        "guests": ["Carmenza Arcila"]
+    },
+    "Nubia Insua": {
+        "guests": 1
     }
 }
