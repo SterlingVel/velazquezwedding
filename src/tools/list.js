@@ -135,7 +135,7 @@ export var weddingList = {
         "guests": ["Lawana Welch"]
     },
     "Caridad Alfaro": {
-        "guests": false``
+        "guests": false
     },
     "Esperanza Rodriguez": {
         "guests": false

@@ -156,7 +156,7 @@ class Home extends React.Component {
                     declinedGuests = guests.filter((name) => document.getElementById("decline_" + name).checked).join(', ')
                 }
             }
-            
+
             window.Email.send({
                 SecureToken: "35935e09-e4b9-4cc1-bc74-ce32ca401db2",
                 To: 'sterling@velazquezwedding.com',
@@ -385,7 +385,5 @@ class Home extends React.Component {
 
 export default Home;
 
-// Fix scroll on mobile input blur
-// Format email with new info
 // FAQ page
 // Upgrade menu design, primarily make it better on mobile
