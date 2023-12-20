@@ -30,48 +30,48 @@
     /* Hazlehurst Information */
 
     .hazlehurstDiv {
-        margin:35vw 0 12vw 0;
+        margin:35vw 0 17vw 0;
     }
     .hazlehurstImageWrapper {
-        height:37vw;
+        height:40vw;
     }
     .hazlehurstFade {
-        height:37vw; width:8vw;
+        height:40vw; width:8vw;
     }
 
     .hazlehurstHeader {
-        font-size:9.5vw;
-        margin-top:1.2vw;
+        font-size:11vw;
+        margin-top:2.5vw;
     }
     .hazlehurstDate {
-        font-size:4vw;
-        margin-top:-2.5vw;
+        font-size:5.2vw;
+        margin-top:-1.8vw;
     }
     .hazlehurstAddressHeader {
-        font-size:3.7vw;
-        margin-top:4vw;
+        font-size:4.7vw;
+        margin-top:6vw;
     }
     .hazlehurstAddress {
-        font-size:3.6vw;
-        margin-top:0.2vw;
+        font-size:4.8vw;
+        margin-top:0.6vw;
     }
     .hazlehurstMap {
-        font-size:4.5vw;
+        font-size:6vw;
         border: thin solid #595959;
-        padding:0.6vw 7vw;
-        margin-top:5vw;
+        padding:0.8vw 9vw;
+        margin-top:8vw;
     }
 
     .sectionDivider {
-        top:-6vw; left:50%;
-        height:12vw; width:0.05vw;
+        top:-10vw; left:50%;
+        height:20vw; width:0.05vw;
         transform:translateX(-50%);
     }
 
     /* Schedule Section */
 
     .scheduleDiv {
-        padding:12vw 0 6vw 0;
+        padding:17vw 0 6vw 0;
     }
     .scheduleWrapper {
         width:110vw;
@@ -84,7 +84,7 @@
         font-size:5.4vw;
     }
     .scheduleTime {
-        font-size:4.7vw;
+        font-size:5vw;
         margin-top:-0.5vw;
     }
     .scheduleFlowerWrapper {
@@ -125,7 +125,7 @@
         width:40vw;
     }
     .crewHeaderText {
-        font-size:10vw;
+        font-size:11vw;
         padding:0.4vw 3vw;
     }
     .crewHeaderText.bride {
@@ -157,7 +157,7 @@
         font-size:8vw;
     }
     .crewSectionSubheader {
-        font-size:4.2vw;
+        font-size:4.8vw;
         margin-top:-0.4vw;
     }
 

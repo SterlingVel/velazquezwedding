@@ -97,6 +97,9 @@
   transition:filter 0.3s;
   pointer-events: all;
 }
+.homeGalleryPic.rsvp {
+  display:none
+}
 .homeGallerySection.wedding .homeGalleryPic {
   width:85%;
 }

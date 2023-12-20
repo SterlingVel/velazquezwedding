@@ -119,7 +119,7 @@ input[type=radio] {
   transform:translateX(0);
 }
 .navOption {
-  padding: 0.5vw 1.5vw;
+  padding: 0.5vw 1.7vw;
   cursor:pointer;
 }
 .navOptionText {
@@ -167,7 +167,7 @@ input[type=radio] {
     transform:translateX(-145vh);
   }
   .navOption {
-    padding: 1vh 3vh;
+    padding: 1vh 3.3vh;
   }
   .navOptionText.story {
     width:17.1vh;
@@ -182,24 +182,25 @@ input[type=radio] {
   .navMenu {
     display:inline-block;
     top:2.5vw; right:2.5vw;
-    font-size:3.5vw;
-    width:17vw; height:6vw;
+    font-size:4.2vw;
+    width:18vw; height:6.5vw;
   }
   .navMenu.show {
-    width:28vw;
-    height:54vw;
+    width:31vw;
+    height:79vw;
   }
   .menuButton {
-    width:17vw;
+    width:17.9vw;
     right:0;
     transition:width 1s;
     height:6vw;
   }
   .menuButtonText {
-    margin-top:0.8vw;
+    margin-top:0.6vw;
+    height:6vw;
   }
   .navMenu.show .menuButton {
-    width:16.7vw;
+    width:18.5vw;
     right:0;
   }
   .navOptions {
@@ -223,7 +224,7 @@ input[type=radio] {
     width:100%;
   }
   .navOptionText.story {
-    width:24.8vw;
+    width:27.9vw;
   }
 
   .navOption {
@@ -238,37 +239,38 @@ input[type=radio] {
 
   .navMenu {
     top:3vw; right:3vw;
-    font-size:6vw;
-    width:27vw; height:9vw;
+    font-size:7vw;
+    width:31vw; height:11vw;
   }
   .navMenu.show {
-    width:40vw;
-    height:72vw;
+    width:50vw;
+    height:128vw;
   }
   .menuButton {
-    width:27vw;
+    width:31vw;
     right:0;
   }
   .menuButtonText {
-    margin-top:0.8vw;
+    margin-top:1.2vw;
+    height:10vw;
   }
   .navMenu.show .menuButton {
-    width:23vw;
+    width:30vw;
     right:0;
   }
   .navOptions {
-    left:-2vw; top:14vw;
+    left:-2vw; top:24vw;
     transform:translateX(40vw);
   }
   .navOption {
-    padding: 0vw 1.5vw;
+    padding: 0vw 3.5vw;
   }
   .navOptionText {
-    padding: 2vw 4vw 2vw 0;
+    padding: 3vw 4vw 3vw 0;
     width:100%;
   }
   .navOptionText.story {
-    width:37vw;
+    width:43vw;
   }
 
 }

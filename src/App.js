@@ -22,6 +22,8 @@ function App() {
           <MenuLink link="story" text="OUR STORY"/>
           <MenuLink link="travel" text="TRAVEL"/>
           <MenuLink link="gifts" text="GIFTS"/>
+          <MenuLink link="#rsvpform" text="RSVP" rsvp={true}/>
+          <MenuLink link="gifts" text="FAQ"/>
         </div>
         <div className="menuButton" onClick={e => openMenu()}>
           <p className="menuButtonText">MENU</p>
@@ -30,7 +32,7 @@ function App() {
       
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/wedding" element={<Wedding />} />
           <Route path="/story" element={<Story />} />
           <Route path="/travel" element={<Travel />} />
@@ -43,6 +45,6 @@ function App() {
 
 export default App;
 
-export function openMenu() {
+export function openMenu(rsvp) {
   document.getElementById("navmenu").classList.toggle("show");
 }

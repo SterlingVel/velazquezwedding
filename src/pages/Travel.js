@@ -65,7 +65,7 @@ class Travel extends React.Component {
 
                     <div className="hotelWrapper">
                         <Fade>
-                            <p className="hotelSubheader">There are plenty of hotels in the area to fit all budgets.<br />
+                            <p className="hotelSubheader">There are plenty of hotels in the area to fit all budgets.
                                 We highly recommend the Hilton Garden Inn as it will have a room block for all our traveling guests!
                             </p>
                         </Fade>

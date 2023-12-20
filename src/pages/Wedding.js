@@ -67,7 +67,7 @@ class Wedding extends React.Component {
                         <p className='hazlehurstAddress'>77 Sloan Street<br />McDonough, GA 30253</p>
                     </Fade>
                     <Fade threshold="1">
-                        <a className="mapLink" href="https://maps.app.goo.gl/WTKX7FBdWWSxgkbq9" target='_blank' rel='noreferrer'>
+                        <a className="mapLink" href="https://maps.app.goo.gl/SprjbdA6oRB1C4rQ8" target='_blank' rel='noreferrer'>
                             <button className="hazlehurstMap">MAP</button>
                         </a>
                     </Fade>

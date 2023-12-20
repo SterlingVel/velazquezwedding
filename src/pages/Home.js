@@ -173,7 +173,6 @@ class Home extends React.Component {
     render() {
         return (
             <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants} onClick={e => this.closeDropdown()}>
-
                 <div className="introDiv">
                     <div className="introHeaderSection">
                         <img className="introImageButterfly" id="introimagebutterfly" alt="butterfly" src="weddingImages/32.PNG" />
@@ -194,14 +193,16 @@ class Home extends React.Component {
                                         <p className="homeGalleryText">WEDDING</p>
                                     </Link>
                                     <Link to='/wedding'>
-                                        <LazyLoadImage className="homeGalleryPic" alt="weddingmenu" src="introImages/twirl.jpg" loading="lazy" />
+                                        <LazyLoadImage className="homeGalleryPic reg" alt="weddingmenu" src="introImages/twirl.jpg" loading="lazy" />
+                                        <img className="homeGalleryPic rsvp" alt="weddingmenu" src="introImages/twirl.jpg" />
                                     </Link>
                                 </div>
                             </Fade>
                             <Fade id="travellink">
                                 <div className="homeGallerySection travel">
                                     <Link to='/travel'>
-                                        <LazyLoadImage className="homeGalleryPic" alt="weddingmenu" src="introImages/field.jpg" loading="lazy" />
+                                        <LazyLoadImage className="homeGalleryPic reg" alt="weddingmenu" src="introImages/field.jpg" loading="lazy" />
+                                        <img className="homeGalleryPic rsvp" alt="weddingmenu" src="introImages/field.jpg" />
                                     </Link>
                                     <Link to='/travel'>
                                         <p className="homeGalleryText">TRAVEL</p>
@@ -219,14 +220,16 @@ class Home extends React.Component {
                                         <p className="homeGalleryText">OUR STORY</p>
                                     </Link>
                                     <Link to='/story'>
-                                        <LazyLoadImage className="homeGalleryPic" alt="weddingmenu" src="introImages/ring.jpg" loading="lazy" />
+                                        <LazyLoadImage className="homeGalleryPic reg" alt="weddingmenu" src="introImages/ring.jpg" loading="lazy" />
+                                        <img className="homeGalleryPic rsvp" alt="weddingmenu" src="introImages/ring.jpg" />
                                     </Link>
                                 </Fade>
                             </div>
                             <Fade id="giftslink">
                                 <div className="homeGallerySection gifts">
                                     <Link to='/gifts'>
-                                        <LazyLoadImage className="homeGalleryPic" alt="weddingmenu" src="introImages/arms.jpg" loading="lazy" />
+                                        <LazyLoadImage className="homeGalleryPic reg" alt="weddingmenu" src="introImages/arms.jpg" loading="lazy" />
+                                        <img className="homeGalleryPic rsvp" alt="weddingmenu" src="introImages/arms.jpg" />
                                     </Link>
                                     <Link to='/gifts'>
                                         <p className="homeGalleryText">GIFTS</p>
