@@ -182,7 +182,7 @@ export var weddingList = {
     "Martin Losada": {
         "guests": ["Paola Rabanal", "Camilo Losada"]
     },
-    "Mike Veloso": {
+    "Michael Veloso": {
         "guests": 1
     },
     "Gabriel Torres": {
