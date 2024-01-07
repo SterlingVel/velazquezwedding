@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link, Routes, Route, useLocation } from "react-router-dom";
 
-function openMenu(rsvp) {
+function openMenu(action) {
     document.getElementById("navmenu").classList.toggle("show");
-    scrollToRSVP(rsvp);
+    scrollToRSVP(action);
 }
 
-function scrollToRSVP(rsvp) {
-    if (rsvp) {
+function scrollToRSVP(action) {
+    if (action === "rsvp" && window.location.pathname !== "/") {
         setTimeout(() => {
             var galleryHide = document.getElementsByClassName("homeGalleryPic reg")
             var galleryShow = document.getElementsByClassName("homeGalleryPic rsvp")
@@ -17,6 +17,16 @@ function scrollToRSVP(rsvp) {
             }
             document.getElementById("rsvpformdiv").scrollIntoView({ block: "start", inline: "nearest" });
         }, 400)
+    } else if (action === "rsvp") {
+        var galleryHide = document.getElementsByClassName("homeGalleryPic reg")
+        var galleryShow = document.getElementsByClassName("homeGalleryPic rsvp")
+        for (var i = 0; i < 4; i++) {
+            galleryHide[i].style.display = "none"
+            galleryShow[i].style.display = "inline-block"
+        }
+        document.getElementById("rsvpformdiv").scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+    } else if (action === "faq") {
+
     }
 }
 
@@ -25,8 +35,8 @@ function MenuLink(props) {
     const location = useLocation();
 
     return (
-        <Link to={"/" + props.link} className={"navOption" + (location.pathname === "/" + props.link ? " selected" : "")}
-            onClick={e => window.screen.height / window.screen.width > 0.855 ? openMenu(props.rsvp) : scrollToRSVP(props.rsvp)}>
+        <Link to={"/" + props.link} className={"navOption" + (location.pathname === "/" + props.link ? " selected" : "")} id={props.id}
+            onClick={e => window.screen.height / window.screen.width > 0.855 ? openMenu(props.action) : scrollToRSVP(props.action)}>
             <p className={"navOptionText" + (props.link === "story" ? " story" : "")}>{props.text}</p>
         </Link>
     )

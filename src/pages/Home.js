@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 import Fade from '../tools/fade.js'
 import { weddingList } from '../tools/list.js'
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+ 
 const emailTest = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
 const pageVariants = {
     in: {
@@ -44,6 +44,11 @@ class Home extends React.Component {
             document.getElementById("navmenu").className = "navMenu";
         window.scrollTo(0, 0);
         this.addResizeListener();
+    }
+
+    openFAQ() {
+        document.getElementById("faqsection").classList.toggle("show")
+        document.getElementById("shadow").classList.toggle("show")
     }
 
     setName(e) {
@@ -210,7 +215,7 @@ class Home extends React.Component {
                                 </div>
                             </Fade>
                             <Fade id="faqbuttonfade">
-                                <button className="faqButton">FAQs</button>
+                                <button className="faqButton" onClick={e => this.openFAQ()}>FAQs</button>
                             </Fade>
                         </div>
                         <div className="homeGalleryColumn right">
@@ -237,7 +242,7 @@ class Home extends React.Component {
                                 </div>
                             </Fade>
                             <Fade id="faqbuttonfade2">
-                                <button className="faqButton mobile">FAQs</button>
+                                <button className="faqButton mobile" onClick={e => this.openFAQ()}>FAQs</button>
                             </Fade>
                         </div>
                     </div>

@@ -135,14 +135,14 @@ class Wedding extends React.Component {
                     <div className="crewRow">
                         <Fade>
                             <div className="crewSection">
-                                <LazyLoadImage className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg" loading="lazy"/>
+                                <LazyLoadImage className="crewImage" alt="bridesmaid" src="weddingImages/Keeley.jpg" loading="lazy"/>
                                 <div className="crewSectionText">
                                     <p className="crewSectionHeader">Keeley Cauble</p>
                                     <p className="crewSectionSubheader">Maid of Honor</p>
                                 </div>
                             </div>
                             <div className="crewSection">
-                                <LazyLoadImage className="crewImage" alt="bridesmaid" src="weddingImages/placeholder.jpg" loading="lazy"/>
+                                <LazyLoadImage className="crewImage" alt="bridesmaid" src="weddingImages/Amelia.jpg" loading="lazy"/>
                                 <div className="crewSectionText">
                                     <p className="crewSectionHeader">Amelia Adkisson</p>
                                     <p className="crewSectionSubheader">Bridesmaid</p>
@@ -161,14 +161,14 @@ class Wedding extends React.Component {
                     <div className="crewRow groom">
                         <Fade>
                             <div className="crewSection">
-                                <LazyLoadImage className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg" loading="lazy"/>
+                                <LazyLoadImage className="crewImage" alt="groomsman" src="weddingImages/Gabriel.jpg" loading="lazy"/>
                                 <div className="crewSectionText">
                                     <p className="crewSectionHeader">Gabriel Torres</p>
                                     <p className="crewSectionSubheader">Best Man</p>
                                 </div>
                             </div>
                             <div className="crewSection">
-                                <LazyLoadImage className="crewImage" alt="groomsman" src="weddingImages/placeholder.jpg" loading="lazy"/>
+                                <LazyLoadImage className="crewImage" alt="groomsman" src="weddingImages/Mike.jpg" loading="lazy"/>
                                 <div className="crewSectionText">
                                     <p className="crewSectionHeader">Mike Veloso</p>
                                     <p className="crewSectionSubheader">Groomsman</p>
