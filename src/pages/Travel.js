@@ -75,8 +75,8 @@ class Travel extends React.Component {
                                     link="https://www.hilton.com/en/hotels/atlmcgi-hilton-garden-inn-atlanta-south-mcdonough/" />
                             </Fade>
                             <Fade id="hotel2">
-                                <Hotel name="Holiday Inn Express" image="travelImages/holiday.jpg" time="10" price="160"
-                                    link="https://www.ihg.com/holidayinnexpress/hotels/us/en/mcdonough/atlmd/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-ATLMD" />
+                                <Hotel name="Courtyard by Marriot" image="travelImages/marriot.jpg" time="11" price="134"
+                                    link="https://www.marriott.com/en-us/hotels/atlam-courtyard-atlanta-mcdonough/overview/" />
                             </Fade>
                         </div>
                         <Fade>
@@ -86,11 +86,11 @@ class Travel extends React.Component {
                         </Fade>
                         <div className="hotelRow atlanta">
                             <Fade id="hotel3">
-                                <Hotel name="The Moxy - Midtown" image="travelImages/moxy.jpg" time="38" price="232"
+                                <Hotel name="The Moxy - Midtown" image="travelImages/moxy.jpg" time="38" price="195"
                                     link="https://www.marriott.com/en-us/hotels/atlox-moxy-atlanta-midtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
                             </Fade>
                             <Fade id="hotel4">
-                                <Hotel name="The Renaissance - Midtown" image="travelImages/renaissance.jpg" time="37" price="265"
+                                <Hotel name="The Renaissance - Midtown" image="travelImages/renaissance.jpg" time="37" price="309"
                                     link="https://www.marriott.com/en-us/hotels/atlbd-renaissance-atlanta-midtown-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
                             </Fade>
                         </div>
