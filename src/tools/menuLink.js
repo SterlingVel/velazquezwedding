@@ -36,7 +36,7 @@ function MenuLink(props) {
 
     return (
         <Link to={"/" + props.link} className={"navOption" + (location.pathname === "/" + props.link ? " selected" : "")} id={props.id}
-            onClick={e => window.screen.height / window.screen.width > 0.855 ? openMenu(props.action) : scrollToRSVP(props.action)}>
+            onClick={e => window.innerHeight / window.innerWidth > 0.855 ? openMenu(props.action) : scrollToRSVP(props.action)}>
             <p className={"navOptionText" + (props.link === "story" ? " story" : "")}>{props.text}</p>
         </Link>
     )

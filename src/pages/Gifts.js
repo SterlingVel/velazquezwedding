@@ -67,7 +67,7 @@ class Gifts extends React.Component {
                         <Fade>
                             <p className="registryHeader">GIFT REGISTRY</p>
                             <p className="registryDetails">We're registered at</p>
-                            <a className="registryLink" href="https://www.amazon.com/wedding/registry/366USBWRUZ0WB" target="_blank" rel='noreferrer'>Amazon</a>
+                            <a className="registryLink" href="https://www.amazon.com/wedding/registry/366USBWRUZ0WB" target="_blank" rel='noreferrer'>AMAZON</a>
                             <p className="registryDetails cards">If you prefer giving gift cards, we love:<br />Amazon, HomeGoods, Target,
                                 Home Depot, and Costco!</p>
                         </Fade>

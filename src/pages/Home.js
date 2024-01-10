@@ -48,7 +48,9 @@ class Home extends React.Component {
 
     openFAQ() {
         document.getElementById("faqsection").classList.toggle("show")
-        document.getElementById("shadow").classList.toggle("show")
+        document.getElementById("faqsection").scrollTo({ top:0, behavior: "smooth" });
+        document.getElementById("shadow").classList.toggle("show");
+        document.body.classList.toggle("noscroll");
     }
 
     setName(e) {

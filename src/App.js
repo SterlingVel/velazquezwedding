@@ -15,9 +15,9 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="App" id="app">
+    <div className="App" id="app" onClick={e => toggleMenu(true)}>
 
-      <div className="navMenu" id="navmenu">
+      <div className="navMenu" id="navmenu" onClick={e => persistMenu(e)}>
         <div className="navOptions" id="navoptions">
           <MenuLink link="" text="HOME" id="homepage"/>
           <MenuLink link="wedding" text="WEDDING" id="weddingpage" />
@@ -27,12 +27,12 @@ function App() {
           <MenuLink link="#rsvpform" text="RSVP" action={"rsvp"} id="rsvppage" />
           <a className="navOption" onClick={e => toggleFAQ()}><p className="navOptionText">FAQ</p></a>
         </div>
-        <div className="menuButton" onClick={e => openMenu()}>
+        <div className="menuButton" onClick={e => toggleMenu()}>
           <p className="menuButtonText">MENU</p>
         </div>
       </div>
 
-      <div className="faqSection" id="faqsection">
+      <div className="faqSection" id="faqsection" onClick={e => persistMenu(e)}>
         <p className="faqHeader">Questions?</p>
         <button className="faqClose" onClick={e => toggleFAQ()}>+</button>
 
@@ -58,7 +58,7 @@ function App() {
         </div>
         <button className="question" onClick={e => triggerCollapse(5)}>Have you reserved blocks of rooms at one or more hotels?</button>
         <div className="answerDiv">
-          <p className="answer">We are currently working on a room block agreement with the Hilton Garden Inn and will post a link to those reservations here shortly!</p>
+          <p className="answer">We have a room block reservation at the Hilton Garden Inn which you can access <span className="faqLink" onClick={e => openPage("https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=ATLMCGI&groupCode=STEALA&arrivaldate=2024-04-04&departuredate=2024-04-07&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT")}>here</span>. The room block period lasts until March 4th so please book your reservations before then!</p>
         </div>
         <button className="question" onClick={e => triggerCollapse(6)}>Am I allowed to bring a plus one?</button>
         <div className="answerDiv">
@@ -112,15 +112,28 @@ function App() {
 
 export default App;
 
+function toggleMenu(close) {
+  if (!close || (close && window.innerHeight / window.innerWidth > 0.855 && document.getElementById("navmenu").className.includes("show")))
+    document.getElementById("navmenu").classList.toggle("show");
+}
+function persistMenu(e) {
+  e.stopPropagation()
+}
+
 function toggleFAQ() {
   document.getElementById("faqsection").classList.toggle("show")
   document.getElementById("faqsection").scrollTo({ top:0, behavior: "smooth" });
-  document.getElementById("shadow").classList.toggle("show")
+  document.getElementById("shadow").classList.toggle("show");
+  document.body.classList.toggle("noscroll");
 }
 
 function openLink(id) {
   toggleFAQ();
   document.getElementById(id).click()
+}
+
+function openPage(link) {
+  window.open(link, "_blank");
 }
 
 function triggerCollapse(id) {
@@ -162,8 +175,4 @@ function expandSection(id) {
   element.addEventListener('transitionend', function (e) {
     element.removeEventListener('transitionend', e);
   });
-}
-
-export function openMenu(rsvp) {
-  document.getElementById("navmenu").classList.toggle("show");
 }

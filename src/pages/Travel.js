@@ -66,13 +66,15 @@ class Travel extends React.Component {
                     <div className="hotelWrapper">
                         <Fade>
                             <p className="hotelSubheader">There are plenty of hotels in the area to fit all budgets.
-                                We highly recommend the Hilton Garden Inn as it will have a room block for all our traveling guests!
+                                We highly recommend the Hilton Garden Inn as we have reserved a room block for all our traveling guests with its link below!
+                                <br/><br/>
+                                <b>The room block at the Hilton Garden Inn lasts until March 4th!</b>
                             </p>
                         </Fade>
                         <div className="hotelRow">
                             <Fade id="hotel1">
-                                <Hotel name="Hilton Garden Inn" image="travelImages/hilton.jpg" time="10" price="165"
-                                    link="https://www.hilton.com/en/hotels/atlmcgi-hilton-garden-inn-atlanta-south-mcdonough/" />
+                                <Hotel name="Hilton Garden Inn" image="travelImages/hilton.jpg" time="10" price="129"
+                                    link="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=ATLMCGI&groupCode=STEALA&arrivaldate=2024-04-04&departuredate=2024-04-07&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" />
                             </Fade>
                             <Fade id="hotel2">
                                 <Hotel name="Courtyard by Marriot" image="travelImages/marriot.jpg" time="11" price="134"
