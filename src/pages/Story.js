@@ -39,7 +39,7 @@ const sbtext5 = ("Following weeks of conversation, they decided to take the plun
     "had transformed into a real-world romance, marked by a mutual desire to explore new places and have someone special to share the experience " + 
     "with.").split(' ');
 const sbtext6 = ("They made it official on April 6th, 2018. Over the next several years, their bond only strengthened until they could hardly " + 
-    "envision their lives before they met. Now, six years later on April 6th, 2024, they stand on the precipice of a new chapter.").split(' ');
+    "envision their lives before they met. Now, six years later on April 6th, 2024, they take the first step into a new chapter.").split(' ');
 
 class Story extends React.Component {
 

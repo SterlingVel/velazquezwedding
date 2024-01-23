@@ -231,6 +231,7 @@ input[type=radio] {
 .faqLink {
   text-decoration: underline;
   color:#94a9bb;
+  cursor: pointer;
 }
 
 .faqSection::-webkit-scrollbar {

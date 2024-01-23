@@ -24,7 +24,7 @@ function App() {
           <MenuLink link="story" text="OUR STORY" id="storypage" />
           <MenuLink link="travel" text="TRAVEL" id="travelpage" />
           <MenuLink link="gifts" text="GIFTS" id="giftspage" />
-          <MenuLink link="#rsvpform" text="RSVP" action={"rsvp"} id="rsvppage" />
+          <MenuLink link="#rsvpform" text="RSVP" id="rsvppage" rsvp={true} />
           <a className="navOption" onClick={e => toggleFAQ()}><p className="navOptionText">FAQ</p></a>
         </div>
         <div className="menuButton" onClick={e => toggleMenu()}>
@@ -128,8 +128,8 @@ function toggleFAQ() {
 }
 
 function openLink(id) {
+  document.getElementById(id).click();
   toggleFAQ();
-  document.getElementById(id).click()
 }
 
 function openPage(link) {
