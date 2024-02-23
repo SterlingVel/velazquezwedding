@@ -158,7 +158,7 @@ class Home extends React.Component {
             if (rsvp === "Accepted") {
                 if (guests === 1 && document.getElementById("accept_plusone").checked) {
                     acceptedGuests = this.state.guest
-                } else if (guests) {
+                } else if (guests && !document.getElementById("decline_plusone").checked) {
                     acceptedGuests = guests.filter((name) => document.getElementById("accept_" + name).checked).join(', ')
                     declinedGuests = guests.filter((name) => document.getElementById("decline_" + name).checked).join(', ')
                 }
