@@ -38,7 +38,7 @@ function App() {
 
         <button className="question" onClick={e => triggerCollapse(0)}>What date should I RSVP by?</button>
         <div className="answerDiv">
-          <p className="answer">Please RSVP <span className="faqLink" onClick={e => openLink("rsvppage")}>here</span> by Wednesday, March 6th, 2024.</p>
+          <p className="answer">The RSVP deadline was March 6th, 2024. Please contact us personally for any late reservations!</p>
         </div>
         <button className="question" onClick={e => triggerCollapse(1)}>What day/time will the wedding take place?</button>
         <div className="answerDiv">
@@ -54,11 +54,11 @@ function App() {
         </div>
         <button className="question" onClick={e => triggerCollapse(4)}>What time should I arrive at your wedding ceremony?</button>
         <div className="answerDiv">
-          <p className="answer">We encourage you to arrive at 5:00 pm. This will give you time to park, sign our guestbook, find seats, and converse with other guests before the ceremony begins promptly at 5:30 pm. </p>
+          <p className="answer">We encourage you to arrive before 5:00 pm. This will give you time to park, sign our guestbook, find seats, and converse with other guests before the ceremony begins promptly at 5:30 pm. </p>
         </div>
         <button className="question" onClick={e => triggerCollapse(5)}>Have you reserved blocks of rooms at one or more hotels?</button>
         <div className="answerDiv">
-          <p className="answer">We have a room block reservation at the Hilton Garden Inn which you can access <span className="faqLink" onClick={e => openPage("https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=ATLMCGI&groupCode=STEALA&arrivaldate=2024-04-04&departuredate=2024-04-07&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT")}>here</span>. The room block period lasts until March 4th so please book your reservations before then!</p>
+          <p className="answer">Unfortunately, we no longer have any reservations open. However, we still highly recommend the Hilton Garden Inn for its low price and short distance to the venue! You can find it <span className="faqLink" onClick={e => openPage("https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=ATLMCGI&groupCode=STEALA&arrivaldate=2024-04-04&departuredate=2024-04-07&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT")}>here</span>.</p>
         </div>
         <button className="question" onClick={e => triggerCollapse(6)}>Am I allowed to bring a plus one?</button>
         <div className="answerDiv">

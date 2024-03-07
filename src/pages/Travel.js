@@ -66,18 +66,16 @@ class Travel extends React.Component {
                     <div className="hotelWrapper">
                         <Fade>
                             <p className="hotelSubheader">There are plenty of hotels in the area to fit all budgets.
-                                We highly recommend the Hilton Garden Inn as we have reserved a room block for all our traveling guests with its link below!
-                                <br/><br/>
-                                <b>The room block at the Hilton Garden Inn lasts until March 4th!</b>
+                                We highly recommend the Hilton Garden Inn for its low price and short distance to the venue!
                             </p>
                         </Fade>
                         <div className="hotelRow">
                             <Fade id="hotel1">
-                                <Hotel name="Hilton Garden Inn" image="travelImages/hilton.jpg" time="10" price="129"
+                                <Hotel name="Hilton Garden Inn" image="travelImages/hilton.jpg" time="10" price="134"
                                     link="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=ATLMCGI&groupCode=STEALA&arrivaldate=2024-04-04&departuredate=2024-04-07&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" />
                             </Fade>
                             <Fade id="hotel2">
-                                <Hotel name="Courtyard by Marriot" image="travelImages/marriot.jpg" time="11" price="134"
+                                <Hotel name="Courtyard by Marriot" image="travelImages/marriot.jpg" time="11" price="118"
                                     link="https://www.marriott.com/en-us/hotels/atlam-courtyard-atlanta-mcdonough/overview/" />
                             </Fade>
                         </div>
@@ -88,11 +86,11 @@ class Travel extends React.Component {
                         </Fade>
                         <div className="hotelRow atlanta">
                             <Fade id="hotel3">
-                                <Hotel name="The Moxy - Midtown" image="travelImages/moxy.jpg" time="38" price="195"
+                                <Hotel name="The Moxy - Midtown" image="travelImages/moxy.jpg" time="38" price="243"
                                     link="https://www.marriott.com/en-us/hotels/atlox-moxy-atlanta-midtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
                             </Fade>
                             <Fade id="hotel4">
-                                <Hotel name="The Renaissance - Midtown" image="travelImages/renaissance.jpg" time="37" price="309"
+                                <Hotel name="The Renaissance - Midtown" image="travelImages/renaissance.jpg" time="37" price="247"
                                     link="https://www.marriott.com/en-us/hotels/atlbd-renaissance-atlanta-midtown-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" />
                             </Fade>
                         </div>
