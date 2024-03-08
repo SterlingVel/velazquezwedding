@@ -119,10 +119,10 @@ class Home extends React.Component {
         e.stopPropagation()
         document.getElementById("dropdowndiv").style.display = "block"
     }
-    closeDropdown() {
-        if (document.getElementById("dropdowndiv").style.display === "block")
-            document.getElementById("dropdowndiv").style.display = "none"
-    }
+    // closeDropdown() {
+    //     if (document.getElementById("dropdowndiv").style.display === "block")
+    //         document.getElementById("dropdowndiv").style.display = "none"
+    // }
     toggleGuestInput(toggle, input) {
         document.getElementById("rsvpguest").required = input
         document.getElementById("plusoneinput").className = "rsvpSection" + toggle
@@ -177,9 +177,11 @@ class Home extends React.Component {
         }
     }
 
+    // onClick={e => this.closeDropdown()} ---- Old function in motion.div tag 
+    
     render() {
         return (
-            <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants} onClick={e => this.closeDropdown()}>
+            <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants} >
                 <div className="introDiv">
                     <div className="introHeaderSection">
                         <img className="introImageButterfly" id="introimagebutterfly" alt="butterfly" src="weddingImages/32.PNG" />
@@ -269,17 +271,17 @@ class Home extends React.Component {
                 <div className="rsvpFormDiv" id="rsvpformdiv">
                     <div className="rsvpHeaderContainer">
                         <Fade id="rsvpHeaderFade">
-                            <p className="rsvpHeaderCursive">Please</p>
+                            <p className="rsvpHeaderCursive">Closed</p>
                         </Fade>
                         <Fade id="rsvpSubheaderFade">
                             <p className="rsvpHeaderScript">RSVP</p>
                         </Fade>
                         <Fade>
-                            <p className="rsvpHeaderDate">by 03.06.2024</p>
+                            <p className="rsvpHeaderDate">on 03.06.2024</p>
                         </Fade>
                     </div>
 
-                    <Fade threshold="0.2">
+                    {/* <Fade threshold="0.2">
                         <div className="rsvpButtons">
                             <div className="radioButtonWrapper accept">
                                 <input className="radioButton" name="option" type="radio" id="acceptRSVP" defaultChecked />
@@ -355,9 +357,9 @@ class Home extends React.Component {
                             </div>
 
                         </form>
-                    </Fade>
+                    </Fade> */}
 
-                    <div className="rsvpFormSubmitted" id="rsvpformsubmitted">
+                    {/* <div className="rsvpFormSubmitted" id="rsvpformsubmitted">
                         <div className="rsvpHeaderContainer">
                             <Fade id="rsvpHeaderFade">
                                 <p className="rsvpSubmitCursive">RSVP</p>
@@ -367,7 +369,7 @@ class Home extends React.Component {
                             </Fade>
                         </div>
                         <p className="submittedSubheader" id="submittedsubheader">Thank you!</p>
-                    </div>
+                    </div> */}
                 </div>
 
             </motion.div>

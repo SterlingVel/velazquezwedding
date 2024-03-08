@@ -24,7 +24,6 @@ function App() {
           <MenuLink link="story" text="OUR STORY" id="storypage" />
           <MenuLink link="travel" text="TRAVEL" id="travelpage" />
           <MenuLink link="gifts" text="GIFTS" id="giftspage" />
-          <MenuLink link="#rsvpform" text="RSVP" id="rsvppage" rsvp={true} />
           <a className="navOption" onClick={e => toggleFAQ()}><p className="navOptionText">FAQ</p></a>
         </div>
         <div className="menuButton" onClick={e => toggleMenu()}>
@@ -38,7 +37,7 @@ function App() {
 
         <button className="question" onClick={e => triggerCollapse(0)}>What date should I RSVP by?</button>
         <div className="answerDiv">
-          <p className="answer">The RSVP deadline was March 6th, 2024. Please contact us personally for any late reservations!</p>
+          <p className="answer">The RSVP deadline was March 6th, 2024. We're sorry, but we can't accept any more reservations!</p>
         </div>
         <button className="question" onClick={e => triggerCollapse(1)}>What day/time will the wedding take place?</button>
         <div className="answerDiv">
